@@ -1,0 +1,230 @@
+lblanco = #ffffff
+lgris = #586455
+
+famarillo = #f9ff00
+fazul = #0043ff
+fverde = #2de500
+@font-face
+	font-family 'signika'
+	 src url('../fonts/signika-regular-webfont.eot')
+	 src url('../fonts/signika-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	 	 url('../fonts/signika-regular-webfont.woff') format('woff'),
+	 	 url('../fonts/signika-regular-webfont.ttf')  format('truetype'),
+	     url('../fonts/signika-regular-webfont.svg#futura') format('svg')
+	
+@font-face
+	font-family 'signika_l'
+	 src url('../fonts/signika-light-webfont.eot')
+	 src url('../fonts/signika-light-webfont.eot?#iefix') format('embedded-opentype'),
+	 	 url('../fonts/signika-light-webfont.woff') format('woff'),
+	 	 url('../fonts/signika-light-webfont.ttf')  format('truetype'),
+	     url('../fonts/signika-light-webfont.svg#futura_l') format('svg')
+
+body
+	background url('../images/bg2.jpg') center top no-repeat
+	font-family 'signika'
+	font-size 12px
+header
+	background transparent url('../images/header.png') center top no-repeat
+	height 240px
+	margin 0
+	.generador
+		background url('../images/generador.png') left top no-repeat
+		height 229px
+		position relative
+		width 194px
+		a
+			display block
+			margin 0 auto
+			padding 2px 0 0 
+			width 104px
+
+	.logo
+		height 174px
+		position relative
+		width 207px
+		a
+			left -22px
+			position absolute
+			top 10px
+	nav
+		background rgba(0,0,0,0.7)
+		border-bottom-right-radius 10px
+		border-bottom-left-radius 10px
+		margin 0 20px 0 0
+		.menu
+			height 141px
+			margin 5px
+			padding 0
+			li
+				display inline-block
+				margin 0 5px
+				height 141px
+				text-align center
+				vertical-align top
+				width 170px
+				a
+					color lblanco
+					font-family signika_l
+					font-size 12px
+					display block
+					height 126px
+					padding 15px 0 0
+					text-decoration none
+					width 170px
+					span
+						background red
+						border-radius 50%
+						display block
+						font-size 34px
+						line-height 37px
+						height 38px
+						margin 0 auto 15px
+						width 38px
+section
+	position relative
+	top -11px
+
+.boxes
+	height 490px
+	// overflow-y scroll
+	ul
+		background url('../images/boxes.png') left center repeat-x
+		margin 0 8px 20px 53px
+		padding 0
+		li
+			display inline-block
+			margin 0 14px 0 0
+			&:nth-child(n+11)
+				margin-right 0px
+			.box
+				background url('../images/box.png') left top no-repeat
+				display block
+				height 73px
+				padding 2px
+				position relative
+				width 73px
+				img
+					display block
+					height 73px
+					width 73px
+					position absolute
+				.box_color
+					bottom -5px
+					height 73px
+					left -5px
+					padding 7px
+					position absolute
+					width 73px
+					img
+						display block
+						height 100%
+						position static
+						width 100%
+				.box_amarillo
+					background url('../images/box_amarillo.png') no-repeat
+				.box_azul
+					background url('../images/box_azul.png') no-repeat
+				.box_verde
+					background url('../images/box_verde.png') no-repeat
+				.fecha
+					-webkit-border-radius 10px
+					-moz-border-radius 10px
+					border-radius 10px
+					bottom -16px
+					height 11px
+					font-size 10px
+					left 50%
+					margin 0 0 0 -34px
+					padding 6px 0
+					position absolute
+					text-align center
+					vertical-align middle
+					width 68px
+				.famarillo
+					background famarillo
+					color lgris
+				.fazul
+					background fazul
+					color lblanco
+				.fverde
+					background fverde
+					color lgris
+				.ipadmini_amarillo
+					background url('../images/ipadmini_amarillo.png') no-repeat
+					height 99px
+					position absolute
+					left -23px
+					top -78px
+					width 86px
+				.ipadmini_azul
+					background url('../images/ipadmini_azul.png') no-repeat
+					height 99px
+					position absolute
+					left -24px
+					top -68px
+					width 86px
+				.ipodnano_azul
+					background url('../images/ipodnano_azul.png') no-repeat
+					height 99px
+					position absolute
+					left -15px
+					top -78px
+					width 86px
+				.ipodnano_verde
+					background url('../images/ipodnano_verde.png') no-repeat
+					height 99px
+					position absolute
+					left 18px
+					top -76px
+					width 86px
+				.ipodtouch_azul
+					background url('../images/ipodtouch_azul.png') no-repeat
+					height 99px
+					position absolute
+					left 16px
+					top -78px
+					width 86px
+				.ipodtouch_verde
+					background url('../images/ipodtouch_verde.png') no-repeat
+					height 99px
+					position absolute
+					left -25px
+					top -78px
+					width 86px
+				.psp_amarillo
+					background url('../images/psp_amarillo.png') no-repeat
+					height 99px
+					left -10px
+					position absolute
+					top -80px
+					width 92px
+				.playstation_amarillo
+					background url('../images/playstation_amarillo.png') no-repeat
+					height 99px
+					left -20px
+					position absolute
+					top -80px
+					width 92px
+				.playstation_verde
+					background url('../images/playstation_verde.png') no-repeat
+					height 99px
+					left 0px
+					position absolute
+					top -80px
+					width 92px
+footer
+	h3
+		color lblanco
+		font-family signika
+		font-size 15px
+		text-align center
+		
+
+.container
+	margin 0 auto
+	width 1093px
+.fleft
+	float left
+.fright
+	float right

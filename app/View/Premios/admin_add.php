@@ -27,6 +27,9 @@
                 <? $icon_premios=$this->santander->getIconPremios();
                 echo $this->Form->input('imagen', array('options'=>$icon_premios,'label' => false, 'div' => false,'empty'=>'Iconos Premios'));?>
             </div>
+            <div style="margin-left: 136px">
+                <img src="" alt="Imagen Premio" style="display:none" id="img"/>
+            </div>
         </div>
         <div class="da-form-row">
             <label>Posicion <span class="required">*</span></label>

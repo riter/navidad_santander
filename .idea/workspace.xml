@@ -23,37 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="backend.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/View/Layouts/backend.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="78" selection-start="177" selection-end="251" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="5032">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PhotosController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Controller/PhotosController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="5" selection-start="1637" selection-end="1637" vertical-scroll-proportion="0.780037" vertical-offset="326" max-vertical-offset="867">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin_ver.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/View/Photos/admin_ver.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="32" selection-start="896" selection-end="896" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="629">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="admin_index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/View/Photos/admin_index.php">
+        <entry file="file://$PROJECT_DIR$/app/View/Premios/admin_index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="28" selection-start="3349" selection-end="3349" vertical-scroll-proportion="-19.653847" vertical-offset="798" max-vertical-offset="1530">
+            <state line="40" column="52" selection-start="1515" selection-end="1515" vertical-scroll-proportion="-8.5" vertical-offset="459" max-vertical-offset="1105">
               <folding>
                 <element signature="n#style#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
@@ -62,10 +35,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/webroot/js/photos/index.js">
+      <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/View/Home/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="36" selection-start="774" selection-end="774" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="765">
+            <state line="42" column="24" selection-start="1804" selection-end="1813" vertical-scroll-proportion="-5.923077" vertical-offset="560" max-vertical-offset="1360">
+              <folding>
+                <marker date="1386105190272" expanded="true" signature="2542:2558" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/webroot/js/home/home.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="28" selection-start="629" selection-end="629" vertical-scroll-proportion="0.4303351" vertical-offset="164" max-vertical-offset="731">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PremiosController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Controller/PremiosController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="72" column="13" selection-start="2418" selection-end="2418" vertical-scroll-proportion="-9.692307" vertical-offset="887" max-vertical-offset="1445">
+              <folding>
+                <element signature="e#6#102#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="santanderHelper.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/View/Helper/santanderHelper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="30" selection-start="724" selection-end="734" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="1258">
               <folding />
             </state>
           </provider>
@@ -81,22 +85,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/webroot/js/clients/add.js" />
-        <option value="$PROJECT_DIR$/app/View/Clients/admin_index.php" />
-        <option value="$PROJECT_DIR$/app/Controller/ClientsController.php" />
+        <option value="$PROJECT_DIR$/app/Controller/PhotosController.php" />
+        <option value="$PROJECT_DIR$/app/View/Photos/admin_index.php" />
         <option value="$PROJECT_DIR$/app/webroot/js/premios/index.js" />
-        <option value="$PROJECT_DIR$/app/Model/Premio.php" />
+        <option value="$PROJECT_DIR$/app/webroot/frontend_css/registro.css" />
+        <option value="$PROJECT_DIR$/app/webroot/frontend_css/styles.css" />
+        <option value="$PROJECT_DIR$/app/View/Home/index.php" />
+        <option value="$PROJECT_DIR$/app/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/app/View/Premios/admin_index.php" />
-        <option value="$PROJECT_DIR$/app/Controller/PremiosController.php" />
-        <option value="$PROJECT_DIR$/app/View/Helper/santanderHelper.php" />
         <option value="$PROJECT_DIR$/app/View/Premios/admin_add.php" />
         <option value="$PROJECT_DIR$/app/webroot/js/premios/add.js" />
-        <option value="$PROJECT_DIR$/app/Model/Photo.php" />
-        <option value="$PROJECT_DIR$/app/View/Photos/admin_add.php" />
-        <option value="$PROJECT_DIR$/app/webroot/js/photos/index.js" />
-        <option value="$PROJECT_DIR$/app/View/Photos/admin_index.php" />
-        <option value="$PROJECT_DIR$/app/View/Photos/admin_ver.php" />
-        <option value="$PROJECT_DIR$/app/Controller/PhotosController.php" />
+        <option value="$PROJECT_DIR$/app/View/Home/home.php" />
+        <option value="$PROJECT_DIR$/app/Controller/AppController.php" />
+        <option value="$PROJECT_DIR$/app/View/Helper/AppHelper.php" />
+        <option value="$PROJECT_DIR$/app/View/Helper/santanderHelper.php" />
+        <option value="$PROJECT_DIR$/app/Controller/PremiosController.php" />
+        <option value="$PROJECT_DIR$/app/webroot/js/home/home.js" />
       </list>
     </option>
   </component>
@@ -104,6 +108,28 @@
   <component name="ProjectFrameBounds">
     <option name="width" value="1366" />
     <option name="height" value="728" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>PHP</id>
+          </State>
+          <State>
+            <id>Type compatibilityPHP</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PhpParamsInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -159,6 +185,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="facebook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test.santander" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test.santander" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test.santander" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test.santander" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -178,6 +236,80 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test.santander" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test.santander" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test.santander" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test.santander" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="premios" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test.santander" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test.santander" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -261,7 +393,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Layouts" />
+              <option name="myItemId" value="Home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -284,6 +416,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Helper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test.santander" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test.santander" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test.santander" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test.santander" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -330,15 +502,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test.unilever" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\test.santander\app\webroot\plugins" />
-      <recent name="C:\xampp\htdocs\test.santander\app\webroot\js" />
-      <recent name="C:\xampp\htdocs\test.santander\app\View" />
-      <recent name="C:\xampp\htdocs\test.santander\app\Model" />
-      <recent name="C:\xampp\htdocs\test.santander\app\Controller" />
+      <recent name="C:\xampp\htdocs\test.santander\app\webroot\premios" />
+      <recent name="C:\xampp\htdocs\test.santander\lib" />
+      <recent name="C:\xampp\htdocs\test.santander\app\webroot\frontend_js" />
+      <recent name="C:\xampp\htdocs\test.santander\app\webroot\frontend_css" />
+      <recent name="C:\xampp\htdocs\test.santander\app\webroot\frontend_fonts" />
     </key>
   </component>
   <component name="RunManager">
@@ -375,7 +547,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2525926" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16740741" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -402,86 +574,50 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/webroot/premios/ipodnano.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/premios/ipodtouch_blue.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/premios/ipodtouch.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/premios/psp.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/webroot/js/premios/add.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="34" selection-start="323" selection-end="323" vertical-scroll-proportion="0.26984128" vertical-offset="0" max-vertical-offset="578">
+        <state line="27" column="0" selection-start="848" selection-end="848" vertical-scroll-proportion="0.46031746" vertical-offset="198" max-vertical-offset="799">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/js/photos/add.js">
+    <entry file="file://$PROJECT_DIR$/app/Controller/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+        <state line="15" column="25" selection-start="249" selection-end="249" vertical-scroll-proportion="0.31423292" vertical-offset="0" max-vertical-offset="541">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Client.php">
+    <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="567">
+        <state line="80" column="22" selection-start="3090" selection-end="3090" vertical-scroll-proportion="-14.384615" vertical-offset="986" max-vertical-offset="2091">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Photo.php">
+    <entry file="file://$PROJECT_DIR$/app/View/Premios/admin_index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="21" selection-start="380" selection-end="380" vertical-scroll-proportion="0.3770795" vertical-offset="0" max-vertical-offset="541">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Layouts/backend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="78" selection-start="177" selection-end="251" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="5032">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/images/breadcrumb-arrow.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/images/bg/blueprint.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/images/button-gradient.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/images/loading.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/images/marcas.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/images/message-error.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/images/pp.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/js/photos/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="36" selection-start="774" selection-end="774" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Photos/admin_index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="28" selection-start="3349" selection-end="3349" vertical-scroll-proportion="-19.653847" vertical-offset="798" max-vertical-offset="1530">
+        <state line="40" column="52" selection-start="1515" selection-end="1515" vertical-scroll-proportion="-8.5" vertical-offset="459" max-vertical-offset="1105">
           <folding>
             <element signature="n#style#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
@@ -489,16 +625,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Photos/admin_ver.php">
+    <entry file="file://$PROJECT_DIR$/app/tmp/logs/error.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="32" selection-start="896" selection-end="896" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="629">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.5784499" vertical-offset="306" max-vertical-offset="112625">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tmp/logs/debug.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="567">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/PhotosController.php">
+    <entry file="file://$PROJECT_DIR$/app/View/Premios/admin_add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="5" selection-start="1637" selection-end="1637" vertical-scroll-proportion="0.780037" vertical-offset="326" max-vertical-offset="867">
+        <state line="26" column="66" selection-start="1133" selection-end="1166" vertical-scroll-proportion="-14.769231" vertical-offset="58" max-vertical-offset="867">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Helper/AppHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="801" selection-end="829" vertical-scroll-proportion="0.48243994" vertical-offset="113" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Helper/santanderHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="30" selection-start="724" selection-end="734" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="1258">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/PremiosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="13" selection-start="2418" selection-end="2418" vertical-scroll-proportion="-9.692307" vertical-offset="887" max-vertical-offset="1445">
+          <folding>
+            <element signature="e#6#102#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Home/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="24" selection-start="1804" selection-end="1813" vertical-scroll-proportion="-5.923077" vertical-offset="560" max-vertical-offset="1360">
+          <folding>
+            <marker date="1386105190272" expanded="true" signature="2542:2558" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/js/home/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="28" selection-start="629" selection-end="629" vertical-scroll-proportion="0.4303351" vertical-offset="164" max-vertical-offset="731">
           <folding />
         </state>
       </provider>

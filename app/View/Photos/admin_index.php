@@ -62,11 +62,13 @@
                                     break;
                             }
                         ?>
-                    <td style="background-color: <?=$color?>">
+                    <td >
+                        <div style="background-color: <?=$color?>; padding: 5px;">
                         <span  >
                             <img src="/images/icons/color/<?=$img?>.png" alt="">
                             <?=$txt?>
                         </span>
+                        </div>
                     </td>
                     <td style="text-align: center;">
                         <?php

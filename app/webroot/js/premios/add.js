@@ -25,5 +25,18 @@
                 }
             }
         });
+
+        mostrarImg();
+
+        $('#PremioImagen').change(mostrarImg);
+
+        function mostrarImg(){
+            if($("#PremioImagen option:selected").val()!=''){
+                $('#img').attr('src','/premios/'+ $("#PremioImagen option:selected").val());
+                $('#img').css('display','block');
+            }else{
+                $('#img').css('display','none');
+            }
+        }
     });
 })(jQuery);

@@ -1,0 +1,167 @@
+blanco = #ffffff
+gris = #343434
+gris_l = #898989
+rojo = #ff0000
+
+@font-face
+	font-family 'signika'
+	 src url('../fonts/signika-regular-webfont.eot')
+	 src url('../fonts/signika-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	 	 url('../fonts/signika-regular-webfont.woff') format('woff'),
+	 	 url('../fonts/signika-regular-webfont.ttf')  format('truetype'),
+	     url('../fonts/signika-regular-webfont.svg#signika') format('svg')
+	
+@font-face
+	font-family 'signika_l'
+	 src url('../fonts/signika-light-webfont.eot')
+	 src url('../fonts/signika-light-webfont.eot?#iefix') format('embedded-opentype'),
+	 	 url('../fonts/signika-light-webfont.woff') format('woff'),
+	 	 url('../fonts/signika-light-webfont.ttf')  format('truetype'),
+	     url('../fonts/signika-light-webfont.svg#signika_l') format('svg')
+body
+	background rgba(0,0,0,0.7)
+	margin 0
+	font-family signika
+	font-size 14px
+	input[type=text]
+		background blanco
+		border 1px solid #bababa
+		color letra_form
+		font-family Helvetica
+		font-style italic
+		height 31px
+		padding 0 0 0 15px
+		width 322px
+	input[type=submit]
+		background rojo
+		border none
+		color blanco
+		display block
+		font-family Helvetica
+		font-size 23px
+		height 43px
+		margin 0 auto
+		width 155px
+		-webkit-border-radius 8px
+		-moz-border-radius 8px
+		border-radius 8px
+	h2
+		color rojo
+		font-family signika_l
+		font-size 38px
+		margin 0 0 .6em
+		text-align center	
+section
+	background url('../images/bg_registro.png') left top no-repeat
+	height 505px
+	padding 16px
+	position relative
+	width 504px
+	.registro
+		padding 28px
+		position relative
+		z-index 200
+		p
+			color gris
+			font-size 19px
+			margin 0
+		ul
+			margin 30px 0 0
+			padding 0
+			li
+				list-style none
+				margin 0 0 18px
+				span
+				p
+					color rojo
+					font-family Helvetica 
+					font-style italic
+					font-size 12px
+	.subir_foto
+		padding 10px 28px
+		position relative
+		z-index 200
+		form
+			ul
+				display block
+				margin 30px auto 10px
+				padding 0
+				width 300px
+				li
+					display inline-block
+					margin 0 20px 18px
+					vertical-align top
+					&:first-child
+						border-right 1px dotted gris
+						padding 0 20px 0 0
+						margin-right 0
+					a
+						background url('../images/subir_foto.png') no-repeat
+						color gris_l
+						padding 90px 0 0 
+						text-decoration none
+						text-align center
+						&:hover
+							color gris
+					.webcam
+						background-position left top
+						display block
+						height 22px
+						width 102px
+						&:hover
+							background-position left -178px
+					.buscar_foto
+						background-position -124px top
+						display block
+						height 22px
+						width 102px
+						&:hover
+							background-position -124px -179px
+			figure
+				background url('../images/bg_foto.png') no-repeat
+				height 204px
+				margin 0 auto
+				padding 6px
+				position relative
+				width 203px
+				img
+					width 100%
+				input[type=submit]
+					position absolute
+					bottom -15px
+					left 50%
+					margin 0 0 0 -77px
+	.mensaje_subida
+		padding 145px 28px
+		position relative
+		z-index 200
+		h2
+			margin 0
+		p
+			font-size 27px
+			margin 0
+			text-align center
+		form
+			ul
+				display block
+				margin 10px 0
+				padding 0
+				text-align center
+				li
+					display inline-block
+					input[type=submit]
+						font-family signika
+						font-size 27px
+						height 71px
+						width 306px
+	.regalo
+		bottom -13px
+		position absolute
+		right -82px
+		z-index 1
+		
+
+
+
+
+

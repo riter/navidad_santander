@@ -5,9 +5,11 @@
  * Date: 24-10-13
  * Time: 05:26 PM
  */
-
+App::uses('Helper', 'View');
 class PremiosController extends AppController
 {
+    //public $helpers  = array('santander');
+
     public function admin_index()
     {
         $this->set('title_page', 'Admin - Premios');
@@ -60,5 +62,24 @@ class PremiosController extends AppController
             $this->Session->setFlash('Error: No se puede eliminar el Premio con id: ' . $id . ' porque tiene referencias', 'error_message');
         }
         $this->redirect(array('controller' => 'premios', 'action' => 'index'));
+    }
+
+    public function getListaPremios(){
+        App::import('Helper', 'santander');
+        $helper=new santanderHelper(new View());
+
+        $res=array();
+        $premios = $this->Premio->find('all');
+        $c=0;
+        foreach($premios as $premio){
+            $res[$c]['descripcion']=$premio['Premio']['descripcion'];
+            $res[$c]['posicion']=$premio['Premio']['posicion'];
+            $res[$c]['imagen']=$premio['Premio']['imagen'];
+            $res[$c]['html']=$helper->getTagHtml($premio['Premio']['imagen']);
+            $c++;
+        }
+
+        echo json_encode($res);
+        $this->autoRender=false;
     }
 } 

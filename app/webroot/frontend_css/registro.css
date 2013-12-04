@@ -1,0 +1,179 @@
+@font-face {
+  font-family: 'signika';
+  src: url("../frontend_fonts/signika-regular-webfont.eot");
+  src: url("../frontend_fonts/signika-regular-webfont.eot?#iefix") format('embedded-opentype'), url("../frontend_fonts/signika-regular-webfont.woff") format('woff'), url("../frontend_fonts/signika-regular-webfont.ttf") format('truetype'), url("../frontend_fonts/signika-regular-webfont.svg#signika") format('svg');
+}
+@font-face {
+  font-family: 'signika_l';
+  src: url("../frontend_fonts/signika-light-webfont.eot");
+  src: url("../frontend_fonts/signika-light-webfont.eot?#iefix") format('embedded-opentype'), url("../frontend_fonts/signika-light-webfont.woff") format('woff'), url("../frontend_fonts/signika-light-webfont.ttf") format('truetype'), url("../frontend_fonts/signika-light-webfont.svg#signika_l") format('svg');
+}
+body {
+  background: rgba(0,0,0,0.7);
+  margin: 0;
+  font-family: signika;
+  font-size: 14px;
+}
+body input[type=text] {
+  background: #fff;
+  border: 1px solid #bababa;
+  color: letra_form;
+  font-family: Helvetica;
+  font-style: italic;
+  height: 31px;
+  padding: 0 0 0 15px;
+  width: 322px;
+}
+body input[type=submit] {
+  background: #f00;
+  border: none;
+  color: #fff;
+  display: block;
+  font-family: Helvetica;
+  font-size: 23px;
+  height: 43px;
+  margin: 0 auto;
+  width: 155px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+body h2 {
+  color: #f00;
+  font-family: signika_l;
+  font-size: 38px;
+  margin: 0 0 0.6em;
+  text-align: center;
+}
+section {
+  background: url("../frontend_images/bg_registro.png") left top no-repeat;
+  height: 505px;
+  padding: 16px;
+  position: relative;
+  width: 504px;
+}
+section .registro {
+  padding: 28px;
+  position: relative;
+  z-index: 200;
+}
+section .registro p {
+  color: #343434;
+  font-size: 19px;
+  margin: 0;
+}
+section .registro ul {
+  margin: 30px 0 0;
+  padding: 0;
+}
+section .registro ul li {
+  list-style: none;
+  margin: 0 0 18px;
+}
+section .registro ul li span,
+section .registro ul li p {
+  color: #f00;
+  font-family: Helvetica;
+  font-style: italic;
+  font-size: 12px;
+}
+section .subir_foto {
+  padding: 10px 28px;
+  position: relative;
+  z-index: 200;
+}
+section .subir_foto form ul {
+  display: block;
+  margin: 30px auto 10px;
+  padding: 0;
+  width: 300px;
+}
+section .subir_foto form ul li {
+  display: inline-block;
+  margin: 0 20px 18px;
+  vertical-align: top;
+}
+section .subir_foto form ul li:first-child {
+  border-right: 1px dotted #343434;
+  padding: 0 20px 0 0;
+  margin-right: 0;
+}
+section .subir_foto form ul li a {
+  background: url("../frontend_images/subir_foto.png") no-repeat;
+  color: #898989;
+  padding: 90px 0 0;
+  text-decoration: none;
+  text-align: center;
+}
+section .subir_foto form ul li a:hover {
+  color: #343434;
+}
+section .subir_foto form ul li .webcam {
+  background-position: left top;
+  display: block;
+  height: 22px;
+  width: 102px;
+}
+section .subir_foto form ul li .webcam:hover {
+  background-position: left -178px;
+}
+section .subir_foto form ul li .buscar_foto {
+  background-position: -124px top;
+  display: block;
+  height: 22px;
+  width: 102px;
+}
+section .subir_foto form ul li .buscar_foto:hover {
+  background-position: -124px -179px;
+}
+section .subir_foto form figure {
+  background: url("../frontend_images/bg_foto.png") no-repeat;
+  height: 204px;
+  margin: 0 auto;
+  padding: 6px;
+  position: relative;
+  width: 203px;
+}
+section .subir_foto form figure img {
+  width: 100%;
+}
+section .subir_foto form figure input[type=submit] {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  margin: 0 0 0 -77px;
+}
+section .mensaje_subida {
+  padding: 145px 28px;
+  position: relative;
+  z-index: 200;
+}
+section .mensaje_subida h2 {
+  margin: 0;
+}
+section .mensaje_subida p {
+  font-size: 27px;
+  margin: 0;
+  text-align: center;
+}
+section .mensaje_subida form ul {
+  display: block;
+  margin: 10px 0;
+  padding: 0;
+  text-align: center;
+}
+section .mensaje_subida form ul li {
+  display: inline-block;
+}
+section .mensaje_subida form ul li input[type=submit] {
+  font-family: signika;
+  font-size: 27px;
+  height: 71px;
+  width: 306px;
+}
+section .regalo {
+  bottom: -13px;
+  position: absolute;
+  right: -82px;
+  z-index: 1;
+}

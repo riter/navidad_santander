@@ -37,10 +37,10 @@
                     <td>
                         <?= $premio['Premio']['descripcion']; ?>
                     </td>
-                    <td>
-                        <?= $this->Html->image('/logo_premios/'.$premio['Premio']['imagen'], array('alt' => 'Logo'));?>
+                    <td style="text-align: center">
+                        <?= $this->Html->image('/premios/'.$premio['Premio']['imagen'], array('alt' => 'Logo','style'=>'width:50px;'));?>
                     </td>
-                    <td>
+                    <td style="text-align: center">
                         <?= $premio['Premio']['posicion'];?>
                     </td>
                     <td style="text-align: center;">

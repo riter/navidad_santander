@@ -22,6 +22,9 @@
  */
 App::uses('Controller', 'Controller');
 
+require_once("facebook/facebook.php");
+
+session_start();
 /**
  * Application Controller
  *
@@ -50,6 +53,38 @@ class AppController extends Controller {
         } else {
             $this->Auth->allow();
         }
+        //control para ingresar solo si esta en TabFacebook y con like
+        /*try{
+            $facebook=new Facebook($this->getConfigFacebook());
+            $signed_request = $facebook->getSignedRequest();
+            $user=$facebook->getUser();
+
+            $canvas_page = "http://www.facebook.com/unileverweb/app_559917344092598"; // direccion de a Tab
+            $auth_url = "https://www.facebook.com/dialog/oauth?client_id=".$facebook->getAppId()
+                ."&scope=publish_stream&redirect_uri=" . urlencode($canvas_page);
+
+                if( $user){
+                    if(isset($this->request->data['signed_request'])
+                        && isset($signed_request["page"]["id"])
+                        && $signed_request["page"]["liked"]){
+
+                            //Esta en la TabFacebook
+                            $user_permisos = $facebook->api('/me/permissions');
+                            $permisos=$user_permisos['data'];
+
+                            if(isset($permisos[0]['publish_stream'])){
+                                $this->redirect(array('controller'=>'Home','action'=>'home'));
+                            }else{
+                                echo("<script> top.location.href='" .$auth_url. "'</script>");
+                            }
+                    }
+                }else{
+                    // esta en la web y redirect a TabFacebook
+                    echo("<script> top.location.href='" .$auth_url. "'</script>");
+                }
+        }catch (Exception $e){
+          //echo("<script> top.location.href='" .$auth_url. "'</script>");
+        }*/
     }
 
     public function isAuthorized($user) {
@@ -59,5 +94,24 @@ class AppController extends Controller {
         }
         // Default deny
         return false;
+    }
+
+    //***********  Mi Metodos de Ayuda
+    public  function getConfigFacebook() {
+        if(strrpos(Router::url('/',true), "juancarlos") > 0) {
+            $config = array('appId' => '592956160742908','secret'=>'c0a091f4d14cf78eb47f25bbb5a85376',
+                'fileUpload' => false, 'cookie' => true);
+        } else {
+            if(strrpos(Router::url('/',true), "test") > 0) {
+                $config = array('appId' => '559917344092598','secret'=>'6d7ec7106bca1dcc0765bd9c226b5ad3',
+                    'fileUpload' => false, 'cookie' => true);
+            }else{
+                $config = array('appId' => '592956160742908','secret'=>'c0a091f4d14cf78eb47f25bbb5a85376',
+                    'fileUpload' => false, 'cookie' => true);
+            }
+        }
+        /*$config = array('appId' => '357963037671702','secret'=>'1a024c8d5b2600c04064fdab71d50d17',
+            'fileUpload' => false, 'cookie' => true);*/
+        return $config;
     }
 }
