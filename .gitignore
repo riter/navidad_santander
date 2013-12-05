@@ -22,3 +22,4 @@ Thumbs.db
 
 # ARCHIVOS IDE
 .idea/*
+.idea/workspace.xml
