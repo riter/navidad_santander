@@ -16,19 +16,19 @@
     <div class="da-panel-content">
         <?= $this->Form->create('Client', array('id' => 'form_cliente','class' => 'da-form', 'url' => array('controller' => 'clients', 'action' => $action))); ?>
         <div class="da-form-row">
-            <label>Nombre <span class="required">*</span></label>
+            <label>Nombre <span class="required"><span>*</span></label>
             <div class="da-form-item">
                 <?= $this->Form->input('nombre', array('label' => false, 'div' => false)); ?>
             </div>
         </div>
         <div class="da-form-row">
-            <label>Email <span class="required">*</span></label>
+            <label>Email <span class="required"><span>*</span></label>
             <div class="da-form-item">
                 <?= $this->Form->input('email', array('type'=>'text','label' => false, 'div' => false)); ?>
             </div>
         </div>
         <div class="da-form-row">
-            <label>Telefono <span class="required">*</span></label>
+            <label>Telefono <span class="required"></label>
             <div class="da-form-item">
                 <?= $this->Form->input('telefono', array('label' => false, 'div' => false)); ?>
             </div>

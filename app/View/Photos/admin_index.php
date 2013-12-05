@@ -75,7 +75,7 @@
                         $ver = $this->Html->image('/images/icons/color/magnifier.png', array('alt' => 'Moderar'));
                         $eliminar = $this->Html->image('/images/icons/color/cross.png', array('alt' => 'Eliminar'));
                         ?>
-                        <?= $this->Html->link($ver, array('controller' => 'photos', 'action' => 'ver',$photo['Photo']['id'] ), array('id'=>'moderar','escape' => false));?>
+                        <?= $this->Html->link($ver, array('controller' => 'photos', 'action' => 'ver',$photo['Photo']['id'] ), array('class'=>'moderar','escape' => false));?>
                         |
                         <?= $this->Form->postLink($eliminar, array('controller' => 'photos', 'action' => 'delete', $photo['Photo']['id']),array('confirm' => "Estas seguro de eliminar la foto con id = {$photo['Photo']['id']}?", 'escape' => false))?>
                     </td>

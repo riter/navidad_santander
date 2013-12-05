@@ -36,6 +36,7 @@ session_start();
  */
 class AppController extends Controller {
     public $ext = '.php';
+    public $like=false;
 
     public $components = array(
         'Session',
@@ -53,37 +54,39 @@ class AppController extends Controller {
         } else {
             $this->Auth->allow();
         }
+        $this->Session->write('idFacebook','100006874081297');
+        $this->Session->write('likeFacebook',true);
         //control para ingresar solo si esta en TabFacebook y con like
-        /*try{
-            $facebook=new Facebook($this->getConfigFacebook());
-            $signed_request = $facebook->getSignedRequest();
-            $user=$facebook->getUser();
 
+        /*$facebook=new Facebook($this->getConfigFacebook());
+        $signed_request = $facebook->getSignedRequest();
+        $user=$facebook->getUser();
+
+        if(isset($signed_request["page"]["id"])){
             $canvas_page = "http://www.facebook.com/unileverweb/app_559917344092598"; // direccion de a Tab
-            $auth_url = "https://www.facebook.com/dialog/oauth?client_id=".$facebook->getAppId()
-                ."&scope=publish_stream&redirect_uri=" . urlencode($canvas_page);
+        }else{
+            $canvas_page = "http://apps.facebook.com/testnavidad"; // direccion de a App
+        }
+
+        $auth_url = "https://www.facebook.com/dialog/oauth?client_id=".$facebook->getAppId()
+            ."&scope=email,user_likes,publish_stream&redirect_uri=" . urlencode($canvas_page);
+
+        try{
+            if(isset($this->request->data['signed_request'])){
 
                 if( $user){
-                    if(isset($this->request->data['signed_request'])
-                        && isset($signed_request["page"]["id"])
-                        && $signed_request["page"]["liked"]){
-
-                            //Esta en la TabFacebook
-                            $user_permisos = $facebook->api('/me/permissions');
-                            $permisos=$user_permisos['data'];
-
-                            if(isset($permisos[0]['publish_stream'])){
-                                $this->redirect(array('controller'=>'Home','action'=>'home'));
-                            }else{
-                                echo("<script> top.location.href='" .$auth_url. "'</script>");
-                            }
-                    }
+                    $this->Session->write('idFacebook',$user);
+                    $this->like=$this->haveLike($facebook->getAppId());
+                    $this->Session->write('likeFacebook',$this->like);
+                    //$this->redirect(array('controller'=>'home','action'=>'home'));
                 }else{
                     // esta en la web y redirect a TabFacebook
                     echo("<script> top.location.href='" .$auth_url. "'</script>");
                 }
+            }
+
         }catch (Exception $e){
-          //echo("<script> top.location.href='" .$auth_url. "'</script>");
+          echo("<script> top.location.href='" .$auth_url. "'</script>");
         }*/
     }
 
@@ -113,5 +116,21 @@ class AppController extends Controller {
         /*$config = array('appId' => '357963037671702','secret'=>'1a024c8d5b2600c04064fdab71d50d17',
             'fileUpload' => false, 'cookie' => true);*/
         return $config;
+    }
+    public function getIdLike(){
+        return '519504951472584';
+    }
+    public function haveLike($appId){
+        $archivo='https://graph.facebook.com/me/likes?access_token='.$_SESSION['fb_'.$appId.'_access_token'];
+        $json=file_get_contents($archivo);
+
+        $fb_response = json_decode($json, true);
+
+        foreach ($fb_response['data'] as $like => $valor){
+
+            if(array_search($this->getIdLike(), $valor))
+                return true;
+        }
+        return false;
     }
 }

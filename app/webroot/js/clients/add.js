@@ -9,9 +9,6 @@
                 "data[Client][email]": {
                     required: true,
                     email:true
-                },
-                "data[Client][telefono]": {
-                    required: true
                 }
             },
             messages: {
@@ -21,9 +18,6 @@
                 "data[Client][email]": {
                     required: 'Email requerido',
                     email: 'Email incorrecto'
-                },
-                "data[Client][telefono]": {
-                    required: 'Teléfono requerido'
                 }
             }
         });
