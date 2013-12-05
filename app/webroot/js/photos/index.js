@@ -16,7 +16,7 @@
             "bFilter": true
         });
 
-        $('#moderar').on('click',function(){
+        $('.moderar').on('click',function(){
 
             $.fancybox.open({
                 href : $(this).attr('href'),

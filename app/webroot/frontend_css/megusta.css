@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'signika';
+  src: url("../frontend_fonts/signika-regular-webfont.eot");
+  src: url("../frontend_fonts/signika-regular-webfont.eot?#iefix") format('embedded-opentype'), url("../frontend_fonts/signika-regular-webfont.woff") format('woff'), url("../frontend_fonts/signika-regular-webfont.ttf") format('truetype'), url("../frontend_fonts/signika-regular-webfont.svg#signika") format('svg');
+}
+@font-face {
+  font-family: 'signika_l';
+  src: url("../frontend_fonts/signika-light-webfont.eot");
+  src: url("../frontend_fonts/signika-light-webfont.eot?#iefix") format('embedded-opentype'), url("../frontend_fonts/signika-light-webfont.woff") format('woff'), url("../frontend_fonts/signika-light-webfont.ttf") format('truetype'), url("../frontend_fonts/signika-light-webfont.svg#signika_l") format('svg');
+}
+body {
+  background: rgba(0,0,0,0.7);
+  margin: 0;
+  font-family: signika;
+  font-size: 14px;
+}
+body h2 {
+  color: #f00;
+  font-family: signika_l;
+  font-size: 23px;
+  margin: 0 0 0.6em;
+  text-align: center;
+}
+section {
+  background: #fff url("../frontend_images/bg_megusta.png") no-repeat center bottom;
+  height: 280px;
+  padding: 15px;
+  position: relative;
+  width: 518px;
+}
+section .megusta {
+  text-align: center;
+}
+section .megusta p {
+  color: #343434;
+  display: block;
+  font-size: 20px;
+  margin: 0.5em 0;
+}
+section .megusta a {
+  background: #f00;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  font-family: Helvetica;
+  font-size: 30px;
+  padding: 0.3em 0.8em;
+  text-decoration: none;
+}

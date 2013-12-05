@@ -8,16 +8,16 @@
     <div class="da-panel" >
         <div class="da-panel-header">
             <span class="da-panel-title">
-                <img src="images/icons/black/16/settings.png" alt="">
+                <img src="/images/icons/black/16/settings.png" alt="">
                 Moderar Fotografia
             </span>
         </div>
         <div class="da-panel-content with-padding">
             <div>
-                <img src="<?= $img;?>" alt=""/>
+                <img src="<?= $img;?>" alt="" style="max-height: 600px; max-width: 800px; "/>
             </div>
             <p>
-                <a href="photos/moderar/<?=$id?>/2" class="da-button red">
+                <a href="photos/moderar/<?=$id?>/2" class="da-button red" >
                     <img src="/images/icons/color/cancel.png" alt="">
                     Rechazar
                 </a>
