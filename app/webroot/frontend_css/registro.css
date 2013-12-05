@@ -131,11 +131,11 @@ section .subir_foto form figure {
   height: 204px;
   margin: 0 auto;
   padding: 6px;
-  position: relative;
+  /*position: relative;*/
   width: 203px;
 }
 section .subir_foto form figure img {
-  width: 100%;
+  /*width: 100%;*/
 }
 section .subir_foto form figure input[type=submit] {
   position: absolute;

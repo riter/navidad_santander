@@ -5,9 +5,11 @@
     <title>Subir foto</title>
     <link rel="stylesheet" href="/frontend_css/normalize.css">
     <link rel="stylesheet" href="/frontend_css/registro.css">
+    <link rel="stylesheet" href="/frontend_css/jWindowCrop.css">
 
     <!-- Add jQuery library -->
     <script type="text/javascript" src="/frontend_js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="/js/registers/jquery.jWindowCrop.js"></script>
     <script type="text/javascript" src="/js/registers/upload.js"></script>
 </head>
 <body>
@@ -22,10 +24,14 @@
                     <input type="file" id="file" name="file"  accept='image/*'>
                 </div>
             </ul>
-            <figure style="overflow: hidden">
+            <figure style="">
                 <img src="/frontend_images/avatar.png" alt="" id="preview">
                 <input type="submit" value="Subir foto" id="subir">
             </figure>
+            <input type="hidden" value="" id="crop_x" name="cropX">
+            <input type="hidden" value="" id="crop_y" name="cropY">
+            <input type="hidden" value="" id="crop_w" name="cropW">
+            <input type="hidden" value="" id="crop_h" name="cropH">
         </form>
     </div>
 </section>
