@@ -1,7 +1,10 @@
 $(document).ready(function() {
+    var opcion = '';
 
+    /* Proceso para subir Imagenes*/
     $('.buscar_foto').click(function(){
        $('#file').click();
+       opcion='file';
     });
 
     function archivo(evt) {
@@ -30,6 +33,9 @@ $(document).ready(function() {
     }
 
     $('#file').change(function(evt){
+        $('.jwc_frame').css('display','block');
+        $('#preview_cam').css('display','none');
+
         var val = $(this).val();
 
         switch(val.substring(val.lastIndexOf('.') + 1).toLowerCase()){
@@ -43,51 +49,67 @@ $(document).ready(function() {
                 break;
         }
     });
+
+    /* Proceso de subir foto capturada con WebCam*/
+    var sayCheese = new SayCheese('#preview_cam', { snapshots: true, width:205, height:205});
+
+    $('.webcam').click(function(){
+        $('.jwc_frame').css('display','none');
+        //$('#file').val('');
+        $('#preview_cam').css('display','block');
+        /*ver si el contendor de la webcam tiene un tag video entonces dar start*/
+        if($('#preview_cam').html() == ''){
+            sayCheese.start();
+        }
+        opcion='webcam';
+    });
+    sayCheese.on('snapshot', function(snapshot) {
+        $('.jwc_frame').css('display','block');
+        $('#preview_cam').css('display','none');
+
+        $('#preview').addClass('thumb');
+        $('#preview').attr('src',snapshot.toDataURL('image/png'));
+        //$('#preview').attr('title',escape(theFile.name));
+    });
+    /* Validar si la imagen esta vacia*/
     $('#subir').click(function(){
+
+
+        if(opcion=='webcam'){
+            /* se captura la foto y se guarda por ajax, se envia la img(src) por  POST*/
+            sayCheese.takeSnapshot(sayCheese.options.width,sayCheese.options.height);
+            var src=$('#preview').attr('src');
+            //console.log(src);
+            data={
+                src: src
+            };
+            $.ajax({
+                url: "/registers/ajax_saveImg",
+                async:false,
+                type: "post",
+                data:data,
+                success: function(msg) {
+                    window.location.href = msg;
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert('Error');
+                }
+            });
+            //return true;
+        }else{
+            //se guarda por file y los datos van por POST
+            if(opcion='file'){
+                return  true;
+            }
+        }
+        return false;
+        /*
         if($('#file').val()==''){
             return false;
-        }
+        }*/
     });
-    /*$.ajax({
-     url: "/registers/validar",
-     async:false,
-     type:'post',
-     data: $("#form_upload").serialize(),
-     //dataType: "json",
-     success: function(msg) {
-     if(!msg=='true'){
-     alert(msg);
-     $(this).val('');
-     }
-     alert(msg);
-     },
-     error: function (xhr, ajaxOptions, thrownError) {
-     alert('Error');
-     }
-     });*/
-    //document.getElementById('file').click(function(){return false;})
 
-    /*$.ajax({
-        url: "/premios/getListaPremios",
-        async:false,
-        dataType: "json",
-        data: '',
-        success: function(msg) {
-            var datos=eval(msg);
-
-            for(i=0; i< datos.length; i++){
-               $('#'+datos[i].posicion+' .img').addClass(datos[i].html.img);
-               $('#'+datos[i].posicion+' .box_color').addClass(datos[i].html.box);
-               $('#'+datos[i].posicion+' .fecha').addClass(datos[i].html.txt);
-               $('#'+datos[i].posicion+' .fecha').html(datos[i].descripcion);
-            }
-        },
-        error: function (xhr, ajaxOptions, thrownError) {
-            alert('Error');
-        }
-    });*/
-
-    // minimum
+    // minimum Crop de Imagen
     $('#preview').jWindowCrop({
         targetWidth:205,
         targetHeight:205,

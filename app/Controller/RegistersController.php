@@ -22,9 +22,14 @@ class RegistersController extends AppController{
 
     public function upload(){
         $this->layout='';
-        $this->loadModel('Photo');
+
 
         if ($this->request->is('post')) {
+
+            $cropX = $this->request->data['cropX'];
+            $cropY = $this->request->data['cropY'];
+            $cropW = $this->request->data['cropW'];
+            $cropH = $this->request->data['cropH'];
 
             $size = (int) $_SERVER['CONTENT_LENGTH'];
             if( isset($_FILES['file']) && ($size < (2 * 1024 * 1024))){
@@ -33,48 +38,93 @@ class RegistersController extends AppController{
                     $output = "Return Code: " . $_FILES["file"]["error"];
                     echo ("<script>alert('$output')</script>");
                 }else{
-                    $extension = explode('/',$_FILES["file"]["type"])[1];
+                    $extension = explode('/',$_FILES["file"]["type"]);
+                    $extension = $extension[1];
                     $filename=uniqid("user2_");
                     if(move_uploaded_file($_FILES["file"]["tmp_name"],
                         'fotos/'.$filename.'.'.$extension)){
 
-                        $this->_resize('fotos/'.$filename.'.'.$extension,205,205,$extension);
-                        $photo=array('Photo'=>array(
-                            'nombre'=>'/fotos/'.$filename.'.'.$extension,
-                            'estado'=>'0',
-                            'fecha'=>date("Y-m-d H:i:s"),
-                            'cliente_id'=>'2'
-                        ));
-                        if($this->Photo->save($photo)){
+                        $this->_resize('fotos/'.$filename.'.'.$extension,$cropX,$cropY,$cropW,$cropH,$extension);
+
+                        if($this->saveFoto('/fotos/'.$filename.'.'.$extension)){
+                            $this->publicarFacebook();
                             $this->redirect(array('action'=>'sended'));
                         }
                     }
                 }
 
             }else{
-                echo("<script> alert('Error: Tamaño del Acrvhi exede el limite')</script>");
+                echo("<script> alert('Error: Tamaño del Acrvhivo exede el limite')</script>");
             }
         }
     }
-    public function _resize($filename=null,$ancho=null,$alto=null,$ext=null){
+    public function saveFoto($filename){
+        $this->loadModel('Client');
+        $this->loadModel('Photo');
+
+        $cliente=$this->Client->find('first',array('conditions'=>array('uid_facebook'=>$this->Session->read('idFacebook'))));
+        $photo=array('Photo'=>array(
+            'nombre'=>$filename,
+            'estado'=>'0',
+            'fecha'=>date("Y-m-d H:i:s"),
+            'cliente_id'=>$cliente['Client']['id']
+        ));
+        if($this->Photo->save($photo)){
+            return true;
+        }
+        return false;
+    }
+
+    public function _resize($filename=null,$cropX,$cropY,$cropW,$cropH,$ext=null){
 
         $jpeg_quelity=100;
         list($targ_w,$targ_h)=getimagesize($filename);
 
-        if($targ_w<=$ancho){
-            $ancho=$targ_w;
+        if($targ_w<=$cropW){
+            $cropW=$targ_w;
         }
-        if($targ_h<=$alto){
-            $alto=$targ_h;
+        if($targ_h<=$cropH){
+            $cropH=$targ_h;
         }
 
         $img_r=imagecreatefromjpeg($filename);
-        $dist_r= imagecreatetruecolor($ancho,$alto);
+        $dist_r= imagecreatetruecolor($cropW,$cropH);
 
-        imagecopyresampled($dist_r,$img_r,0,0,0,0,$targ_w,$targ_h,$ancho,$alto);
+        imagecopyresampled($dist_r,$img_r,0,0,$cropX,$cropY,$cropW,$cropH,$cropW,$cropH);
 
         header('Contend-type: image/'.$ext);
         imagejpeg($dist_r,$filename,$jpeg_quelity);
+    }
+
+    public function ajax_saveImg(){
+        Header("Content-type: image/png");
+
+        try{
+            $srcCadena=$this->request->data['src'];
+
+            $filename=uniqid("user2_");
+            $filename='fotos/'.$filename.'.png';
+
+            $dataURL = str_replace('data:image/png;base64,', '', $srcCadena);
+            $dataURL = str_replace(' ', ',', $dataURL);
+            $image = base64_decode($dataURL);
+
+            file_put_contents($filename, $image);
+
+            if($this->saveFoto('/fotos/'.$filename.'.png')){
+                $this->publicarFacebook();
+                $res = '/registers/sended';
+            }else{
+                $res = 'Error';
+            }
+
+        }catch (Exception $e){
+            CakeLog::debug(print_r($e->getMessage(),true));
+            $res = 'Error';
+        }
+
+        echo $res;
+        $this->autoRender = false;
     }
 
     public function publicarFacebook(){
@@ -83,9 +133,10 @@ class RegistersController extends AppController{
 
             $ret_obj = $facebook->api('/me/feed', 'POST',array(
                 'link' => Router::url('/',true),
-                'message' => 'Yo lo quiero para Navidad','description' => 'Participa ahora!. Sube tus fotos y desplaza a los demas para colocar tu foto en el cuadro con premio',
+                'message' => 'Yo lo quiero para Navidad','description' => 'Participa ahora!. Sube tus fotos y desplaza a los demas para colocar tu foto en el cuadro con premio.',
                 'picture'=>Router::url('/',true).'/frontend_images/logo.png',
                 'privacy' => array('value' => 'EVERYONE')));
+
         }catch (Exception $e){
             CakeLog::debug(print_r($e->getMessage(),true));
         }
@@ -93,5 +144,27 @@ class RegistersController extends AppController{
 
     public function sended(){
         $this->layout='';
+        if($this->request->is('post')){
+            $this->redirect('https://www.facebook.com/dialog/apprequests?app_id=559917344092598&message=Participa%20ahora!.%20En%20el%20concurso%20Yo%20lo%20quiero%20para%20Navidad&display=popup&redirect_uri=http://test.navidad.com/home/home');
+        }
+    }
+    public function ajax_Upload(){
+        $this->loadModel('Client');
+        $this->loadModel('Photo');
+
+        $res='';
+
+        $cliente = $this->Client->find('first',array('conditions'=>array('uid_facebook'=>$this->Session->read('idFacebook'))));
+        if(!empty($cliente)){
+
+            $photo=$this->Photo->find('all',array('conditions'=>array('fecha'=>date("Y-m-d"),'cliente_id'=>$cliente['Client']['id'])));
+            if(count($photo)<3){
+                $res = 'upload_true';
+            }
+
+        }
+
+        echo $res;
+        $this->autoRender = false;
     }
 } 

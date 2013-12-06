@@ -11,6 +11,10 @@
     <script type="text/javascript" src="/frontend_js/jquery-1.10.1.min.js"></script>
     <script type="text/javascript" src="/js/registers/jquery.jWindowCrop.js"></script>
     <script type="text/javascript" src="/js/registers/upload.js"></script>
+
+    <!-- Add Plugin Cheese WebCam library-->
+    <script type="text/javascript" src="/plugins/say-cheese/say-cheese.js"></script>
+
 </head>
 <body>
 <section>
@@ -24,7 +28,8 @@
                     <input type="file" id="file" name="file"  accept='image/*'>
                 </div>
             </ul>
-            <figure style="">
+            <figure>
+                <div id="preview_cam" style="display: none"></div>
                 <img src="/frontend_images/avatar.png" alt="" id="preview">
                 <input type="submit" value="Subir foto" id="subir">
             </figure>

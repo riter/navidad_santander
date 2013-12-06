@@ -177,3 +177,9 @@ section .regalo {
   right: -82px;
   z-index: 1;
 }
+
+section .error{
+    border-style:solid !important;
+    border-width:1px !important;
+    border-color: #f00 !important;
+}

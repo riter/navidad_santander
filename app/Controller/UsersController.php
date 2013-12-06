@@ -8,11 +8,6 @@
 
 class UsersController extends AppController{
 
-    /*public function beforeFilter() {
-        parent::beforeFilter();
-        $this->Auth->allow('add');
-    }*/
-
     public function admin_index() {
         $this->set('title_page','Unicef Admin - Usuarios');
         $this->layout='backend';

@@ -17,15 +17,18 @@ class HomeController extends AppController{
     }
     public function getPopup(){
         $this->loadModel('Client');
+
         $res='';
         if($this->Session->check('likeFacebook')
             && $this->Session->read('likeFacebook')){
 
             if($this->Session->check('idFacebook')){
                 $cliente = $this->Client->find('first',array('conditions'=>array('uid_facebook'=>$this->Session->read('idFacebook'))));
+
                 if(empty($cliente)){
                     $res= 'registro';
                 }
+
             }
 
         }else{

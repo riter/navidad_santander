@@ -22,7 +22,7 @@
 <header>
     <div class="container">
         <div class="generador fleft">
-            <a class="upload" data-fancybox-type="iframe" href="/registers/upload"><img src="/frontend_images/upload_photo.png" alt="sube tu foto"></a>
+            <a class="upload"><img src="/frontend_images/upload_photo.png" alt="sube tu foto"></a>
         </div>
         <div class="logo fleft">
             <a href="/Home/home"><img src="/frontend_images/logo.png" alt="logo"></a>

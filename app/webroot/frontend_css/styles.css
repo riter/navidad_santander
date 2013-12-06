@@ -29,6 +29,7 @@ header .generador a {
   margin: 0 auto;
   padding: 2px 0 0;
   width: 104px;
+  cursor: pointer;
 }
 header .logo {
   height: 174px;
