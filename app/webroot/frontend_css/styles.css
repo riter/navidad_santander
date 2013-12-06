@@ -18,41 +18,59 @@ header {
   height: 240px;
   margin: 0;
 }
-header .generador {
+header .header {
+  position: relative;
+}
+header .header .generador {
   background: url("../frontend_images/generador.png") left top no-repeat;
   height: 229px;
-  position: relative;
+  left: 0;
+  position: absolute;
+  top: 0;
   width: 194px;
 }
-header .generador a {
+header .header .generador a {
   display: block;
   margin: 0 auto;
   padding: 2px 0 0;
   width: 104px;
-  cursor: pointer;
 }
-header .logo {
+header .header .logo {
   height: 174px;
-  position: relative;
+  left: 195px;
+  position: absolute;
+  top: 0;
   width: 207px;
 }
-header .logo a {
+header .header .logo a {
   left: -22px;
   position: absolute;
   top: 10px;
 }
-header nav {
-  background: rgba(0,0,0,0.7);
+header .header .premios {
+  height: 93px;
+  left: 400px;
+  margin: 0;
+  position: absolute;
+  top: 120px;
+  width: 237px;
+  z-index: 11;
+}
+header .header nav {
+  background: rgba(0,0,0,0.6);
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   margin: 0 20px 0 0;
+  position: absolute;
+  right: 50px;
+  z-index: 10;
 }
-header nav .menu {
+header .header nav .menu {
   height: 141px;
   margin: 5px;
   padding: 0;
 }
-header nav .menu li {
+header .header nav .menu li {
   display: inline-block;
   margin: 0 5px;
   height: 141px;
@@ -60,7 +78,7 @@ header nav .menu li {
   vertical-align: top;
   width: 170px;
 }
-header nav .menu li a {
+header .header nav .menu li a {
   color: #fff;
   font-family: signika_l;
   font-size: 12px;
@@ -70,7 +88,7 @@ header nav .menu li a {
   text-decoration: none;
   width: 170px;
 }
-header nav .menu li a span {
+header .header nav .menu li a span {
   background: #f00;
   border-radius: 50%;
   display: block;

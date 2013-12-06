@@ -20,14 +20,17 @@
 </head>
 <body>
 <header>
-    <div class="container">
-        <div class="generador fleft">
+    <div class="container header">
+        <div class="generador">
             <a class="upload"><img src="/frontend_images/upload_photo.png" alt="sube tu foto"></a>
         </div>
-        <div class="logo fleft">
+        <div class="logo">
             <a href="/Home/home"><img src="/frontend_images/logo.png" alt="logo"></a>
         </div>
-        <nav class="fright">
+        <div class="premios">
+            <img src="/frontend_images/50premios.png" alt="premios">
+        </div>
+        <nav>
             <ul class="menu">
                 <li><a href="#"><span>1</span> Sube tu foto con la mano levantada.</a></li>
                 <li><a href="#"><span>2</span>Mantente al tanto de la posición de tu foto e intenta que al final de cada etapa, esté colocada en uno de los cuadros con premio.</a></li>
