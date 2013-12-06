@@ -19,7 +19,7 @@
         <h2>¿Quién eres?</h2>
         <p>Para participar necesitamos tus datos.</p>
         <p>Solo utilizaremos para conectarte en caso de que resultes ganador.</p>
-        <?= $this->Form->create('Client', array('id' => 'form_cliente', 'url' => array('controller' => 'registers', 'action' => 'index'))); ?>
+        <?= $this->Form->create('Client', array('id' => 'form_cliente', 'url' => array('controller' => 'registers', 'action' => 'index'),'target'=>'_parent')); ?>
             <ul>
                 <!--<li><input type="text" placeholder="Nombres y apellidos"></li>-->
                 <li><?= $this->Form->input('nombre', array('label' => false, 'div' => false,'placeholder'=>'Nombres y apellidos')); ?></li>

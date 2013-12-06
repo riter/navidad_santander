@@ -28,9 +28,7 @@ class HomeController extends AppController{
                 if(empty($cliente)){
                     $res= 'registro';
                 }
-
             }
-
         }else{
             $res= 'like';
         }

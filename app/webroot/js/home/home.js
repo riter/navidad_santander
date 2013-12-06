@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+
     /* Validar si cargo las 3 fotos del dia en el Boton Subiir foto*/
     $(".upload").on('click',upload);
     function upload(){
@@ -67,13 +69,15 @@ $(document).ready(function() {
                         // height		: '100%',
                         autoSize	: true,
                         closeClick	: false,
+                        closeBtn : false,
                         openEffect	: 'none',
                         closeEffect	: 'none',
                         padding: 0,
+                        regalo: true,
                         type:'iframe'
                     });
                     $.fancybox.close = function() {
-                        location.reload();
+                        return false;
                     };
                     break;
                 case 'like':
@@ -86,13 +90,15 @@ $(document).ready(function() {
                         // height		: '100%',
                         autoSize	: true,
                         closeClick	: false,
+                        closeBtn : false,
                         openEffect	: 'none',
                         closeEffect	: 'none',
                         padding: 0,
+                        regalo: false,
                         type:'iframe'
                     });
                     $.fancybox.close = function() {
-                        location.reload();
+                        return false;
                     };
                     break;
             }

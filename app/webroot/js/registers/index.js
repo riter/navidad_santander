@@ -20,11 +20,21 @@ $(document).ready(function() {
                 $('#msg').html('*Existen campos vacios o incorrectos');
             }
         });
-        function cerrar(){
-            parent.$.fancybox.close();
+        if(validar){
+            /*$.ajax({
+                url: "/registers/index",
+                async:false,
+                type:'post',
+                data: '',
+                success: function(msg) {
+                    parent.$.fancybox.close();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert('Error');
+                }
+            });*/
             return true;
         }
-
-        return validar && cerrar();
+        return false;
     });
 });
