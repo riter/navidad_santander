@@ -67,8 +67,8 @@ class PremiosController extends AppController
     }
 
     public function getListaPremios(){
-        App::import('Helper', 'santander');
-        $helper=new santanderHelper(new View());
+        //App::import('Helper', 'santander');
+        //$helper=new santanderHelper(new View());
 
         $res=array();
         $premios = $this->Premio->find('all');
@@ -77,11 +77,25 @@ class PremiosController extends AppController
             $res[$c]['descripcion']=$premio['Premio']['descripcion'];
             $res[$c]['posicion']=$premio['Premio']['posicion'];
             $res[$c]['imagen']=$premio['Premio']['imagen'];
-            $res[$c]['html']=$helper->getTagHtml($premio['Premio']['imagen']);
+            $res[$c]['html']=$this->getTagHtml($premio['Premio']['imagen']);
             $c++;
         }
 
         echo json_encode($res);
         $this->autoRender=false;
+    }
+    public function getTagHtml($id){
+        $tag=array(
+            'ipod.png'=>array('img'=>'ipodnano_azul','box'=>'box_azul','txt'=>'fazul'),
+            'psp.png'=>array('img'=>'psp_amarillo','box'=>'box_amarillo','txt'=>'famarillo'),
+            'play_station.png'=>array('img'=>'playstation_verde','box'=>'box_verde','txt'=>'fverde'),
+            'ipodtouch.png'=>array('img'=>'ipodtouch_verde','box'=>'box_verde','txt'=>'fverde'),
+            'ipadmini.png'=>array('img'=>'ipadmini_azul','box'=>'box_azul','txt'=>'fazul'),
+            'play_station_yellow.png'=>array('img'=>'playstation_amarillo','box'=>'box_amarillo','txt'=>'famarillo'),
+            'ipodnano.png'=>array('img'=>'ipodnano_verde','box'=>'box_verde','txt'=>'fverde'),
+            'ipodtouch_blue.png'=>array('img'=>'ipodtouch_azul','box'=>'box_azul','txt'=>'fazul'),
+            'ipadmini_yellow.png'=>array('img'=>'ipadmini_amarillo','box'=>'box_amarillo','txt'=>'famarillo')
+        );
+        return $tag[$id];
     }
 } 

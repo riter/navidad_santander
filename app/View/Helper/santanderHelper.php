@@ -26,7 +26,7 @@ class santanderHelper extends AppHelper{
         return $icons;
     }
 
-    public function getTagHtml($id){
+    /*public function getTagHtml($id){
         $tag=array(
             'ipod.png'=>array('img'=>'ipodnano_azul','box'=>'box_azul','txt'=>'fazul'),
             'psp.png'=>array('img'=>'psp_amarillo','box'=>'box_amarillo','txt'=>'famarillo'),
@@ -39,36 +39,5 @@ class santanderHelper extends AppHelper{
             'ipadmini_yellow.png'=>array('img'=>'ipadmini_amarillo','box'=>'box_amarillo','txt'=>'famarillo')
         );
         return $tag[$id];
-    }
-    /*
-    public function getIconPremios(){
-        $icons=array(
-            '1'=>'Ipod mini',
-            '2'=>'Ipod touch',
-            '3'=>'Ipod nano',
-            '4'=>'Play Station',
-            '5'=>'PSD',
-            '6'=>'Ipod nano',
-            '7'=>'Ipod touch',
-            '8'=>'Play Station',
-            '9'=>'Ipod mini',
-        );
-        return $icons;
-    }
-
-    public function getImgPremios($id){
-        $icons=array(
-            '1'=>'ipadmini.png',
-            '2'=>'ipodtouch.png',
-            '3'=>'ipod.png',
-            '4'=>'play_station.png',
-            '5'=>'psp.png',
-            '6'=>'ipodnano.png',
-            '7'=>'ipodtouch_blue.png',
-            '8'=>'play_station_yellow.png',
-            '9'=>'ipadmini_yellow.png',
-        );
-        return $icons[$id];
     }*/
-
 } 
