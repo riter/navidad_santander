@@ -22,6 +22,7 @@
 
                FB.ui({method: 'apprequests',
                    to:[],
+                   display:'popup',
                    message: 'Participa ahora!. En el concurso Yo lo quiero para Navidad'
                }, requestCallback);
 

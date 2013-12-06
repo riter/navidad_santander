@@ -20,6 +20,8 @@
 
             $.fancybox.open({
                 href : $(this).attr('href'),
+                width	: 300,
+                height	: 400,
                 fitToView	: false,
                 autoSize	: true,
                 closeClick	: false,

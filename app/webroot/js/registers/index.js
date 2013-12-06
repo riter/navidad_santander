@@ -20,14 +20,11 @@ $(document).ready(function() {
                 $('#msg').html('*Existen campos vacios o incorrectos');
             }
         });
-        //validar;
-        /*if(validar){
+        function cerrar(){
             parent.$.fancybox.close();
             return true;
-        }*/
-        return validar;
+        }
 
-
-        //parent.location.reload();
+        return validar && cerrar();
     });
 });

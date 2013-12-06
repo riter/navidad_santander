@@ -1,11 +1,10 @@
 $(document).ready(function() {
-
+    /* Validar si cargo las 3 fotos del dia en el Boton Subiir foto*/
     $(".upload").on('click',upload);
     function upload(){
         $.ajax({
             url: "/registers/ajax_Upload",
             async:false,
-            //dataType: "json",
             data: '',
             success: function(msg) {
                 if(msg=='upload_true'){
@@ -29,7 +28,7 @@ $(document).ready(function() {
             }
         });
     }
-
+    /* Consulta e inserta la lista de premios en la Home*/
     $.ajax({
         url: "/premios/getListaPremios",
         async:false,
@@ -49,7 +48,7 @@ $(document).ready(function() {
             alert('Error');
         }
     });
-
+    /* Consulta para ver si muestra popup de like o registro */
     $.ajax({
         url: "/Home/getPopup",
         async:false,
@@ -96,32 +95,42 @@ $(document).ready(function() {
                         location.reload();
                     };
                     break;
-                /*case 'upload_true':
-                    $(".upload").on('click',upload);
-                    break;
-                case 'upload_false':
-                    $(".upload").on('click',function(){
-                       return false;
-                    });
-                    break;*/
             }
-            /*if(msg=='registro'){
-                //$(".upload").attr('href','/registers/index');
-
-            }else{
-                if(msg=='like'){
-
-                }else{
-                    if(msg=='upload_true'){
-
-                    }
-
-                }
-            }*/
-
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert('Error');
         }
     });
+
+    /* Hilo que carga las fotos en los cuadros cada 3 segundos*/
+    var interval = 5000;   //number of mili seconds between each call
+    var refresh = function() {
+        $.ajax({
+            url: "/Home/ajax_reload_fotos",
+            async:false,
+            dataType: "json",
+            data: '',
+            cache: false,
+            success: function(msg) {
+                var datos=eval(msg);
+                for(var i=0; i< 55; i++){
+                    if(i < datos.length){
+                        $('#'+i+' img').attr('src',datos[i].src);
+                    }else{
+                        $('#'+i+' img').attr('src','');
+                    }
+
+                }
+                console.log(datos);
+
+                setTimeout(function() {
+                    refresh();
+                }, interval);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert('Error');
+            }
+        });
+    };
+    refresh();
 });

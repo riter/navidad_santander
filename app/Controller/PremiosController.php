@@ -23,6 +23,7 @@ class PremiosController extends AppController
         $this->set('title_page', 'Admin - Adicionar Usuario');
         $this->layout = 'backend';
         if ($this->request->is('post')) {
+            $this->request->data['Premio']['posicion']=($this->request->data['Premio']['posicion'] - 1);
             $datos = $this->request->data;
             if ($this->Premio->save($datos)) {
                 $this->Session->setFlash('Su Premio fue registrada', 'success_message');
@@ -41,6 +42,7 @@ class PremiosController extends AppController
             $this->request->data = $Usuario;
             $this->render('admin_add');
         } else {
+            $this->request->data['Premio']['posicion']=($this->request->data['Premio']['posicion'] - 1);
             $datos = $this->request->data;
             if ($this->Premio->save($datos)) {
                 $this->Session->setFlash('Su Premio fue actualizada', 'success_message');

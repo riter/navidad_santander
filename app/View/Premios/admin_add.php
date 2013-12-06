@@ -35,6 +35,7 @@
             <label>Posicion <span class="required">*</span></label>
             <div class="da-form-item">
                 <?= $this->Form->input('posicion', array('type'=>'text','label' => false, 'div' => false)); ?>
+                <p>Posicion Inicial 1 de izquierda a derecha</p>
             </div>
         </div>
         <div class="da-button-row">

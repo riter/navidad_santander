@@ -88,6 +88,9 @@ $(document).ready(function() {
                 async:false,
                 type: "post",
                 data:data,
+                beforeSend: function(){
+                    $("body").append('<div id="fancybox-loading"><div></div></div>');
+                },
                 success: function(msg) {
                     window.location.href = msg;
                 },
@@ -99,6 +102,7 @@ $(document).ready(function() {
         }else{
             //se guarda por file y los datos van por POST
             if(opcion='file'){
+                $("body").append('<div id="fancybox-loading"><div></div></div>');
                 return  true;
             }
         }

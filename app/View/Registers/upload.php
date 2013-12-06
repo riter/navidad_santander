@@ -15,6 +15,10 @@
     <!-- Add Plugin Cheese WebCam library-->
     <script type="text/javascript" src="/plugins/say-cheese/say-cheese.js"></script>
 
+    <!-- Add fancyBox -->
+    <link rel="stylesheet" href="/frontend_js/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="/frontend_js/jquery.fancybox.js?v=2.1.5"></script>
+
 </head>
 <body>
 <section>

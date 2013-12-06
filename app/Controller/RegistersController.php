@@ -111,7 +111,7 @@ class RegistersController extends AppController{
 
             file_put_contents($filename, $image);
 
-            if($this->saveFoto('/fotos/'.$filename.'.png')){
+            if($this->saveFoto('/'.$filename)){
                 $this->publicarFacebook();
                 $res = '/registers/sended';
             }else{

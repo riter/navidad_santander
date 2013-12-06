@@ -41,7 +41,7 @@
                         <?= $this->Html->image('/premios/'.$premio['Premio']['imagen'], array('alt' => 'Logo','style'=>'width:50px;'));?>
                     </td>
                     <td style="text-align: center">
-                        <?= $premio['Premio']['posicion'];?>
+                        <?= ($premio['Premio']['posicion']+1);?>
                     </td>
                     <td style="text-align: center;">
                         <?php
