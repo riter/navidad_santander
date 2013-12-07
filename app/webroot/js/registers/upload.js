@@ -85,7 +85,7 @@ $(document).ready(function() {
             };
             $.ajax({
                 url: "/registers/ajax_saveImg",
-                async:false,
+                //async:false,
                 type: "post",
                 data:data,
                 beforeSend: function(){
@@ -95,7 +95,7 @@ $(document).ready(function() {
                     window.location.href = msg;
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
-                    alert('Error');
+                    //alert('Error');
                 }
             });
             //return true;

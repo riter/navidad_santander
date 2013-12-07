@@ -26,7 +26,7 @@ $(document).ready(function() {
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) {
-                alert('Error');
+                //alert('Error');
             }
         });
     }
@@ -47,7 +47,7 @@ $(document).ready(function() {
             }
         },
         error: function (xhr, ajaxOptions, thrownError) {
-            alert('Error');
+            //alert('Error');
         }
     });
     /* Consulta para ver si muestra popup de like o registro */
@@ -104,7 +104,7 @@ $(document).ready(function() {
             }
         },
         error: function (xhr, ajaxOptions, thrownError) {
-            alert('Error');
+            //alert('Error');
         }
     });
 
@@ -112,7 +112,7 @@ $(document).ready(function() {
     var interval = 5000;   //number of mili seconds between each call
     var refresh = function() {
         $.ajax({
-            url: "/Home/ajax_reload_fotos",
+            url: "/photos/ajax_reload_fotos",
             async:false,
             dataType: "json",
             data: '',
@@ -134,7 +134,7 @@ $(document).ready(function() {
                 }, interval);
             },
             error: function (xhr, ajaxOptions, thrownError) {
-                alert('Error');
+                //alert('Error');
             }
         });
     };

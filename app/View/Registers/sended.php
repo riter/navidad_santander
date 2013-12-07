@@ -36,10 +36,6 @@
             if (response != undefined) {
                 parent.$.fancybox.close();
                 parent.location.reload();
-            }else{
-               // $('.message_alert').show();
-                //$('.message_alert').html('<span>Error al Enviar invitaciones</span>');
-                //alert('Error al Enviar invitaciones');
             }
         }
     </script>

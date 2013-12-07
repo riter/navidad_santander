@@ -23,19 +23,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AppController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
+      <file leaf-file-name="admin_index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/View/Photos/admin_index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="0" selection-start="4063" selection-end="4063" vertical-scroll-proportion="-6.8461537" vertical-offset="1573" max-vertical-offset="2805">
+            <state line="27" column="18" selection-start="990" selection-end="995" vertical-scroll-proportion="-2.4230769" vertical-offset="396" max-vertical-offset="1445">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin_add.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/View/Premios/admin_add.php">
+      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/webroot/js/photos/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="60" selection-start="1804" selection-end="1804" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="884">
+            <state line="57" column="46" selection-start="1933" selection-end="1933" vertical-scroll-proportion="0.59375" vertical-offset="646" max-vertical-offset="1343">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PhotosController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Controller/PhotosController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="13" selection-start="1461" selection-end="1461" vertical-scroll-proportion="-11.423077" vertical-offset="383" max-vertical-offset="1547">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upload.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/webroot/js/registers/upload.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="88" column="14" selection-start="3035" selection-end="3035" vertical-scroll-proportion="0.0" vertical-offset="1377" max-vertical-offset="2278">
               <folding />
             </state>
           </provider>
@@ -44,25 +62,25 @@
       <file leaf-file-name="PremiosController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Controller/PremiosController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="40" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="1802">
+            <state line="53" column="40" selection-start="1839" selection-end="1839" vertical-scroll-proportion="-14.038462" vertical-offset="536" max-vertical-offset="1819">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin_index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/View/Premios/admin_index.php">
+      <file leaf-file-name="admin_add.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/View/Premios/admin_add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="25" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1105">
+            <state line="36" column="104" selection-start="1737" selection-end="1737" vertical-scroll-proportion="-8.961538" vertical-offset="379" max-vertical-offset="884">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/webroot/js/home/home.js">
+      <file leaf-file-name="sended.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/View/Registers/sended.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="41" selection-start="2491" selection-end="2491" vertical-scroll-proportion="0.3125" vertical-offset="1037" max-vertical-offset="2499">
+            <state line="38" column="13" selection-start="1248" selection-end="1248" vertical-scroll-proportion="-7.8076925" vertical-offset="443" max-vertical-offset="1054">
               <folding />
             </state>
           </provider>
@@ -78,22 +96,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/View/Registers/index.php" />
-        <option value="$PROJECT_DIR$/app/webroot/frontend_css/registro.css" />
+        <option value="$PROJECT_DIR$/app/View/Clients/admin_add.php" />
+        <option value="$PROJECT_DIR$/app/View/Premios/admin_index.php" />
         <option value="$PROJECT_DIR$/app/Controller/RegistersController.php" />
+        <option value="$PROJECT_DIR$/app/webroot/js/premios/index.js" />
+        <option value="$PROJECT_DIR$/app/View/Premios/admin_add.php" />
+        <option value="$PROJECT_DIR$/app/webroot/js/premios/add.js" />
+        <option value="$PROJECT_DIR$/app/Controller/ReportsController.php" />
+        <option value="$PROJECT_DIR$/app/Controller/HomeController.php" />
+        <option value="$PROJECT_DIR$/app/Controller/PremiosController.php" />
+        <option value="$PROJECT_DIR$/app/webroot/js/home/home.js" />
+        <option value="$PROJECT_DIR$/app/webroot/js/registers/upload.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/tmp/logs/debug.log" />
+        <option value="$PROJECT_DIR$/app/Controller/PhotosController.php" />
         <option value="$PROJECT_DIR$/app/View/Photos/admin_index.php" />
         <option value="$PROJECT_DIR$/app/webroot/js/photos/index.js" />
-        <option value="$PROJECT_DIR$/app/Controller/HomeController.php" />
-        <option value="$PROJECT_DIR$/app/View/Registers/sended.php" />
-        <option value="$PROJECT_DIR$/app/webroot/js/registers/index.js" />
-        <option value="$PROJECT_DIR$/app/View/Home/home.php" />
-        <option value="$PROJECT_DIR$/app/View/Registers/upload.php" />
-        <option value="$PROJECT_DIR$/app/webroot/js/registers/upload.js" />
-        <option value="$PROJECT_DIR$/app/Controller/PremiosController.php" />
-        <option value="$PROJECT_DIR$/app/View/Premios/admin_index.php" />
-        <option value="$PROJECT_DIR$/app/View/Premios/admin_add.php" />
-        <option value="$PROJECT_DIR$/app/Controller/AppController.php" />
-        <option value="$PROJECT_DIR$/app/webroot/js/home/home.js" />
       </list>
     </option>
   </component>
@@ -178,52 +196,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test.santander" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test.santander" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="facebook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test.santander" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test.santander" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test.santander" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test.santander" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -243,54 +215,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webroot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test.santander" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test.santander" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webroot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test.santander" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test.santander" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webroot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="say-cheese" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -501,6 +425,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test.santander" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test.santander" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Reports" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -759,15 +705,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test.unicef" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test.unilever" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\test.santander\app\Model" />
+      <recent name="C:\xampp\htdocs\test.santander\app\View\Reports" />
+      <recent name="C:\xampp\htdocs\test.santander\app\Controller" />
       <recent name="C:\xampp\htdocs\test.santander\app\webroot\fotos" />
       <recent name="C:\xampp\htdocs\test.santander\app\webroot\js\say-cheese" />
-      <recent name="C:\xampp\htdocs\test.santander\app\webroot\js\registers" />
-      <recent name="C:\xampp\htdocs\test.santander\app\View\Registers" />
-      <recent name="C:\xampp\htdocs\test.santander\app\webroot\frontend_css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\test.santander\app\webroot\plugins" />
@@ -805,18 +752,18 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982457" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962963" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17407976" sideWeight="0.67017543" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17714724" sideWeight="0.67017543" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982457" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982457" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -834,114 +781,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Controller/RegistersController.php">
+    <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="32" selection-start="3531" selection-end="3531" vertical-scroll-proportion="-4.576923" vertical-offset="1632" max-vertical-offset="2890">
+        <state line="68" column="20" selection-start="2395" selection-end="2395" vertical-scroll-proportion="-0.7364185" vertical-offset="1522" max-vertical-offset="2924">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Photos/admin_index.php">
+    <entry file="file://$PROJECT_DIR$/app/View/Layouts/backend.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="168" selection-start="3368" selection-end="3368" vertical-scroll-proportion="-9.153846" vertical-offset="1071" max-vertical-offset="1564">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/js/photos/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="36" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="799">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="76" selection-start="1044" selection-end="1044" vertical-scroll-proportion="-9.461538" vertical-offset="434" max-vertical-offset="1037">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Home/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="523">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Registers/upload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="36" selection-start="761" selection-end="762" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="901">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/js/registers/upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="18" selection-start="3220" selection-end="3220" vertical-scroll-proportion="0.5517891" vertical-offset="1271" max-vertical-offset="2278">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/js/registers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="35" selection-start="755" selection-end="755" vertical-scroll-proportion="0.75" vertical-offset="51" max-vertical-offset="595">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Registers/sended.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="35" selection-start="933" selection-end="933" vertical-scroll-proportion="0.45945945" vertical-offset="204" max-vertical-offset="1122">
+        <state line="141" column="73" selection-start="6476" selection-end="6476" vertical-scroll-proportion="0.1714876" vertical-offset="2314" max-vertical-offset="4675">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Home/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="4" selection-start="389" selection-end="610" vertical-scroll-proportion="0.4039604" vertical-offset="0" max-vertical-offset="1360">
+        <state line="61" column="0" selection-start="2447" selection-end="2447" vertical-scroll-proportion="0.639604" vertical-offset="714" max-vertical-offset="1479">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/PremiosController.php">
+    <entry file="file://$PROJECT_DIR$/app/Controller/RegistersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="40" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="1802">
+        <state line="157" column="0" selection-start="5246" selection-end="5246" vertical-scroll-proportion="5.116832" vertical-offset="0" max-vertical-offset="2958">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Premios/admin_index.php">
+    <entry file="file://$PROJECT_DIR$/app/Controller/ReportsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="25" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1105">
+        <state line="25" column="102" selection-start="635" selection-end="635" vertical-scroll-proportion="-7.8461537" vertical-offset="136" max-vertical-offset="561">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Premios/admin_add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="60" selection-start="1804" selection-end="1804" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="884">
+        <state line="36" column="104" selection-start="1737" selection-end="1737" vertical-scroll-proportion="-8.961538" vertical-offset="379" max-vertical-offset="884">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Registers/index.php">
+    <entry file="file://$PROJECT_DIR$/app/webroot/js/registers/upload.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="162" selection-start="886" selection-end="886" vertical-scroll-proportion="0.7069307" vertical-offset="0" max-vertical-offset="782">
+        <state line="88" column="14" selection-start="3035" selection-end="3035" vertical-scroll-proportion="0.0" vertical-offset="1377" max-vertical-offset="2278">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
+    <entry file="file://$PROJECT_DIR$/app/View/Premios/admin_index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="0" selection-start="4063" selection-end="4063" vertical-scroll-proportion="-6.8461537" vertical-offset="1573" max-vertical-offset="2805">
+        <state line="28" column="19" selection-start="1196" selection-end="1196" vertical-scroll-proportion="0.16831683" vertical-offset="391" max-vertical-offset="1156">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="1168" selection-end="1168" vertical-scroll-proportion="-13.384615" vertical-offset="349" max-vertical-offset="867">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/webroot/js/home/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="41" selection-start="2491" selection-end="2491" vertical-scroll-proportion="0.3125" vertical-offset="1037" max-vertical-offset="2499">
+        <state line="140" column="14" selection-start="3816" selection-end="4788" vertical-scroll-proportion="0.77246654" vertical-offset="1976" max-vertical-offset="2499">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="334" selection-end="334" vertical-scroll-proportion="0.6424474" vertical-offset="21" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/PremiosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="40" selection-start="1839" selection-end="1839" vertical-scroll-proportion="-14.038462" vertical-offset="536" max-vertical-offset="1819">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tmp/logs/debug.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="27" selection-start="55" selection-end="55" vertical-scroll-proportion="0.03250478" vertical-offset="0" max-vertical-offset="523">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/PhotosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="13" selection-start="1461" selection-end="1461" vertical-scroll-proportion="-11.423077" vertical-offset="383" max-vertical-offset="1547">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Photos/admin_index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="18" selection-start="990" selection-end="995" vertical-scroll-proportion="-2.4230769" vertical-offset="396" max-vertical-offset="1445">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/js/photos/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="46" selection-start="1933" selection-end="1933" vertical-scroll-proportion="0.59375" vertical-offset="646" max-vertical-offset="1343">
           <folding />
         </state>
       </provider>

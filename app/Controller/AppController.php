@@ -41,9 +41,9 @@ class AppController extends Controller {
     public $components = array(
         'Session',
         'Auth' => array(
-            'loginRedirect' => array('controller' => 'consola', 'action' => 'index'),
+            'loginRedirect' => array('controller' => 'clients', 'action' => 'index'),
             'logoutRedirect' => array('controller' => 'users', 'action' => 'login'),
-            'authorize' => array('Controller') // Added this line
+            'authorize' => array('Controller')
         )
     );
 
@@ -63,9 +63,11 @@ class AppController extends Controller {
         $user=$facebook->getUser();
 
         if(isset($signed_request["page"]["id"])){
-            $canvas_page = "http://www.facebook.com/unileverweb/app_559917344092598"; // direccion de a Tab
+            //$canvas_page = "http://www.facebook.com/unileverweb/app_559917344092598"; // direccion de a Tab web
+            $canvas_page = 'http://www.facebook.com/unileverweb/app_771893319494562';
         }else{
-            $canvas_page = "http://apps.facebook.com/testnavidad"; // direccion de a App
+            //$canvas_page = "http://apps.facebook.com/testnavidad"; // direccion de a App web
+            $canvas_page = "https://apps.facebook.com/testmobiletwo"; // direccion de a App
         }
 
         $auth_url = "https://www.facebook.com/dialog/oauth?client_id=".$facebook->getAppId()
@@ -93,7 +95,12 @@ class AppController extends Controller {
                     */
                     $graph_url = "/me/likes/".$this->getIdLike()."?access_token=". $facebook->getAccessToken();
                     $likes=$facebook->api($graph_url);
-                    $this->like=isset($likes['data']) && count($likes['data']); ;
+                    $this->like=isset($likes['data']) && count($likes['data']);
+
+                    if($this->like && isset($signed_request["page"]["id"])){
+                        $canvas_page = "https://apps.facebook.com/testmobiletwo";
+                        echo("<script> top.location.href='" .$canvas_page. "'</script>");
+                    }
                     $this->Session->write('likeFacebook',$this->like);
                     //$this->redirect(array('controller'=>'home','action'=>'home'));
                 }else{
@@ -123,7 +130,7 @@ class AppController extends Controller {
                 'fileUpload' => false, 'cookie' => true);
         } else {
             if(strrpos(Router::url('/',true), "test") > 0) {
-                $config = array('appId' => '559917344092598','secret'=>'6d7ec7106bca1dcc0765bd9c226b5ad3',
+                $config = array('appId' => '771893319494562','secret'=>'b64a0254bd94949c1efb533797c893fa',
                     'fileUpload' => false, 'cookie' => true);
             }else{
                 $config = array('appId' => '559917344092598','secret'=>'6d7ec7106bca1dcc0765bd9c226b5ad3',

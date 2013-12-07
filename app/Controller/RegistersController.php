@@ -11,10 +11,14 @@ class RegistersController extends AppController{
     public function index(){
         $this->layout='';
         $this->loadModel('Client');
+        $this->loadModel('Premio_client');
+
         if ($this->request->is('post')) {
             $datos = $this->request->data;
             $datos['Client']['uid_facebook']=$this->Session->read('idFacebook');
-            if ($this->Client->save($datos)) {
+            $newClient=$this->Client->save($datos);
+            if ($newClient) {
+
                 $this->redirect(array('controller' => 'Home', 'action' => 'home'));
             }
         }
@@ -163,7 +167,7 @@ class RegistersController extends AppController{
             }
 
         }
-
+        //$res = 'upload_true';
         echo $res;
         $this->autoRender = false;
     }

@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="da-button-row">
-            <a href="<?= $this->Html->url(array('controller' => 'provincias', 'action' => 'index'))?>"><input type="button" value="Cancelar" class="da-button orange large left"/></a>
+            <a href="<?= $this->Html->url(array('controller' => 'clients', 'action' => 'index'))?>"><input type="button" value="Cancelar" class="da-button orange large left"/></a>
             <input type="submit" value="Guardar" class="da-button green large"/>
         </div>
         </form>

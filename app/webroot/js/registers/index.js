@@ -21,18 +21,6 @@ $(document).ready(function() {
             }
         });
         if(validar){
-            /*$.ajax({
-                url: "/registers/index",
-                async:false,
-                type:'post',
-                data: '',
-                success: function(msg) {
-                    parent.$.fancybox.close();
-                },
-                error: function (xhr, ajaxOptions, thrownError) {
-                    alert('Error');
-                }
-            });*/
             return true;
         }
         return false;

@@ -144,15 +144,6 @@
                             }
                         break;
 
-                        case "reports":
-                            echo "<li $modulo><a href='/admin/$controller'><img src='/images/icons/black/16/address_book.png' alt='Reportes' />Reportes</a></li>";
-                            switch($action){
-                                case "admin_clientes":
-                                    echo "<li class='active'><span>Usuarios</span></li>";
-                                    break;
-                            }
-                        break;
-
                         case "maintenance":
                         case "users":
                             $subMenu = array('maintenance' => 'Mantenimiento', 'users' => 'Usuario');
@@ -202,14 +193,14 @@
             <!-- Main Navigation -->
             <div id="da-main-nav" class="da-button-container">
                 <ul>
-                    <li <?//= $controller == "consola"? "class='active'" : ""?>>
+                    <!--<li <?//= $controller == "consola"? "class='active'" : ""?>>
                         <a href="/admin/consola">
                             <span class="da-nav-icon">
                                 <img alt="Consola" src="/img/../images/icons/black/32/home.png">
                             </span>
                             Inicio
                         </a>
-                    </li>
+                    </li>-->
                     <li <?= $controller == "clients"? "class='active'" : ""?>>
                         <a href="/admin/clients">
                             <!-- Icon Container -->
@@ -217,15 +208,6 @@
                                 <?= $this->Html->image('../images/icons/black/32/group.png', array('alt' => 'Usuario')); ?>
                             </span>
                             Usuarios
-                        </a>
-                    </li>
-                    <li <?= $controller == "premios"? "class='active'" : ""?>>
-                        <a href="/admin/premios">
-                            <!-- Icon Container -->
-                            <span class="da-nav-icon">
-                                <?= $this->Html->image('../images/icons/black/32/text_document.png', array('alt' => 'Premios')); ?>
-                            </span>
-                            Premios
                         </a>
                     </li>
 
@@ -239,17 +221,14 @@
                         </a>
                     </li>
 
-                    <li <?= $controller == "reports"? "class='active'" : ""?>>
-                        <a href="<?= $this->Html->url(array('controller' => 'reports', 'action' => 'index'))?>">
+                    <li <?= $controller == "premios"? "class='active'" : ""?>>
+                        <a href="/admin/premios">
                             <!-- Icon Container -->
                             <span class="da-nav-icon">
-                                <?= $this->Html->image('../images/icons/black/32/address_book.png', array('alt' => 'Reportes')); ?>
+                                <?= $this->Html->image('../images/icons/black/32/text_document.png', array('alt' => 'Premios')); ?>
                             </span>
-                            Reportes
+                            Premios
                         </a>
-                        <ul <?= $controller == "reports"? "" : "class='closed'"?>>
-                            <li><?= $this->Html->link('Reporte de Usuarios', array('controller' => 'reports', 'action' => 'index')) ?></li>
-                        </ul>
                     </li>
 
                     <li <?= $controller == "maintenance" || $controller == 'users'? "class='active'" : ""?>>
@@ -261,7 +240,7 @@
                             Configuracion
                         </a>
                         <ul <?= $controller == "maintenance" || $controller == 'users'? "" : "class='closed'"?>>
-                            <li><?= $this->Html->link('Administracion de usuario', array('controller' => 'users', 'action' => 'index')) ?></li>
+                            <li><?= $this->Html->link('Administracion de usuario del sistema', array('controller' => 'users', 'action' => 'index')) ?></li>
                         </ul>
                     </li>
                 </ul>

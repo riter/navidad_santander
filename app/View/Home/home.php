@@ -27,9 +27,13 @@
         <div class="logo">
             <a href="/Home/home"><img src="/frontend_images/logo.png" alt="logo"></a>
         </div>
-        <div class="premios">
-            <img src="/frontend_images/50premios.png" alt="premios">
-        </div>
+        <? if (isset($primerosCinc)) {
+        ?>
+            <div class="premios">
+                <img src="/frontend_images/50premios.png" alt="premios">
+            </div>
+        <? }    ?>
+        ?>
         <nav>
             <ul class="menu">
                 <li><a href="#"><span>1</span> Sube tu foto con la mano levantada.</a></li>
@@ -46,24 +50,24 @@
             <? $posicion=0;
                 for($f=0; $f<5; $f++){
                 echo '<ul>';
-                for($c=0; $c<11; $c++){
-                    ?>
-                    <li>
-                        <div class="box" id="<?=$posicion?>">
-                            <div class="img"></div>
-                            <div class="box_color ">
-                                <img src="" alt="">
-                            </div>
-                            <span class="fecha">
+                    for($c=0; $c<11; $c++){
+                        ?>
+                        <li>
+                            <div class="box" id="<?=$posicion?>">
+                                <div class="img"></div>
+                                <div class="box_color ">
+                                    <img src="" alt="">
+                                </div>
+                                <span class="fecha">
 
-                            </span>
-                        </div>
-                    </li>
-                <?
-                  $posicion++;
-                }
+                                </span>
+                            </div>
+                        </li>
+                    <?
+                      $posicion++;
+                    }
                 echo '</ul>';
-            }
+                 }
             ?>
 
         </div>

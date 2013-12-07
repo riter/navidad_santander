@@ -10,11 +10,16 @@
             Listado de Usuarios
         </span>
     </div>
+
     <div class="da-panel-toolbar top">
         <ul>
+            <?php echo $this->Form->create('Client', array('class' => 'da-form',
+                'url' => array('controller' => 'reports', 'action' => 'admin_index')));
+            ?>
             <li>
-                <?= $this->Html->link($this->Html->image("/images/icons/color/add.png", array("alt" => "Agregar")).'Agregar', array('controller' => 'clients','action' => 'admin_add'), array('escape' => false)); ?>
+                <input type="submit" name="boton" value="Exportar XLS" class="da-button blue large"/>
             </li>
+            </form>
         </ul>
     </div>
     <div class="da-panel-content">

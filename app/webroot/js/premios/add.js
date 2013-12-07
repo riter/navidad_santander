@@ -1,5 +1,8 @@
 (function ($) {
     $(document).ready(function (e) {
+        /* Sumar 1 a la posicion por que en la base de datos empieza en 0*/
+        $('#PremioPosicion').val(parseInt($('#PremioPosicion').val())+1);
+
         //Validacion de formulario
         $('#form_premio').validate({
             rules: {
@@ -10,7 +13,9 @@
                     required: true
                 },
                 "data[Premio][posicion]": {
-                    required: true
+                    required: true,
+                    number:true,
+                    min:1
                 }
             },
             messages: {
@@ -21,7 +26,9 @@
                     required: 'Imagen requerido'
                 },
                 "data[Premio][posicion]": {
-                    required: 'Posicion requerido'
+                    required: 'Posicion requerido',
+                    number: 'Numero Requerido',
+                    min: 'El valor minimo es 1'
                 }
             }
         });
@@ -38,5 +45,6 @@
                 $('#img').css('display','none');
             }
         }
+
     });
 })(jQuery);

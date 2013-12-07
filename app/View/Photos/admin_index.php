@@ -14,18 +14,11 @@
             Listado de Fotos
         </span>
     </div>
-    <div class="da-panel-toolbar top">
-        <ul>
-            <li>
-                <?= $this->Html->link($this->Html->image("/images/icons/color/add.png", array("alt" => "Agregar")).'Agregar', array('controller' => 'photos','action' => 'admin_add'), array('escape' => false)); ?>
-            </li>
-        </ul>
-    </div>
     <div class="da-panel-content">
         <table id="table_photos" class="da-table">
             <thead>
             <tr>
-                <th>Id</th>
+                <th>Posicion</th>
                 <th>Usuario</th>
                 <th>Fecha</th>
                 <th>Estado</th>
@@ -35,8 +28,8 @@
             <tbody>
             <?php foreach ($photos as $photo): ?>
                 <tr>
-                    <td>
-                        <?= $photo['Photo']['id']; ?>
+                    <td id="<?= $photo['Photo']['id']; ?>">
+
                     </td>
                     <td>
                         <?= $photo['Client']['nombre']; ?>

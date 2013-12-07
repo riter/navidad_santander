@@ -15,33 +15,36 @@
             <li>
                 <?= $this->Html->link($this->Html->image("/images/icons/color/add.png", array("alt" => "Agregar")).'Agregar', array('controller' => 'premios','action' => 'admin_add'), array('escape' => false)); ?>
             </li>
+            <?php echo $this->Form->create('Client', array('class' => 'da-form',
+                'url' => array('controller' => 'reports', 'action' => 'admin_winners')));
+            ?>
+            <li>
+                <input type="submit" name="boton" value="Boletos Export XLS" class="da-button blue large"/>
+            </li>
+            </form>
         </ul>
     </div>
     <div class="da-panel-content">
         <table id="table_premios" class="da-table">
             <thead>
             <tr>
-                <th>Id</th>
+                <th>Posicion</th>
                 <th>Descripcion</th>
                 <th>Imagen</th>
-                <th>Posicion</th>
                 <th style="text-align: center;">Accion</th>
             </tr>
             </thead>
             <tbody>
             <?php foreach ($premios as $premio): ?>
                 <tr>
-                    <td>
-                        <?= $premio['Premio']['id']; ?>
+                    <td style="text-align: center">
+                        <?= ($premio['Premio']['posicion']+1);?>
                     </td>
                     <td>
                         <?= $premio['Premio']['descripcion']; ?>
                     </td>
                     <td style="text-align: center">
                         <?= $this->Html->image('/premios/'.$premio['Premio']['imagen'], array('alt' => 'Logo','style'=>'width:50px;'));?>
-                    </td>
-                    <td style="text-align: center">
-                        <?= ($premio['Premio']['posicion']+1);?>
                     </td>
                     <td style="text-align: center;">
                         <?php

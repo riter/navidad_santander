@@ -20,6 +20,12 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
-# ARCHIVOS IDE
+# ARCHIVOS IDE #
+################
 .idea/*
 .idea/workspace.xml
+
+# Arcvhivo Fotos Premios y Upload #
+###################################
+/app/webroot/fotos
+/app/webroot/premios

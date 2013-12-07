@@ -5,10 +5,9 @@
                 {"bSortable": true},
                 {"bSortable": true},
                 {"bSortable": true},
-                {"bSortable": true},
                 {"bSortable": false, "bSearchable" : false}
             ],
-            "aaSorting": [[0, "desc" ]],
+            "aaSorting": [[0, "asc" ]],
             "oLanguage": {
                 "sUrl": "/js/es_BO.txt"
             },

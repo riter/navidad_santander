@@ -14,6 +14,14 @@ class HomeController extends AppController{
 
     public function home(){
         $this->layout='';
+
+        /* validar si son menos de cincuenta inscritos mosrtrar imagen 50 Premios*/
+        $this->loadModel('Client');
+        $clientes = $this->Client->find('all',array('order'=>array('Client.id'=>'asc'),'limit'=>'51'));
+
+        if( count($clientes)<51){
+            $this->set('primerosCinc',true);
+        }
     }
     public function getPopup(){
         $this->loadModel('Client');
@@ -36,23 +44,7 @@ class HomeController extends AppController{
         echo $res;
         $this->autoRender=false;
     }
-    public function ajax_reload_fotos(){
-        $this->loadModel('Photo');
 
-        $res=array();
-        $c=0;
-        $photos = $this->Photo->find('all',array('order'=>array('Photo.id'=>'desc'),array('top'=>'55')));
-        // $countrys = $this->Member>find('list', array('order' => array('Country.c_description' => 'asc')));
-
-        foreach($photos as $photo){
-            if($photo['Photo']['estado']!='2'){
-                $res[$c]['src']=$photo['Photo']['nombre'];
-                $c++;
-            }
-        }
-        echo json_encode($res);
-        $this->autoRender=false;
-    }
     public function like(){
         $this->layout='';
     }
