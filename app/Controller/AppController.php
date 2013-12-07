@@ -63,11 +63,11 @@ class AppController extends Controller {
         $user=$facebook->getUser();
 
         if(isset($signed_request["page"]["id"])){
-            //$canvas_page = "http://www.facebook.com/unileverweb/app_559917344092598"; // direccion de a Tab web
-            $canvas_page = 'http://www.facebook.com/unileverweb/app_771893319494562';
+            $canvas_page = "http://www.facebook.com/unileverweb/app_559917344092598"; // direccion de a Tab web
+            //$canvas_page = 'http://www.facebook.com/unileverweb/app_771893319494562';
         }else{
-            //$canvas_page = "http://apps.facebook.com/testnavidad"; // direccion de a App web
-            $canvas_page = "https://apps.facebook.com/testmobiletwo"; // direccion de a App
+            $canvas_page = "http://apps.facebook.com/testnavidad"; // direccion de a App web
+            //$canvas_page = "https://apps.facebook.com/testmobiletwo"; // direccion de a App
         }
 
         $auth_url = "https://www.facebook.com/dialog/oauth?client_id=".$facebook->getAppId()
