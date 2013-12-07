@@ -62,7 +62,7 @@
                 <div id="da-logo">
                     <div id="da-logo-img">
                         <a href="#">
-                            <?= $this->Html->image('/images/logo.jpg', array('alt' => 'Unicef Admin')); ?>
+                            <?= $this->Html->image('/frontend_images/logo2.png', array('alt' => 'Navidad Santander Admin')); ?>
                         </a>
                     </div>
                 </div>

@@ -63,11 +63,9 @@ class AppController extends Controller {
         $user=$facebook->getUser();
 
         if(isset($signed_request["page"]["id"])){
-            $canvas_page = "http://www.facebook.com/unileverweb/app_559917344092598"; // direccion de a Tab web
-            //$canvas_page = 'http://www.facebook.com/unileverweb/app_771893319494562';
+            $canvas_page = $this->getUrlATab();
         }else{
-            $canvas_page = "http://apps.facebook.com/testnavidad"; // direccion de a App web
-            //$canvas_page = "https://apps.facebook.com/testmobiletwo"; // direccion de a App
+            $canvas_page = $this->getUrlApp();
         }
 
         $auth_url = "https://www.facebook.com/dialog/oauth?client_id=".$facebook->getAppId()
@@ -98,7 +96,7 @@ class AppController extends Controller {
                     $this->like=isset($likes['data']) && count($likes['data']);
 
                     if($this->like && isset($signed_request["page"]["id"])){
-                        $canvas_page = "https://apps.facebook.com/testmobiletwo";
+                        $canvas_page = $this->getUrlApp();
                         echo("<script> top.location.href='" .$canvas_page. "'</script>");
                     }
                     $this->Session->write('likeFacebook',$this->like);
@@ -140,6 +138,30 @@ class AppController extends Controller {
 
         return $config;
     }
+
+    public  function getUrlApp() {
+        if(strrpos(Router::url('/',true), "juancarlos") > 0) {
+            return 'https://apps.facebook.com/testnavidad';
+        } else {
+            if(strrpos(Router::url('/',true), "test") > 0) {
+                return 'https://apps.facebook.com/testmobiletwo';
+            }else{
+                return 'https://apps.facebook.com/testnavidad';
+            }
+        }
+    }
+    public  function getUrlATab() {
+        if(strrpos(Router::url('/',true), "juancarlos") > 0) {
+            return 'http://www.facebook.com/unileverweb/app_559917344092598';
+        } else {
+            if(strrpos(Router::url('/',true), "test") > 0) {
+                return 'http://www.facebook.com/unileverweb/app_771893319494562';
+            }else{
+                return 'http://www.facebook.com/unileverweb/app_559917344092598';
+            }
+        }
+    }
+
     public function getIdLike(){
         return '519504951472584';
     }
