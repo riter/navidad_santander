@@ -34,6 +34,7 @@ class RegistersController extends AppController{
             $cropY = $this->request->data['cropY'];
             $cropW = $this->request->data['cropW'];
             $cropH = $this->request->data['cropH'];
+            $imgH = $this->request->data['imgH'];
 
             $size = (int) $_SERVER['CONTENT_LENGTH'];
             if( isset($_FILES['file']) && ($size < (2 * 1024 * 1024))){
@@ -48,7 +49,7 @@ class RegistersController extends AppController{
                     if(move_uploaded_file($_FILES["file"]["tmp_name"],
                         'fotos/'.$filename.'.'.$extension)){
 
-                        $this->_resize('fotos/'.$filename.'.'.$extension,$cropX,$cropY,$cropW,$cropH,$extension);
+                        $this->_resize('fotos/'.$filename.'.'.$extension,$cropX,$cropY,$cropW,$cropH,$extension,$imgH);
 
                         if($this->saveFoto('/fotos/'.$filename.'.'.$extension)){
                             $this->publicarFacebook();
@@ -79,7 +80,7 @@ class RegistersController extends AppController{
         return false;
     }
 
-    public function _resize($filename=null,$cropX,$cropY,$cropW,$cropH,$ext=null){
+    public function _resize($filename=null,$cropX,$cropY,$cropW,$cropH,$ext=null,$imgH){
 
         $jpeg_quelity=100;
         list($targ_w,$targ_h)=getimagesize($filename);
@@ -94,7 +95,9 @@ class RegistersController extends AppController{
         $img_r=imagecreatefromjpeg($filename);
         $dist_r= imagecreatetruecolor($cropW,$cropH);
 
-        imagecopyresampled($dist_r,$img_r,0,0,$cropX,$cropY,$cropW,$cropH,$cropW,$cropH);
+        $newcropY=($cropY*$targ_h)/$imgH;
+        $newtarg_h=((($cropY+$cropH)*$targ_h)/$imgH)-$newcropY;
+        imagecopyresampled($dist_r,$img_r,0,0,0,$newcropY,$cropW,$cropH,$targ_w,$newtarg_h);
 
         header('Contend-type: image/'.$ext);
         imagejpeg($dist_r,$filename,$jpeg_quelity);

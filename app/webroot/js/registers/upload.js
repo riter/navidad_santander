@@ -21,7 +21,6 @@ $(document).ready(function() {
             reader.onload = (function(theFile) {
                 return function(e) {
                     // Insertamos la imagen
-                    //document.getElementById("preview").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
                     $('#preview').addClass('thumb');
                     $('#preview').attr('src',e.target.result);
                     $('#preview').attr('title',escape(theFile.name));
@@ -44,7 +43,6 @@ $(document).ready(function() {
             break;
             default:
                 $(this).val('');
-                // error message here
                 $('#preview').attr('src','/frontend_images/avatar.png');
                 break;
         }
@@ -55,7 +53,6 @@ $(document).ready(function() {
 
     $('.webcam').click(function(){
         $('.jwc_frame').css('display','none');
-        //$('#file').val('');
         $('#preview_cam').css('display','block');
         /*ver si el contendor de la webcam tiene un tag video entonces dar start*/
         if($('#preview_cam').html() == ''){
@@ -71,6 +68,7 @@ $(document).ready(function() {
         $('#preview').attr('src',snapshot.toDataURL('image/png'));
         //$('#preview').attr('title',escape(theFile.name));
     });
+
     /* Validar si la imagen esta vacia*/
     $('#subir').click(function(){
 
@@ -79,7 +77,6 @@ $(document).ready(function() {
             /* se captura la foto y se guarda por ajax, se envia la img(src) por  POST*/
             sayCheese.takeSnapshot(sayCheese.options.width,sayCheese.options.height);
             var src=$('#preview').attr('src');
-            //console.log(src);
             data={
                 src: src
             };
@@ -98,7 +95,6 @@ $(document).ready(function() {
                     //alert('Error');
                 }
             });
-            //return true;
         }else{
             //se guarda por file y los datos van por POST
             if(opcion='file'){
@@ -107,10 +103,7 @@ $(document).ready(function() {
             }
         }
         return false;
-        /*
-        if($('#file').val()==''){
-            return false;
-        }*/
+
     });
 
     // minimum Crop de Imagen
@@ -124,6 +117,7 @@ $(document).ready(function() {
             $('#crop_y').val(result.cropY);
             $('#crop_w').val(result.cropW);
             $('#crop_h').val(result.cropH);
+            $('#img_h').val($('.jwc_frame img').height()); // nuevo tamaño de la imagen
         }
     });
 });

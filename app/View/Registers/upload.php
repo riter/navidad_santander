@@ -41,6 +41,7 @@
             <input type="hidden" value="" id="crop_y" name="cropY">
             <input type="hidden" value="" id="crop_w" name="cropW">
             <input type="hidden" value="" id="crop_h" name="cropH">
+            <input type="hidden" value="" id="img_h" name="imgH">
         </form>
     </div>
 </section>

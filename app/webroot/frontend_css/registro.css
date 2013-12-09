@@ -135,7 +135,7 @@ section .subir_foto form figure {
   width: 203px;
 }
 section .subir_foto form figure img {
-  /*width: 100%;*/
+  width: 100%;
 }
 section .subir_foto form figure input[type=submit] {
   position: absolute;

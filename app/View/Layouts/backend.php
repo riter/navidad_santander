@@ -103,12 +103,6 @@
                         case "consola":
                             echo "<li $modulo><a href='/admin/$controller'><img src='../images/icons/black/16/home.png' alt='Consola' />Consola</a></li>";
                         break;
-                        case "provincias":
-                            echo "<li $modulo><a href='/admin/$controller'><img src='/images/icons/black/16/airplane.png' alt='Provincias' />Provincias</a></li>";
-                        break;
-                        /*case "paises":
-                            echo "<li $modulo><a href='/admin/$controller'><img src='/images/icons/black/16/globe.png' alt='Paises' />Paises</a></li>";
-                            break;*/
                         case "premios":
                             echo "<li $modulo><a href='/admin/$controller'><img src='/images/icons/black/16/text_document.png' alt='Premios' />Premios</a></li>";
 
@@ -121,17 +115,7 @@
                                 break;
                             }
                         break;
-                        /*case "typeletters":
-                            echo "<li $modulo><a href='/admin/$controller'><img src='/images/icons/black/16/word_documents_small.png' alt='Tipos de Cartas' />Tipos de Cartas</a></li>";
-                            switch($action){
-                                case "admin_add":
-                                    echo "<li class='active'><span>Agregar</span></li>";
-                                break;
-                                case "admin_edit":
-                                    echo "<li class='active'><span>Editar</span></li>";
-                                break;
-                            }
-                        break;*/
+
                         case "photos":
                             echo "<li $modulo><a href='/admin/$controller'><img src='/images/icons/black/16/create_write.png' alt='Fotos' />Fotos</a></li>";
                             switch($action){
@@ -193,14 +177,6 @@
             <!-- Main Navigation -->
             <div id="da-main-nav" class="da-button-container">
                 <ul>
-                    <!--<li <?//= $controller == "consola"? "class='active'" : ""?>>
-                        <a href="/admin/consola">
-                            <span class="da-nav-icon">
-                                <img alt="Consola" src="/img/../images/icons/black/32/home.png">
-                            </span>
-                            Inicio
-                        </a>
-                    </li>-->
                     <li <?= $controller == "clients"? "class='active'" : ""?>>
                         <a href="/admin/clients">
                             <!-- Icon Container -->
