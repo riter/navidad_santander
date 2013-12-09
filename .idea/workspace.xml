@@ -26,27 +26,25 @@
       <file leaf-file-name="AppController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="887" selection-end="887" vertical-scroll-proportion="0.39405942" vertical-offset="243" max-vertical-offset="3298">
+            <state line="102" column="0" selection-start="3903" selection-end="3903" vertical-scroll-proportion="0.629703" vertical-offset="1416" max-vertical-offset="3281">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/View/Home/home.php">
+      <file leaf-file-name="RegistersController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Controller/RegistersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="29" selection-start="2662" selection-end="2662" vertical-scroll-proportion="-16.0" vertical-offset="740" max-vertical-offset="1666">
-              <folding>
-                <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="41" column="53" selection-start="1176" selection-end="1176" vertical-scroll-proportion="-3.0" vertical-offset="459" max-vertical-offset="3094">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/webroot/js/home/home.js">
+      <file leaf-file-name="upload.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/webroot/js/registers/upload.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="167" column="9" selection-start="5757" selection-end="5757" vertical-scroll-proportion="0.0" vertical-offset="2420" max-vertical-offset="3026">
+            <state line="97" column="14" selection-start="3218" selection-end="3218" vertical-scroll-proportion="-65.96" vertical-offset="0" max-vertical-offset="2193">
               <folding />
             </state>
           </provider>
@@ -62,8 +60,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/app/Controller/PhotosController.php" />
         <option value="$PROJECT_DIR$/app/View/Photos/admin_index.php" />
         <option value="$PROJECT_DIR$/app/webroot/js/photos/index.js" />
         <option value="$PROJECT_DIR$/app/View/Layouts/backend.php" />
@@ -72,11 +68,13 @@
         <option value="$PROJECT_DIR$/app/webroot/frontend_css/jWindowCrop.css" />
         <option value="$PROJECT_DIR$/app/webroot/frontend_css/registro.css" />
         <option value="$PROJECT_DIR$/app/View/Registers/upload.php" />
-        <option value="$PROJECT_DIR$/app/tmp/logs/debug.log" />
-        <option value="$PROJECT_DIR$/app/webroot/js/registers/upload.js" />
-        <option value="$PROJECT_DIR$/app/Controller/RegistersController.php" />
         <option value="$PROJECT_DIR$/app/View/Home/home.php" />
+        <option value="$PROJECT_DIR$/app/webroot/js/registers/upload.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/View/Registers/upload_completed.php" />
+        <option value="$PROJECT_DIR$/app/tmp/logs/debug.log" />
         <option value="$PROJECT_DIR$/app/webroot/js/home/home.js" />
+        <option value="$PROJECT_DIR$/app/Controller/RegistersController.php" />
         <option value="$PROJECT_DIR$/app/Controller/AppController.php" />
       </list>
     </option>
@@ -150,34 +148,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test.santander" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test.santander" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test.santander" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test.santander" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test.santander" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -284,28 +254,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test.santander" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test.santander" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webroot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fotos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -608,11 +556,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\test.santander\app\View\Registers" />
       <recent name="C:\xampp\htdocs\test.santander\app\Controller\Component" />
       <recent name="C:\xampp\htdocs\test.santander\app\webroot\frontend_images" />
       <recent name="C:\xampp\htdocs\test.santander\app\Model" />
       <recent name="C:\xampp\htdocs\test.santander\app\View\Reports" />
-      <recent name="C:\xampp\htdocs\test.santander\app\Controller" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\test.santander\app\webroot\plugins" />
@@ -702,21 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/fotos/user2_52a4f52d1edc7.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/fotos/user2_52a4f38010815.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/fotos/user2_52a50b693ab87.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Registers/upload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="40" selection-start="2026" selection-end="2026" vertical-scroll-proportion="0.629703" vertical-offset="413" max-vertical-offset="918">
@@ -733,32 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/fotos/user2_52a5101ed6c97.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/js/registers/upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="87" selection-start="3965" selection-end="3965" vertical-scroll-proportion="0.71875" vertical-offset="1632" max-vertical-offset="2176">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/tmp/logs/debug.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="17" selection-start="487" selection-end="490" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/RegistersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="0" selection-start="4953" selection-end="4953" vertical-scroll-proportion="-8.307693" vertical-offset="2249" max-vertical-offset="3009">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/PhotosController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="73" column="20" selection-start="2613" selection-end="2613" vertical-scroll-proportion="0.22574258" vertical-offset="1042" max-vertical-offset="1547">
@@ -766,25 +673,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="5" selection-start="311" selection-end="311" vertical-scroll-proportion="0.3499044" vertical-offset="123" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/frontend_css/jWindowCrop.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="12" selection-start="37" selection-end="37" vertical-scroll-proportion="0.06500956" vertical-offset="0" max-vertical-offset="523">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/frontend_css/registro.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="18" selection-start="3122" selection-end="3122" vertical-scroll-proportion="0.0" vertical-offset="2108" max-vertical-offset="3230">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Home/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="29" selection-start="2662" selection-end="2662" vertical-scroll-proportion="-16.0" vertical-offset="740" max-vertical-offset="1666">
+        <state line="68" column="29" selection-start="2662" selection-end="2662" vertical-scroll-proportion="0.82376236" vertical-offset="740" max-vertical-offset="1666">
           <folding>
             <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Registers/upload_completed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="65" selection-start="404" selection-end="404" vertical-scroll-proportion="0.444668" vertical-offset="0" max-vertical-offset="497">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tmp/logs/debug.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="10" selection-start="2153" selection-end="2153" vertical-scroll-proportion="1.34375" vertical-offset="527" max-vertical-offset="1683">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/js/registers/upload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="14" selection-start="3218" selection-end="3218" vertical-scroll-proportion="-65.96" vertical-offset="0" max-vertical-offset="2193">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/RegistersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="53" selection-start="1176" selection-end="1176" vertical-scroll-proportion="-3.0" vertical-offset="459" max-vertical-offset="3094">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/webroot/js/home/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="9" selection-start="5757" selection-end="5757" vertical-scroll-proportion="0.0" vertical-offset="2420" max-vertical-offset="3026">
+        <state line="26" column="42" selection-start="935" selection-end="935" vertical-scroll-proportion="0.25" vertical-offset="306" max-vertical-offset="3298">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="887" selection-end="887" vertical-scroll-proportion="0.39405942" vertical-offset="243" max-vertical-offset="3298">
+        <state line="102" column="0" selection-start="3903" selection-end="3903" vertical-scroll-proportion="0.629703" vertical-offset="1416" max-vertical-offset="3281">
           <folding />
         </state>
       </provider>
