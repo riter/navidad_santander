@@ -30,26 +30,7 @@ $(document).ready(function() {
             }
         });
     }
-    /* Consulta e inserta la lista de premios en la Home*/
-    $.ajax({
-        url: "/premios/getListaPremios",
-        async:false,
-        dataType: "json",
-        data: '',
-        success: function(msg) {
-            var datos=eval(msg);
 
-            for(i=0; i< datos.length; i++){
-               $('#'+datos[i].posicion+' .img').addClass(datos[i].html.img);
-               $('#'+datos[i].posicion+' .box_color').addClass(datos[i].html.box);
-               $('#'+datos[i].posicion+' .fecha').addClass(datos[i].html.txt);
-               $('#'+datos[i].posicion+' .fecha').html(datos[i].descripcion);
-            }
-        },
-        error: function (xhr, ajaxOptions, thrownError) {
-            //alert('Error');
-        }
-    });
     /* Consulta para ver si muestra popup de like o registro */
     $.ajax({
         url: "/Home/getPopup",
@@ -107,6 +88,33 @@ $(document).ready(function() {
             //alert('Error');
         }
     });
+    /* Se creara mas fila si hay mas de 55 fotos*/
+    var canFilas=$('.boxes ul').length-1;
+    function crearFila(canDatos){
+        var canCol=$('.boxes ul:first-child li').length;
+        //alert(canCol);
+        //var canCol=11;
+        var newCantFilas=Math.floor(canDatos/canCol);
+        if((canDatos % canCol) > 0){
+            newCantFilas++;
+        }
+        var posicion= canFilas * canCol;
+        if(canFilas<newCantFilas){
+            for(var i=canFilas; i<newCantFilas; i++){
+                var htmlFila="<ul>";
+                for(var c=0; c<canCol; c++){
+                    htmlFila+=$('ul.ejemplo').html();
+                    htmlFila=htmlFila.replace("idEjm",posicion);
+                    posicion++;
+                }
+                htmlFila+="</ul>";
+                $('.boxes').append(htmlFila);
+            }
+            canFilas=newCantFilas;
+            //console.log('entro');
+        }
+        return posicion;
+    }
 
     /* Hilo que carga las fotos en los cuadros cada 3 segundos*/
     var interval = 5000;   //number of mili seconds between each call
@@ -119,7 +127,9 @@ $(document).ready(function() {
             cache: false,
             success: function(msg) {
                 var datos=eval(msg);
-                for(var i=0; i< 55; i++){
+                var posicion=crearFila(datos.length);
+                //console.log(datos.length);
+                for(var i=0; i< posicion; i++){
                     if(i < datos.length){
                         $('#'+i+' img').attr('src',datos[i].src);
                     }else{
@@ -127,7 +137,7 @@ $(document).ready(function() {
                     }
 
                 }
-                console.log(datos);
+                //console.log(datos);
 
                 setTimeout(function() {
                     refresh();
@@ -139,4 +149,25 @@ $(document).ready(function() {
         });
     };
     refresh();
+
+    /* Consulta e inserta la lista de premios en la Home*/
+    $.ajax({
+         url: "/premios/getListaPremios",
+         async:false,
+         dataType: "json",
+         data: '',
+         success: function(msg) {
+             var datos=eval(msg);
+
+             for(i=0; i< datos.length; i++){
+                 $('#'+datos[i].posicion+' .img').addClass(datos[i].html.img);
+                 $('#'+datos[i].posicion+' .box_color').addClass(datos[i].html.box);
+                 $('#'+datos[i].posicion+' .fecha').addClass(datos[i].html.txt);
+                 $('#'+datos[i].posicion+' .fecha').html(datos[i].descripcion);
+             }
+         },
+         error: function (xhr, ajaxOptions, thrownError) {
+            //alert('Error');
+         }
+     });
 });

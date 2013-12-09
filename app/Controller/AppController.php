@@ -22,8 +22,7 @@
  */
 App::uses('Controller', 'Controller');
 
-//require_once("facebook/facebook.php");
-App::import('Lib', 'facebook/facebook.php');
+require_once("facebook/facebook.php");
 
 session_start();
 /**
@@ -80,7 +79,7 @@ class AppController extends Controller {
 
                     $facebook=new Facebook($this->getConfigFacebook());
 
-                    /*Validar like por Graph*/
+                    /*Validar like por Grapho*/
                     /*$graph_url = "/me/likes?access_token=". $facebook->getAccessToken();
                     $likes=$facebook->api($graph_url);
                     $this->like=$this->haveLike($likes);
@@ -101,6 +100,7 @@ class AppController extends Controller {
                         echo("<script> top.location.href='" .$canvas_page. "'</script>");
                     }
                     $this->Session->write('likeFacebook',$this->like);
+                    //$this->redirect(array('controller'=>'home','action'=>'home'));
                 }else{
                     // esta en la web y redirect a TabFacebook
                     echo("<script> top.location.href='" .$auth_url. "'</script>");

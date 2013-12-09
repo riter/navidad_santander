@@ -69,7 +69,18 @@
                 echo '</ul>';
                  }
             ?>
-
+            <ul style="display: none" class="ejemplo">
+                <li>
+                    <div class="box" id='idEjm'>
+                        <div class="img"></div>
+                        <div class="box_color ">
+                            <img src="" alt="">
+                        </div>
+                        <span class="fecha">
+                        </span>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </section>
