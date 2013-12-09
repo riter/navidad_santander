@@ -97,11 +97,12 @@ $(document).ready(function() {
             });
         }else{
             //se guarda por file y los datos van por POST
-            if(opcion='file'){
+            if(opcion=='file'){
                 $("body").append('<div id="fancybox-loading"><div></div></div>');
                 return  true;
             }
         }
+        alert('Debe seleccionar una de las dos opciones');
         return false;
 
     });

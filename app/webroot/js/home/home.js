@@ -23,6 +23,22 @@ $(document).ready(function() {
                         type:'iframe',
                         regalo: true
                     });
+                }else{
+                    if(msg =='upload_false'){
+                        $.fancybox.open({
+                            href:'/registers/upload_completed',
+                            maxWidth	: 537,
+                            maxHeight	: 537,
+                            fitToView	: true,
+                            autoSize	: true,
+                            closeClick	: false,
+                            openEffect	: 'none',
+                            closeEffect	: 'none',
+                            padding: 0,
+                            type:'iframe',
+                            regalo: false
+                        });
+                    }
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) {

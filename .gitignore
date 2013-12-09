@@ -22,8 +22,10 @@ Thumbs.db
 
 # ARCHIVOS IDE #
 ################
-.idea/*
 .idea/workspace.xml
+.idea/*
+.svn/*
+svn
 
 # Arcvhivo Fotos Premios y Upload #
 ###################################

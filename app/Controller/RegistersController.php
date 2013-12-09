@@ -24,9 +24,11 @@ class RegistersController extends AppController{
         }
     }
 
+    public function upload_completed(){
+        $this->layout='';
+    }
     public function upload(){
         $this->layout='';
-
 
         if ($this->request->is('post')) {
 
@@ -37,7 +39,7 @@ class RegistersController extends AppController{
             $imgH = $this->request->data['imgH'];
 
             $size = (int) $_SERVER['CONTENT_LENGTH'];
-            if( isset($_FILES['file']) && ($size < (2 * 1024 * 1024))){
+            if( isset($_FILES['file']) && ($size < (5 * 1024 * 1024))){
 
                 if ($_FILES["file"]["error"] > 0){
                     $output = "Return Code: " . $_FILES["file"]["error"];
@@ -63,6 +65,7 @@ class RegistersController extends AppController{
             }
         }
     }
+
     public function saveFoto($filename){
         $this->loadModel('Client');
         $this->loadModel('Photo');
@@ -71,7 +74,7 @@ class RegistersController extends AppController{
         $photo=array('Photo'=>array(
             'nombre'=>$filename,
             'estado'=>'0',
-            'fecha'=>date("Y-m-d H:i:s"),
+            'fecha'=>date("Y-m-d"),
             'cliente_id'=>$cliente['Client']['id']
         ));
         if($this->Photo->save($photo)){
@@ -159,19 +162,21 @@ class RegistersController extends AppController{
         $this->loadModel('Client');
         $this->loadModel('Photo');
 
-        $res='';
+        $res='upload_false';
 
         $cliente = $this->Client->find('first',array('conditions'=>array('uid_facebook'=>$this->Session->read('idFacebook'))));
         if(!empty($cliente)){
 
             $photo=$this->Photo->find('all',array('conditions'=>array('fecha'=>date("Y-m-d"),'cliente_id'=>$cliente['Client']['id'])));
+
             if(count($photo)<3){
                 $res = 'upload_true';
             }
 
         }
-        //$res = 'upload_true';
+
         echo $res;
         $this->autoRender = false;
     }
+
 } 

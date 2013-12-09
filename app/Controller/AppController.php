@@ -22,7 +22,7 @@
  */
 App::uses('Controller', 'Controller');
 
-require_once("facebook/facebook.php");
+//require_once("facebook/facebook.php");
 
 session_start();
 /**
@@ -54,11 +54,11 @@ class AppController extends Controller {
         } else {
             $this->Auth->allow();
         }
-        //$this->Session->write('idFacebook','100006874081297');
-        //$this->Session->write('likeFacebook',true);
+        $this->Session->write('idFacebook','100006874081297');
+        $this->Session->write('likeFacebook',true);
 
         //control para ingresar solo si esta en TabFacebook y con like
-        $facebook=new Facebook($this->getConfigFacebook());
+        /*$facebook=new Facebook($this->getConfigFacebook());
         $signed_request = $facebook->getSignedRequest();
         $user=$facebook->getUser();
 
@@ -91,7 +91,7 @@ class AppController extends Controller {
                     ));
                     $this->like=$this->validarLikeQuery($user_graph);
                     */
-                    $graph_url = "/me/likes/".$this->getIdLike()."?access_token=". $facebook->getAccessToken();
+                    /*$graph_url = "/me/likes/".$this->getIdLike()."?access_token=". $facebook->getAccessToken();
                     $likes=$facebook->api($graph_url);
                     $this->like=isset($likes['data']) && count($likes['data']);
 
@@ -109,7 +109,7 @@ class AppController extends Controller {
 
         }catch (Exception $e){
           echo("<script> top.location.href='" .$auth_url. "'</script>");
-        }
+        }*/
     }
 
     public function isAuthorized($user) {
