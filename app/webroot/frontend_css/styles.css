@@ -12,6 +12,7 @@ body {
   background: url("../frontend_images/bg2.jpg") center top no-repeat;
   font-family: 'signika';
   font-size: 12px;
+  overflow-x: hidden;
 }
 header {
   background: transparent url("../frontend_images/header.png") center top no-repeat;

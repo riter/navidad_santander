@@ -11,7 +11,7 @@
     <script src="https://connect.facebook.net/en_US/all.js"></script>
     <script>
         FB.init({
-            appId  : '559917344092598',
+            appId  : '<?=$appId?>',
             status : true,
             cookie : true,
             frictionlessRequests : true,

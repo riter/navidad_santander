@@ -47,6 +47,7 @@ class RegistersController extends AppController{
                 }else{
                     $extension = explode('/',$_FILES["file"]["type"]);
                     $extension = $extension[1];
+                    //$extension = 'jpeg';
                     $filename=uniqid("user2_");
                     if(move_uploaded_file($_FILES["file"]["tmp_name"],
                         'fotos/'.$filename.'.'.$extension)){
@@ -85,7 +86,7 @@ class RegistersController extends AppController{
 
     public function _resize($filename=null,$cropX,$cropY,$cropW,$cropH,$ext=null,$imgH){
 
-        $jpeg_quelity=100;
+        $jpeg_quelity=9;
         list($targ_w,$targ_h)=getimagesize($filename);
 
         if($targ_w<=$cropW){
@@ -94,8 +95,20 @@ class RegistersController extends AppController{
         if($targ_h<=$cropH){
             $cropH=$targ_h;
         }
-
-        $img_r=imagecreatefromjpeg($filename);
+        switch($ext){
+            case 'gif':
+                $img_r=imagecreatefromgif($filename);
+                break;
+            case 'png':
+                $img_r=imagecreatefrompng($filename);
+                break;
+            case 'jpeg':
+                $img_r=imagecreatefromjpeg($filename);
+                break;
+            case 'jpg':
+                $img_r=imagecreatefromjpeg($filename);
+                break;
+        }
         $dist_r= imagecreatetruecolor($cropW,$cropH);
 
         $newcropY=($cropY*$targ_h)/$imgH;
@@ -103,7 +116,20 @@ class RegistersController extends AppController{
         imagecopyresampled($dist_r,$img_r,0,0,0,$newcropY,$cropW,$cropH,$targ_w,$newtarg_h);
 
         header('Contend-type: image/'.$ext);
-        imagejpeg($dist_r,$filename,$jpeg_quelity);
+        switch($ext){
+            case 'gif':
+                imagegif($dist_r,$filename);
+                break;
+            case 'png':
+                imagepng($dist_r,$filename,$jpeg_quelity,PNG_ALL_FILTERS);
+                break;
+            case 'jpeg':
+                imagejpeg($dist_r,$filename,$jpeg_quelity);
+                break;
+            case 'jpg':
+                imagejpeg($dist_r,$filename,$jpeg_quelity);
+                break;
+        }
     }
 
     public function ajax_saveImg(){
@@ -156,6 +182,9 @@ class RegistersController extends AppController{
         $this->layout='';
         if($this->request->is('post')){
             $this->redirect('https://www.facebook.com/dialog/apprequests?app_id=559917344092598&message=Participa%20ahora!.%20En%20el%20concurso%20Yo%20lo%20quiero%20para%20Navidad&display=popup&redirect_uri=http://test.navidad.com/home/home');
+        }else{
+            $config=$this->getConfigFacebook();
+            $this->set('appId',$config['appId']);
         }
     }
     public function ajax_Upload(){

@@ -95,9 +95,12 @@ class AppController extends Controller {
                     $likes=$facebook->api($graph_url);
                     $this->like=isset($likes['data']) && count($likes['data']);
 
-                    if($this->like && isset($signed_request["page"]["id"])){
-                        $canvas_page = $this->getUrlApp();
-                        echo("<script> top.location.href='" .$canvas_page. "'</script>");
+                    if(isset($signed_request["page"]["id"])){
+                        $this->like=$signed_request["page"]["liked"];
+                        if($this->like){
+                            $canvas_page = $this->getUrlApp();
+                            echo("<script> top.location.href='" .$canvas_page. "'</script>");
+                        }
                     }
                     $this->Session->write('likeFacebook',$this->like);
                 }else{
@@ -122,47 +125,38 @@ class AppController extends Controller {
 
     //***********  Mi Metodos de Ayuda
     public  function getConfigFacebook() {
-        if(strrpos(Router::url('/',true), "juancarlos") > 0) {
-            $config = array('appId' => '559917344092598','secret'=>'6d7ec7106bca1dcc0765bd9c226b5ad3',
-                'fileUpload' => false, 'cookie' => true);
-        } else {
-            if(strrpos(Router::url('/',true), "test") > 0) {
-                $config = array('appId' => '771893319494562','secret'=>'b64a0254bd94949c1efb533797c893fa',
-                    'fileUpload' => false, 'cookie' => true);
-            }else{
-                $config = array('appId' => '559917344092598','secret'=>'6d7ec7106bca1dcc0765bd9c226b5ad3',
-                    'fileUpload' => false, 'cookie' => true);
-            }
-        }
-
+        /* Configuracion de el AppFacebook cambiar el appId y secret por los codigos que proporsiona Facebook*/
+        $config = array('appId' => '559917344092598','secret'=>'6d7ec7106bca1dcc0765bd9c226b5ad3',
+            'fileUpload' => false, 'cookie' => true);
+        /* Codigos de Prueba en modo testing*/
+        /*$config = array('appId' => '771893319494562','secret'=>'b64a0254bd94949c1efb533797c893fa',
+            'fileUpload' => false, 'cookie' => true);
+        */
         return $config;
     }
 
     public  function getUrlApp() {
-        if(strrpos(Router::url('/',true), "juancarlos") > 0) {
-            return 'https://apps.facebook.com/testnavidad';
-        } else {
-            if(strrpos(Router::url('/',true), "test") > 0) {
-                return 'https://apps.facebook.com/testmobiletwo';
-            }else{
-                return 'https://apps.facebook.com/testnavidad';
-            }
-        }
+        /* Cambiar la direccion por la direccion de la app que proporsiona Facebook*/
+        $direccionAppFacebook='https://apps.facebook.com/testnavidad';
+        return $direccionAppFacebook;
+
+        /* Direccion de Prueba en modo testing*/
+        //return 'https://apps.facebook.com/testmobiletwo';
     }
     public  function getUrlATab() {
-        if(strrpos(Router::url('/',true), "juancarlos") > 0) {
-            return 'http://www.facebook.com/unileverweb/app_559917344092598';
-        } else {
-            if(strrpos(Router::url('/',true), "test") > 0) {
-                return 'http://www.facebook.com/unileverweb/app_771893319494562';
-            }else{
-                return 'http://www.facebook.com/unileverweb/app_559917344092598';
-            }
-        }
+
+        /* Cambiar la direccion por la direccion de la app que proporsiona Facebook*/
+        $direccionTabFacebook='http://www.facebook.com/unileverweb/app_559917344092598';
+        return $direccionTabFacebook;
+
+        /* Direccion de Prueba en modo testing*/
+        //return 'http://www.facebook.com/unileverweb/app_771893319494562';
     }
 
     public function getIdLike(){
-        return '519504951472584';
+        /*Cambiar por el codigo de la FanPage que desean utilizar*/
+        $codigoFanPage='519504951472584';
+        return $codigoFanPage;
     }
     public function haveLike($fb_response){
 
