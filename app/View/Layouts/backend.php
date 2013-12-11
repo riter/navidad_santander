@@ -128,6 +128,10 @@
                             }
                         break;
 
+                        case "ganadores":
+                            echo "<li $modulo><a href='/admin/$controller'><img src='/images/icons/black/16/create_write.png' alt='Ganadores' />Ganadores</a></li>";
+                            break;
+
                         case "maintenance":
                         case "users":
                             $subMenu = array('maintenance' => 'Mantenimiento', 'users' => 'Usuario');
@@ -194,6 +198,16 @@
                                 <?= $this->Html->image('/images/icons/black/32/create_write.png', array('alt' => 'Fotos')); ?>
                             </span>
                             Fotos
+                        </a>
+                    </li>
+
+                    <li <?= $controller == "ganadores"? "class='active'" : ""?>>
+                        <a href="/admin/ganadores">
+                            <!-- Icon Container -->
+                            <span class="da-nav-icon">
+                                <?= $this->Html->image('/images/icons/black/32/create_write.png', array('alt' => 'Ganadores')); ?>
+                            </span>
+                            Ganadores
                         </a>
                     </li>
 

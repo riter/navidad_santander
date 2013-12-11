@@ -18,4 +18,10 @@ class Photo extends AppModel {
             'foreignKey' => 'cliente_id'
         )
     );
+    public $hasMany = array(
+        'Premio_cliente' => array(
+            'className' => 'Premio_cliente',
+            'foreignKey' => 'foto_id'
+        )
+    );
 } 

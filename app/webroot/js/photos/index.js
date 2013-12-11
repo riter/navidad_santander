@@ -8,7 +8,7 @@
                 {"bSortable": true},
                 {"bSortable": false, "bSearchable" : false}
             ],
-            "aaSorting": [[0, "desc" ]],
+            "aaSorting": [[0, "asc" ]],
             "oLanguage": {
                 "sUrl": "/js/es_BO.txt"
             },
@@ -55,7 +55,7 @@
                         if($('#'+datos[i].id).length > 0){
                             $('#'+datos[i].id).html(i+1);
                         }else{
-                            location.reload();
+                            //location.reload();
                         }
                     }
                     //console.log(datos);

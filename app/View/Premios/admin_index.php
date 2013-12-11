@@ -15,13 +15,13 @@
             <li>
                 <?= $this->Html->link($this->Html->image("/images/icons/color/add.png", array("alt" => "Agregar")).'Agregar', array('controller' => 'premios','action' => 'admin_add'), array('escape' => false)); ?>
             </li>
-            <?php echo $this->Form->create('Client', array('class' => 'da-form',
-                'url' => array('controller' => 'reports', 'action' => 'admin_winners')));
+            <?// echo $this->Form->create('Client', array('class' => 'da-form',
+                //'url' => array('controller' => 'reports', 'action' => 'admin_winners')));
             ?>
-            <li>
+            <!--<li>
                 <input type="submit" name="boton" value="Boletos Export XLS" class="da-button blue large"/>
             </li>
-            </form>
+            </form>-->
         </ul>
     </div>
     <div class="da-panel-content">

@@ -11,4 +11,11 @@ class Premio extends AppModel {
     var $useTable = 'premio';
     //var $displayField = 'descripcion';
     public $primaryKey = 'id';
+
+    public $hasMany = array(
+        'Premio_cliente' => array(
+            'className' => 'Premio_cliente',
+            'foreignKey' => 'premio_id'
+        )
+    );
 } 

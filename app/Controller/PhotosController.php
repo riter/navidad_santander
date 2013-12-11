@@ -12,13 +12,13 @@ class PhotosController extends AppController
     {
         $this->set('title_page', 'Admin - Fotos');
         $this->layout = 'backend';
-        $photos = $this->Photo->find('all');
+        $photos = $this->Photo->find('all',array('order'=>array('Photo.id'=>'desc')));
         $this->set('photos', $photos);
     }
 
     public function admin_add()
     {
-        $this->set('title_page', 'Admin - Adicionar Usuario');
+        $this->set('title_page', 'Admin - Adicionar Foto');
         $this->layout = 'backend';
         if ($this->request->is('post')) {
             $datos = $this->request->data;
@@ -73,18 +73,60 @@ class PhotosController extends AppController
     /* Frontend: Devuelve lista de fotos para mostrar en la home */
     public function ajax_reload_fotos(){
         $this->loadModel('Photo');
+        $this->loadModel('Premio_cliente');
+        $this->loadModel('Client');
 
         $res=array();
-        $c=0;
-        $photos = $this->Photo->find('all',array('order'=>array('Photo.id'=>'desc')));
+        $posiciones=array();
 
-        foreach($photos as $photo){
+        $photos = $this->Photo->find('all',array('order'=>array('Photo.id'=>'desc')));
+        $ganadores = $this->Premio_cliente->find('all');
+
+
+        foreach($ganadores as $ganador){
+            $posiciones[]= $ganador['Premio']['posicion'];
+        }
+
+        $contador=0;
+        $pos=0;
+        $datosGanadores=array();
+        while($contador < count($photos)){
+            $photo=$photos[$contador];
+
             if($photo['Photo']['estado']!='2'){
-                $res[$c]['id']=$photo['Photo']['id'];
-                $res[$c]['src']=$photo['Photo']['nombre'];
-                $c++;
+                $datos['id']=$photo['Photo']['id'];
+                $datos['src']=$photo['Photo']['nombre'];
+                $datos['cliente_id']=$photo['Photo']['cliente_id'];
+                $datos['cliente_nombre']=$photo['Client']['nombre'];
+
+
+                if(in_array($pos,$posiciones)){
+                    $res[$pos]=array();
+                    $val=array_search($pos,$posiciones);
+                    unset($posiciones[$val]);
+                    $pos++;
+                    //CakeLog::debug(print_r('if1',true));
+                }else{
+                    if(count($photo['Premio_cliente'])>0){
+                        $datosGanadores[$datos['id']]=$datos;
+                       // CakeLog::debug(print_r('if2',true));
+                    }else{
+                        $res[$pos]=$datos;
+                        //CakeLog::debug(print_r('if3',true));
+                        $pos++;
+                    }
+                    $contador++;
+                }
+                //CakeLog::debug(print_r($res,true));
             }
         }
+
+        foreach($ganadores as $ganador){
+            $id=$ganador['Photo']['id'];
+            $pos=$ganador['Premio']['posicion'];
+            $res[$pos]=$datosGanadores[$id];
+        }
+
         echo json_encode($res);
         $this->autoRender=false;
     }

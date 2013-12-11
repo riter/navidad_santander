@@ -26,10 +26,13 @@
             </tr>
             </thead>
             <tbody>
-            <?php foreach ($photos as $photo): ?>
+            <?php
+                $posicion=1;
+                foreach ($photos as $photo):
+                ?>
                 <tr>
                     <td id="<?= $photo['Photo']['id']; ?>">
-
+                        <? echo $posicion; $posicion++;?>
                     </td>
                     <td>
                         <?= $photo['Client']['nombre']; ?>
