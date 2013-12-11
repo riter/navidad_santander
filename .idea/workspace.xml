@@ -23,19 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AppController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AppController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="20" selection-start="5480" selection-end="5480" vertical-scroll-proportion="-13.384615" vertical-offset="2117" max-vertical-offset="3179">
+            <state line="151" column="8" selection-start="5747" selection-end="5747" vertical-scroll-proportion="0.5733591" vertical-offset="2270" max-vertical-offset="3179">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegistersController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RegistersController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Controller/RegistersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="73" selection-start="4164" selection-end="4164" vertical-scroll-proportion="0.40416667" vertical-offset="1778" max-vertical-offset="3774">
+            <state line="112" column="27" selection-start="3806" selection-end="3806" vertical-scroll-proportion="-0.8039216" vertical-offset="1778" max-vertical-offset="3774">
               <folding />
             </state>
           </provider>
@@ -100,9 +100,9 @@
         <option value="$PROJECT_DIR$/app/Controller/PhotosController.php" />
         <option value="$PROJECT_DIR$/app/View/Premios/admin_index.php" />
         <option value="$PROJECT_DIR$/app/webroot/js/ganadores/index.js" />
-        <option value="$PROJECT_DIR$/app/Controller/AppController.php" />
         <option value="$PROJECT_DIR$/app/webroot/js/registers/upload.js" />
         <option value="$PROJECT_DIR$/app/Controller/RegistersController.php" />
+        <option value="$PROJECT_DIR$/app/Controller/AppController.php" />
       </list>
     </option>
   </component>
@@ -911,16 +911,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
+    <entry file="file://$PROJECT_DIR$/app/Controller/RegistersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="20" selection-start="5480" selection-end="5480" vertical-scroll-proportion="-13.384615" vertical-offset="2117" max-vertical-offset="3179">
+        <state line="112" column="27" selection-start="3806" selection-end="3806" vertical-scroll-proportion="-0.8039216" vertical-offset="1778" max-vertical-offset="3774">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/RegistersController.php">
+    <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="73" selection-start="4164" selection-end="4164" vertical-scroll-proportion="0.40416667" vertical-offset="1778" max-vertical-offset="3774">
+        <state line="151" column="8" selection-start="5747" selection-end="5747" vertical-scroll-proportion="0.5733591" vertical-offset="2270" max-vertical-offset="3179">
           <folding />
         </state>
       </provider>

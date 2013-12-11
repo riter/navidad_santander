@@ -131,8 +131,8 @@ class AppController extends Controller {
             'fileUpload' => false, 'cookie' => true);
 
         /* Codigos de Prueba en modo testing*/
-        $config = array('appId' => '771893319494562','secret'=>'b64a0254bd94949c1efb533797c893fa',
-            'fileUpload' => false, 'cookie' => true);
+        /*$config = array('appId' => '771893319494562','secret'=>'b64a0254bd94949c1efb533797c893fa',
+            'fileUpload' => false, 'cookie' => true);*/
 
         return $config;
     }
@@ -140,19 +140,19 @@ class AppController extends Controller {
     public  function getUrlApp() {
         /* Cambiar la direccion por la direccion de la app que proporsiona Facebook*/
         $direccionAppFacebook='https://apps.facebook.com/testnavidad';
-        //return $direccionAppFacebook;
+        return $direccionAppFacebook;
 
         /* Direccion de Prueba en modo testing*/
-        return 'http://apps.facebook.com/testmobiletwo';
+        //return 'http://apps.facebook.com/testmobiletwo';
     }
     public  function getUrlATab() {
 
         /* Cambiar la direccion por la direccion de la app que proporsiona Facebook*/
         $direccionTabFacebook='http://www.facebook.com/unileverweb/app_559917344092598';
-        //return $direccionTabFacebook;
+        return $direccionTabFacebook;
 
         /* Direccion de Prueba en modo testing*/
-        return 'http://www.facebook.com/unileverweb/app_771893319494562';
+        //return 'http://www.facebook.com/unileverweb/app_771893319494562';
     }
 
     public function getIdLike(){
