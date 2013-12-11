@@ -96,12 +96,13 @@ class AppController extends Controller {
                     $this->like=isset($likes['data']) && count($likes['data']);
 
                     if(isset($signed_request["page"]["id"])){
-                        $this->like=$signed_request["page"]["liked"];
+                        //$this->like=$signed_request["page"]["liked"];
                         if($this->like){
                             $canvas_page = $this->getUrlApp();
                             echo("<script> top.location.href='" .$canvas_page. "'</script>");
                         }
                     }
+
                     $this->Session->write('likeFacebook',$this->like);
                 }else{
                     // esta en la web y redirect a TabFacebook
@@ -128,7 +129,7 @@ class AppController extends Controller {
         /* Configuracion de el AppFacebook cambiar el appId y secret por los codigos que proporsiona Facebook*/
         $config = array('appId' => '559917344092598','secret'=>'6d7ec7106bca1dcc0765bd9c226b5ad3',
             'fileUpload' => false, 'cookie' => true);
-        
+
         /* Codigos de Prueba en modo testing*/
         /*$config = array('appId' => '771893319494562','secret'=>'b64a0254bd94949c1efb533797c893fa',
             'fileUpload' => false, 'cookie' => true);*/
@@ -147,7 +148,7 @@ class AppController extends Controller {
     public  function getUrlATab() {
 
         /* Cambiar la direccion por la direccion de la app que proporsiona Facebook*/
-        $direccionTabFacebook='https://www.facebook.com/unileverweb/app_559917344092598';
+        $direccionTabFacebook='http://www.facebook.com/unileverweb/app_559917344092598';
         return $direccionTabFacebook;
 
         /* Direccion de Prueba en modo testing*/
