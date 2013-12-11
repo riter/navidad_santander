@@ -23,56 +23,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AppController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AppController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="139" column="35" selection-start="5331" selection-end="5331" vertical-scroll-proportion="0.49496982" vertical-offset="2117" max-vertical-offset="3145">
+            <state line="142" column="27" selection-start="5401" selection-end="5401" vertical-scroll-proportion="-11.423077" vertical-offset="2117" max-vertical-offset="3179">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GanadoresController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Controller/GanadoresController.php">
+      <file leaf-file-name="RegistersController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Controller/RegistersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="46" selection-start="412" selection-end="412" vertical-scroll-proportion="-4.8846154" vertical-offset="94" max-vertical-offset="714">
+            <state line="133" column="54" selection-start="4597" selection-end="4597" vertical-scroll-proportion="1.2222222" vertical-offset="1615" max-vertical-offset="3655">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Photo.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Model/Photo.php">
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/webroot/js/ganadores/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="36" selection-start="562" selection-end="562" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="459">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin_index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/View/Ganadores/admin_index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="32" selection-start="1837" selection-end="1837" vertical-scroll-proportion="-11.769231" vertical-offset="578" max-vertical-offset="1479">
-              <folding>
-                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Premio_cliente.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Model/Premio_cliente.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="32" selection-start="624" selection-end="624" vertical-scroll-proportion="-11.423077" vertical-offset="60" max-vertical-offset="578">
+            <state line="31" column="0" selection-start="1241" selection-end="1241" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1037">
               <folding />
             </state>
           </provider>
@@ -81,30 +53,34 @@
       <file leaf-file-name="PhotosController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Controller/PhotosController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="0" selection-start="4390" selection-end="4390" vertical-scroll-proportion="-23.346153" vertical-offset="1416" max-vertical-offset="2261">
+            <state line="106" column="27" selection-start="3765" selection-end="3765" vertical-scroll-proportion="-1.2307693" vertical-offset="1685" max-vertical-offset="2261">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="admin_index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/View/Premios/admin_index.php">
+        <entry file="file://$PROJECT_DIR$/app/View/Ganadores/admin_index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="52" selection-start="2044" selection-end="2044" vertical-scroll-proportion="-13.730769" vertical-offset="459" max-vertical-offset="1156">
-              <folding>
-                <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="52" column="32" selection-start="1837" selection-end="1837" vertical-scroll-proportion="-7.8461537" vertical-offset="680" max-vertical-offset="1479">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="debug.log" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/tmp/logs/debug.log">
+      <file leaf-file-name="admin_add.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/View/Premios/admin_add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1980" column="0" selection-start="61380" selection-end="61380" vertical-scroll-proportion="0.0" vertical-offset="33660" max-vertical-offset="34102">
+            <state line="5" column="46" selection-start="211" selection-end="243" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="884">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientsController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Controller/ClientsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="35" selection-start="770" selection-end="770" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="1088">
               <folding />
             </state>
           </provider>
@@ -120,7 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/Controller/RegistersController.php" />
         <option value="$PROJECT_DIR$/app/View/Home/home.php" />
         <option value="$PROJECT_DIR$/app/View/Photos/admin_index.php" />
         <option value="$PROJECT_DIR$/app/View/Layouts/backend.php" />
@@ -131,11 +106,12 @@
         <option value="$PROJECT_DIR$/app/Model/Premio_cliente.php" />
         <option value="$PROJECT_DIR$/app/View/Ganadores/admin_index.php" />
         <option value="$PROJECT_DIR$/app/Controller/GanadoresController.php" />
-        <option value="$PROJECT_DIR$/app/webroot/js/ganadores/index.js" />
         <option value="$PROJECT_DIR$/app/tmp/logs/debug.log" />
         <option value="$PROJECT_DIR$/app/Controller/PhotosController.php" />
         <option value="$PROJECT_DIR$/app/View/Premios/admin_index.php" />
+        <option value="$PROJECT_DIR$/app/webroot/js/ganadores/index.js" />
         <option value="$PROJECT_DIR$/app/Controller/AppController.php" />
+        <option value="$PROJECT_DIR$/app/Controller/RegistersController.php" />
       </list>
     </option>
   </component>
@@ -208,6 +184,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test.santander" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test.santander" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test.santander" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Doc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -340,32 +330,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="photos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test.santander" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test.santander" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webroot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -782,11 +746,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\test.santander\Doc" />
       <recent name="C:\xampp\htdocs\test.santander\app\webroot\js" />
       <recent name="C:\xampp\htdocs\test.santander\app\View\Ganadores" />
       <recent name="C:\xampp\htdocs\test.santander\app\Controller" />
       <recent name="C:\xampp\htdocs\test.santander\app\webroot\frontend_images" />
-      <recent name="C:\xampp\htdocs\test.santander\app\Model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\test.santander\app\webroot\plugins" />
@@ -853,45 +817,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Controller/ReportsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/PremiosController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="36" selection-start="2488" selection-end="2488" vertical-scroll-proportion="2.3227723" vertical-offset="0" max-vertical-offset="1819" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Layouts/backend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="37" selection-start="9444" selection-end="9444" vertical-scroll-proportion="-7.0" vertical-offset="3196" max-vertical-offset="4505" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/js/photos/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="16" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1343">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/Premio.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="31" selection-start="363" selection-end="363" vertical-scroll-proportion="0.37625754" vertical-offset="0" max-vertical-offset="497">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Premios/admin_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="16" selection-start="1649" selection-end="1743" vertical-scroll-proportion="0.51287127" vertical-offset="353" max-vertical-offset="884">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/js/ganadores/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="28" selection-start="588" selection-end="588" vertical-scroll-proportion="0.375" vertical-offset="0" max-vertical-offset="1037">
           <folding />
         </state>
       </provider>
@@ -903,13 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/GanadoresController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="46" selection-start="412" selection-end="412" vertical-scroll-proportion="-4.8846154" vertical-offset="94" max-vertical-offset="714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/Premio_cliente.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="32" selection-start="624" selection-end="624" vertical-scroll-proportion="-11.423077" vertical-offset="60" max-vertical-offset="578">
@@ -917,40 +838,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/Ganadores/admin_index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="32" selection-start="1837" selection-end="1837" vertical-scroll-proportion="-11.769231" vertical-offset="578" max-vertical-offset="1479">
-          <folding>
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/RegistersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="22" selection-start="514" selection-end="514" vertical-scroll-proportion="0.49173555" vertical-offset="0" max-vertical-offset="3587">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/tmp/logs/debug.log">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1980" column="0" selection-start="61380" selection-end="61380" vertical-scroll-proportion="0.0" vertical-offset="33660" max-vertical-offset="34102">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/PhotosController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="0" selection-start="4390" selection-end="4390" vertical-scroll-proportion="-23.346153" vertical-offset="1416" max-vertical-offset="2261">
           <folding />
         </state>
       </provider>
@@ -967,9 +857,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Doc/Backup.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1972">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="115" selection-end="115" vertical-scroll-proportion="0.125" vertical-offset="0" max-vertical-offset="544">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/PremiosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.6019802" vertical-offset="1314" max-vertical-offset="1819">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/GanadoresController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="46" selection-start="412" selection-end="412" vertical-scroll-proportion="0.048262548" vertical-offset="196" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/PhotosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="106" column="27" selection-start="3765" selection-end="3765" vertical-scroll-proportion="-1.2307693" vertical-offset="1685" max-vertical-offset="2261">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/js/ganadores/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="1241" selection-end="1241" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1037">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Ganadores/admin_index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="32" selection-start="1837" selection-end="1837" vertical-scroll-proportion="-7.8461537" vertical-offset="680" max-vertical-offset="1479">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Premios/admin_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="46" selection-start="211" selection-end="243" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/ClientsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="35" selection-start="770" selection-end="770" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="1088">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="35" selection-start="5331" selection-end="5331" vertical-scroll-proportion="0.49496982" vertical-offset="2117" max-vertical-offset="3145">
+        <state line="142" column="27" selection-start="5401" selection-end="5401" vertical-scroll-proportion="-11.423077" vertical-offset="2117" max-vertical-offset="3179">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/RegistersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="133" column="54" selection-start="4597" selection-end="4597" vertical-scroll-proportion="1.2222222" vertical-offset="1615" max-vertical-offset="3655">
           <folding />
         </state>
       </provider>

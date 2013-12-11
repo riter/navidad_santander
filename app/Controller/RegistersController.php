@@ -85,51 +85,55 @@ class RegistersController extends AppController{
     }
 
     public function _resize($filename=null,$cropX,$cropY,$cropW,$cropH,$ext=null,$imgH){
+        try{
+            $jpeg_quelity=9;
+            list($targ_w,$targ_h)=getimagesize($filename);
 
-        $jpeg_quelity=9;
-        list($targ_w,$targ_h)=getimagesize($filename);
+            if($targ_w<=$cropW){
+                $cropW=$targ_w;
+            }
+            if($targ_h<=$cropH){
+                $cropH=$targ_h;
+            }
+            switch($ext){
+                case 'gif':
+                    $img_r=imagecreatefromgif($filename);
+                    break;
+                case 'png':
+                    $img_r=imagecreatefrompng($filename);
+                    break;
+                case 'jpeg':
+                    $img_r=imagecreatefromjpeg($filename);
+                    break;
+                case 'jpg':
+                    $img_r=imagecreatefromjpeg($filename);
+                    break;
+            }
+            $dist_r= imagecreatetruecolor($cropW,$cropH);
 
-        if($targ_w<=$cropW){
-            $cropW=$targ_w;
-        }
-        if($targ_h<=$cropH){
-            $cropH=$targ_h;
-        }
-        switch($ext){
-            case 'gif':
-                $img_r=imagecreatefromgif($filename);
-                break;
-            case 'png':
-                $img_r=imagecreatefrompng($filename);
-                break;
-            case 'jpeg':
-                $img_r=imagecreatefromjpeg($filename);
-                break;
-            case 'jpg':
-                $img_r=imagecreatefromjpeg($filename);
-                break;
-        }
-        $dist_r= imagecreatetruecolor($cropW,$cropH);
+            $newcropY=($cropY*$targ_h)/$imgH;
+            $newtarg_h=((($cropY+$cropH)*$targ_h)/$imgH)-$newcropY;
+            imagecopyresampled($dist_r,$img_r,0,0,0,$newcropY,$cropW,$cropH,$targ_w,$newtarg_h);
 
-        $newcropY=($cropY*$targ_h)/$imgH;
-        $newtarg_h=((($cropY+$cropH)*$targ_h)/$imgH)-$newcropY;
-        imagecopyresampled($dist_r,$img_r,0,0,0,$newcropY,$cropW,$cropH,$targ_w,$newtarg_h);
-
-        header('Contend-type: image/'.$ext);
-        switch($ext){
-            case 'gif':
-                imagegif($dist_r,$filename);
-                break;
-            case 'png':
-                imagepng($dist_r,$filename,$jpeg_quelity,PNG_ALL_FILTERS);
-                break;
-            case 'jpeg':
-                imagejpeg($dist_r,$filename,$jpeg_quelity);
-                break;
-            case 'jpg':
-                imagejpeg($dist_r,$filename,$jpeg_quelity);
-                break;
+            header('Contend-type: image/'.$ext);
+            switch($ext){
+                case 'gif':
+                    imagegif($dist_r,$filename);
+                    break;
+                case 'png':
+                    imagepng($dist_r,$filename,$jpeg_quelity,PNG_ALL_FILTERS);
+                    break;
+                case 'jpeg':
+                    imagejpeg($dist_r,$filename,$jpeg_quelity);
+                    break;
+                case 'jpg':
+                    imagejpeg($dist_r,$filename,$jpeg_quelity);
+                    break;
+            }
+        }catch (Exception $e){
+            CakeLog::debug(print_r($e->getMessage()));
         }
+
     }
 
     public function ajax_saveImg(){
