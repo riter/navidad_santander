@@ -35,7 +35,7 @@
       <file leaf-file-name="RegistersController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Controller/RegistersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="15" selection-start="3183" selection-end="3183" vertical-scroll-proportion="-0.11111111" vertical-offset="1598" max-vertical-offset="3655">
+            <state line="69" column="54" selection-start="2503" selection-end="2503" vertical-scroll-proportion="0.44444445" vertical-offset="884" max-vertical-offset="3723">
               <folding />
             </state>
           </provider>
@@ -929,7 +929,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/RegistersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="15" selection-start="3183" selection-end="3183" vertical-scroll-proportion="-0.11111111" vertical-offset="1598" max-vertical-offset="3655">
+        <state line="69" column="54" selection-start="2503" selection-end="2503" vertical-scroll-proportion="0.44444445" vertical-offset="884" max-vertical-offset="3723">
           <folding />
         </state>
       </provider>

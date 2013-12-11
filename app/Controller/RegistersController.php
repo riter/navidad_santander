@@ -28,42 +28,46 @@ class RegistersController extends AppController{
         $this->layout='';
     }
     public function upload(){
-        $this->layout='';
+        try{
+            $this->layout='';
 
-        if ($this->request->is('post')) {
+            if ($this->request->is('post')) {
 
-            $cropX = $this->request->data['cropX'];
-            $cropY = $this->request->data['cropY'];
-            $cropW = $this->request->data['cropW'];
-            $cropH = $this->request->data['cropH'];
-            $imgH = $this->request->data['imgH'];
+                $cropX = $this->request->data['cropX'];
+                $cropY = $this->request->data['cropY'];
+                $cropW = $this->request->data['cropW'];
+                $cropH = $this->request->data['cropH'];
+                $imgH = $this->request->data['imgH'];
 
-            $size = (int) $_SERVER['CONTENT_LENGTH'];
-            if( isset($_FILES['file']) && ($size < (5 * 1024 * 1024))){
+                $size = (int) $_SERVER['CONTENT_LENGTH'];
+                if( isset($_FILES['file']) && ($size < (5 * 1024 * 1024))){
 
-                if ($_FILES["file"]["error"] > 0){
-                    $output = "Return Code: " . $_FILES["file"]["error"];
-                    echo ("<script>alert('$output')</script>");
-                }else{
-                    $extension = explode('/',$_FILES["file"]["type"]);
-                    $extension = $extension[1];
-                    //$extension = 'jpeg';
-                    $filename=uniqid("user2_");
-                    if(move_uploaded_file($_FILES["file"]["tmp_name"],
-                        'fotos/'.$filename.'.'.$extension)){
+                    if ($_FILES["file"]["error"] > 0){
+                        $output = "Return Code: " . $_FILES["file"]["error"];
+                        echo ("<script>alert('$output')</script>");
+                    }else{
+                        $extension = explode('/',$_FILES["file"]["type"]);
+                        $extension = $extension[1];
+                        //$extension = 'jpeg';
+                        $filename=uniqid("user2_");
+                        if(move_uploaded_file($_FILES["file"]["tmp_name"],
+                            'fotos/'.$filename.'.'.$extension)){
 
-                        $this->_resize('fotos/'.$filename.'.'.$extension,$cropX,$cropY,$cropW,$cropH,$extension,$imgH);
+                            $this->_resize('fotos/'.$filename.'.'.$extension,$cropX,$cropY,$cropW,$cropH,$extension,$imgH);
 
-                        if($this->saveFoto('/fotos/'.$filename.'.'.$extension)){
-                            $this->publicarFacebook();
-                            $this->redirect(array('action'=>'sended'));
+                            if($this->saveFoto('/fotos/'.$filename.'.'.$extension)){
+                                $this->publicarFacebook();
+                                $this->redirect(array('action'=>'sended'));
+                            }
                         }
                     }
-                }
 
-            }else{
-                echo("<script> alert('Error: Tamaño del Acrvhivo exede el limite')</script>");
+                }else{
+                    echo("<script> alert('Error: Tamaño del Acrvhivo exede el limite')</script>");
+                }
             }
+        }catch (Exception $e){
+            CakeLog::debug(print_r($e->getMessage()));
         }
     }
 
