@@ -96,7 +96,7 @@ class AppController extends Controller {
                     $likes=$facebook->api($graph_url);
                     $this->like=isset($likes['data']) && count($likes['data']);
 
-                    debug($signed_request);
+                    //debug($signed_request);
 
                     if(isset($signed_request["page"]["id"])){
                         $this->like=$signed_request["page"]["liked"];
@@ -113,7 +113,7 @@ class AppController extends Controller {
                 }
             //}else{
                 // esta en la web y redirect a AppFacebook
-                echo("<script> top.location.href='" .$this->getUrlATab(). "'</script>");
+                //echo("<script> top.location.href='" .$this->getUrlATab(). "'</script>");
             //}
 
         }catch (Exception $e){
