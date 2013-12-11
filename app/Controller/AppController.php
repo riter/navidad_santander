@@ -64,6 +64,7 @@ class AppController extends Controller {
 
         if(isset($signed_request["page"]["id"])){
             $canvas_page = $this->getUrlATab();
+            $this->like=$signed_request["page"]["liked"];
         }else{
             $canvas_page = $this->getUrlApp();
         }
@@ -95,12 +96,14 @@ class AppController extends Controller {
                     $likes=$facebook->api($graph_url);
                     $this->like=isset($likes['data']) && count($likes['data']);
 
-                    if(isset($signed_request["page"]["id"])){
-                        $this->like=$signed_request["page"]["liked"];
-                        if($this->like){
+                    debug($signed_request);
+
+                    if(isset($signed_request["page"]["id"]) && $this->like){
+
+                        //if($this->like){
                             $canvas_page = $this->getUrlApp();
                             echo("<script> top.location.href='" .$canvas_page. "'</script>");
-                        }
+                        //}
                     }
 
                     $this->Session->write('likeFacebook',$this->like);
