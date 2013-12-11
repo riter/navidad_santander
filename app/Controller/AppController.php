@@ -64,7 +64,6 @@ class AppController extends Controller {
 
         if(isset($signed_request["page"]["id"])){
             $canvas_page = $this->getUrlATab();
-            $this->like=$signed_request["page"]["liked"];
         }else{
             $canvas_page = $this->getUrlApp();
         }
@@ -73,7 +72,8 @@ class AppController extends Controller {
             ."&scope=email,user_likes,publish_stream&redirect_uri=" . urlencode($canvas_page);
 
         try{
-            if(isset($this->request->data['signed_request'])){
+
+            //if(isset($this->request->data['signed_request'])){
 
                 if( $user){
                     $this->Session->write('idFacebook',$user);
@@ -98,12 +98,12 @@ class AppController extends Controller {
 
                     debug($signed_request);
 
-                    if(isset($signed_request["page"]["id"]) && $this->like){
-
-                        //if($this->like){
+                    if(isset($signed_request["page"]["id"])){
+                        $this->like=$signed_request["page"]["liked"];
+                        if($this->like){
                             $canvas_page = $this->getUrlApp();
                             echo("<script> top.location.href='" .$canvas_page. "'</script>");
-                        //}
+                        }
                     }
 
                     $this->Session->write('likeFacebook',$this->like);
@@ -111,7 +111,10 @@ class AppController extends Controller {
                     // esta en la web y redirect a TabFacebook
                     echo("<script> top.location.href='" .$canvas_page. "'</script>");
                 }
-            }
+            //}else{
+                // esta en la web y redirect a AppFacebook
+                echo("<script> top.location.href='" .$this->getUrlATab(). "'</script>");
+            //}
 
         }catch (Exception $e){
           echo("<script> top.location.href='" .$auth_url. "'</script>");
