@@ -1,4 +1,19 @@
 $(document).ready(function() {
+    // minimum Crop de Imagen
+    $('#preview').jWindowCrop({
+        targetWidth:205,
+        targetHeight:205,
+        smartControls: true,
+        showControlsOnStart: false,
+        onChange: function(result) {
+            $('#crop_x').val(result.cropX);
+            $('#crop_y').val(result.cropY);
+            $('#crop_w').val(result.cropW);
+            $('#crop_h').val(result.cropH);
+            $('#img_h').val($('.jwc_frame img').height()); // nuevo tamaño de la imagen
+        }
+    });
+
     var opcion = '';
 
     /* Proceso para subir Imagenes*/
@@ -108,18 +123,5 @@ $(document).ready(function() {
 
     });
 
-    // minimum Crop de Imagen
-    $('#preview').jWindowCrop({
-        targetWidth:205,
-        targetHeight:205,
-        smartControls: true,
-        showControlsOnStart: false,
-        onChange: function(result) {
-            $('#crop_x').val(result.cropX);
-            $('#crop_y').val(result.cropY);
-            $('#crop_w').val(result.cropW);
-            $('#crop_h').val(result.cropH);
-            $('#img_h').val($('.jwc_frame img').height()); // nuevo tamaño de la imagen
-        }
-    });
+
 });
