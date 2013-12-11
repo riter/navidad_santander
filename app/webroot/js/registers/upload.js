@@ -38,7 +38,7 @@ $(document).ready(function() {
         var val = $(this).val();
 
         switch(val.substring(val.lastIndexOf('.') + 1).toLowerCase()){
-            case 'jpg': case 'png': case 'jpeg':
+            case 'gif': case 'jpg': case 'png': case 'jpeg':
              archivo(evt);
             break;
             default:

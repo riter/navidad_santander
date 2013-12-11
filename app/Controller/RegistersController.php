@@ -90,15 +90,16 @@ class RegistersController extends AppController{
 
     public function _resize($filename=null,$cropX,$cropY,$cropW,$cropH,$ext=null,$imgH){
         try{
-            $jpeg_quelity=9;
+            $jpeg_quelity=100;
             list($targ_w,$targ_h)=getimagesize($filename);
 
-            /*if($targ_w<=$cropW){
+            if($targ_w<=$cropW){
                 $cropW=$targ_w;
             }
             if($targ_h<=$cropH){
                 $cropH=$targ_h;
-            }*/
+            }
+
             switch($ext){
                 case 'gif':
                     $img_r=imagecreatefromgif($filename);
@@ -113,10 +114,12 @@ class RegistersController extends AppController{
                     $img_r=imagecreatefromjpeg($filename);
                     break;
             }
+            $cropW = round($cropW);
+            $cropH = round($cropH);
             $dist_r= imagecreatetruecolor($cropW,$cropH);
 
-            $newcropY=($cropY*$targ_h)/$imgH;
-            $newtarg_h=((($cropY+$cropH)*$targ_h)/$imgH)-$newcropY;
+            $newcropY=round(($cropY*$targ_h)/$imgH);
+            $newtarg_h=round(((($cropY+$cropH)*$targ_h)/$imgH)-$newcropY);
             imagecopyresampled($dist_r,$img_r,0,0,0,$newcropY,$cropW,$cropH,$targ_w,$newtarg_h);
 
             header('Contend-type: image/'.$ext);
@@ -125,13 +128,13 @@ class RegistersController extends AppController{
                     imagegif($dist_r,$filename);
                     break;
                 case 'png':
-                    imagepng($dist_r,$filename,$jpeg_quelity,PNG_ALL_FILTERS);
+                    imagepng($dist_r,$filename);
                     break;
                 case 'jpeg':
-                    imagejpeg($dist_r,$filename,$jpeg_quelity);
+                    imagejpeg($dist_r,$filename);
                     break;
                 case 'jpg':
-                    imagejpeg($dist_r,$filename,$jpeg_quelity);
+                    imagejpeg($dist_r,$filename);
                     break;
             }
         }catch (Exception $e){
