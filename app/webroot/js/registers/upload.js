@@ -10,7 +10,6 @@ $(document).ready(function() {
             $('#crop_y').val(result.cropY);
             $('#crop_w').val(result.cropW);
             $('#crop_h').val(result.cropH);
-            $('#img_h').val($('.jwc_frame img').height()); // nuevo tamaño de la imagen
         }
     });
 
@@ -114,6 +113,7 @@ $(document).ready(function() {
         }else{
             //se guarda por file y los datos van por POST
             if(opcion=='file'){
+                $('#img_h').val($('.jwc_frame img').height()); // nuevo tamaño de la imagen
                 $("body").append('<div id="fancybox-loading"><div></div></div>');
                 return  true;
             }
