@@ -118,8 +118,12 @@ class RegistersController extends AppController{
             $cropH = round($cropH);
             $dist_r= imagecreatetruecolor($cropW,$cropH);
 
-            $newcropY=round(($cropY*$targ_h)/$imgH);
-            $newtarg_h=round(((($cropY+$cropH)*$targ_h)/$imgH)-$newcropY);
+            $newcropY=($cropY*$targ_h)/$imgH;
+            $newtarg_h=((($cropY+$cropH)*$targ_h)/$imgH)-$newcropY;
+
+            $newcropY = round($newcropY);
+            $newtarg_h = round($newtarg_h);
+
             imagecopyresampled($dist_r,$img_r,0,0,0,$newcropY,$cropW,$cropH,$targ_w,$newtarg_h);
 
             header('Contend-type: image/'.$ext);
