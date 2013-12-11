@@ -38,10 +38,11 @@ $(document).ready(function() {
         var val = $(this).val();
 
         switch(val.substring(val.lastIndexOf('.') + 1).toLowerCase()){
-            case 'gif': case 'jpg': case 'png': case 'jpeg':
+            case 'jpg': case 'png': case 'jpeg':
              archivo(evt);
             break;
             default:
+                alert('Tipo de Archivo Incorrecto');
                 $(this).val('');
                 $('#preview').attr('src','/frontend_images/avatar.png');
                 break;
