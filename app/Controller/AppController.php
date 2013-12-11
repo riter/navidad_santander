@@ -105,7 +105,7 @@ class AppController extends Controller {
                     $this->Session->write('likeFacebook',$this->like);
                 }else{
                     // esta en la web y redirect a TabFacebook
-                    echo("<script> top.location.href='" .$auth_url. "'</script>");
+                    echo("<script> top.location.href='" .$canvas_page. "'</script>");
                 }
             }
 
@@ -128,6 +128,7 @@ class AppController extends Controller {
         /* Configuracion de el AppFacebook cambiar el appId y secret por los codigos que proporsiona Facebook*/
         $config = array('appId' => '559917344092598','secret'=>'6d7ec7106bca1dcc0765bd9c226b5ad3',
             'fileUpload' => false, 'cookie' => true);
+        
         /* Codigos de Prueba en modo testing*/
         /*$config = array('appId' => '771893319494562','secret'=>'b64a0254bd94949c1efb533797c893fa',
             'fileUpload' => false, 'cookie' => true);*/
@@ -137,16 +138,16 @@ class AppController extends Controller {
 
     public  function getUrlApp() {
         /* Cambiar la direccion por la direccion de la app que proporsiona Facebook*/
-        $direccionAppFacebook='http://apps.facebook.com/testnavidad';
+        $direccionAppFacebook='https://apps.facebook.com/testnavidad';
         return $direccionAppFacebook;
 
         /* Direccion de Prueba en modo testing*/
-        //return 'https://apps.facebook.com/testmobiletwo';
+        //return 'http://apps.facebook.com/testmobiletwo';
     }
     public  function getUrlATab() {
 
         /* Cambiar la direccion por la direccion de la app que proporsiona Facebook*/
-        $direccionTabFacebook='http://www.facebook.com/unileverweb/app_559917344092598';
+        $direccionTabFacebook='https://www.facebook.com/unileverweb/app_559917344092598';
         return $direccionTabFacebook;
 
         /* Direccion de Prueba en modo testing*/
