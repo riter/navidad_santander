@@ -96,7 +96,7 @@ class AppController extends Controller {
                     $this->like=isset($likes['data']) && count($likes['data']);
 
                     if(isset($signed_request["page"]["id"])){
-                        //$this->like=$signed_request["page"]["liked"];
+                        $this->like=$signed_request["page"]["liked"];
                         if($this->like){
                             $canvas_page = $this->getUrlApp();
                             echo("<script> top.location.href='" .$canvas_page. "'</script>");
