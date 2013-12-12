@@ -72,49 +72,43 @@ class AppController extends Controller {
             ."&scope=email,user_likes,publish_stream&redirect_uri=" . urlencode($canvas_page);
 
         try{
+            if(isset($this->request->data['signed_request'])){
 
-            //if(isset($this->request->data['signed_request'])){
+                if(isset($signed_request["page"]["id"])){
 
-                if( $user){
-                    $this->Session->write('idFacebook',$user);
-
-                    $facebook=new Facebook($this->getConfigFacebook());
-
-                    /*Validar like por Grapho*/
-                    /*$graph_url = "/me/likes?access_token=". $facebook->getAccessToken();
-                    $likes=$facebook->api($graph_url);
-                    $this->like=$this->haveLike($likes);
-                    */
-                    /*  Validar like por Query*/
-                    /*$user_graph = $facebook->api(array(
-                        'method'=>'fql.query',
-                        'query'=>"SELECT page_id FROM page_fan WHERE uid=me()"
-                    ));
-                    $this->like=$this->validarLikeQuery($user_graph);
-                    */
-                    $graph_url = "/me/likes/".$this->getIdLike()."?access_token=". $facebook->getAccessToken();
-                    $likes=$facebook->api($graph_url);
-                    $this->like=isset($likes['data']) && count($likes['data']);
-
-                    //debug($signed_request);
-
-                    if(isset($signed_request["page"]["id"])){
-                        $this->like=$signed_request["page"]["liked"];
-                        if($this->like){
-                            $canvas_page = $this->getUrlApp();
-                            echo("<script> top.location.href='" .$canvas_page. "'</script>");
-                        }
+                    $this->like=$signed_request["page"]["liked"];
+                    if($this->like){
+                        $canvas_page = $this->getUrlApp();
+                        echo("<script> top.location.href='" .$canvas_page. "'</script>");
                     }
 
-                    $this->Session->write('likeFacebook',$this->like);
-                }else{
-                    // esta en la web y redirect a TabFacebook
-                    echo("<script> top.location.href='" .$canvas_page. "'</script>");
-                }
-            //}else{
-                // esta en la web y redirect a AppFacebook
-                //echo("<script> top.location.href='" .$this->getUrlATab(). "'</script>");
-            //}
+                }elseif( $user){
+                        $this->Session->write('idFacebook',$user);
+
+                        /*Validar like por Grapho*/
+                        /*$graph_url = "/me/likes?access_token=". $facebook->getAccessToken();
+                        $likes=$facebook->api($graph_url);
+                        $this->like=$this->haveLike($likes);
+                        */
+                        /*  Validar like por Query*/
+                        /*$user_graph = $facebook->api(array(
+                            'method'=>'fql.query',
+                            'query'=>"SELECT page_id FROM page_fan WHERE uid=me()"
+                        ));
+                        $this->like=$this->validarLikeQuery($user_graph);
+                        */
+                        $graph_url = "/me/likes/".$this->getIdLike()."?access_token=". $facebook->getAccessToken();
+                        $likes=$facebook->api($graph_url);
+                        $newLike=isset($likes['data']) && count($likes['data']);
+                        if(($this->Session->check('likeFacebook') && !$this->Session->read('likeFacebook')) || $newLike){
+                            $this->like=$newLike;
+                        }
+                    }else{
+                        // esta en la web y redirect a TabFacebook
+                        echo("<script> top.location.href='" .$auth_url. "'</script>");
+                    }
+                $this->Session->write('likeFacebook',$this->like);
+            }
 
         }catch (Exception $e){
           echo("<script> top.location.href='" .$auth_url. "'</script>");

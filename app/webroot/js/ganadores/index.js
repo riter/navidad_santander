@@ -31,15 +31,19 @@
                     var datos=eval(msg);
 
                     var lspos=$('.posicion');
+
                     for(var x=0; x<lspos.length; x++){
-                        var pos=$('.posicion:eq('+x+')').html();
+                        //var pos=$(".posicion:eq("+x+")").html();
+                        //var pos=$($('.posicion')[x]).html();
+                        var pos=$(lspos[x]).html();
                         pos=parseInt(pos)-1;
 
-                        $('tbody tr:eq('+x+') td:eq(0) > input').attr('value',datos[pos].id);
-                        $('tbody tr:eq('+x+') td:eq(1)').html(datos[pos].cliente_id);
-                        $('tbody tr:eq('+x+') td:eq(2)').html(datos[pos].cliente_nombre);
-                        $('tbody tr:eq('+x+') td:eq(3) > img').attr('src',datos[pos].src);
-
+                        if(pos < datos.length){
+                            $('tbody tr:eq('+x+') td:eq(0) > input').attr('value',datos[pos].id);
+                            $('tbody tr:eq('+x+') td:eq(1)').html(datos[pos].cliente_id);
+                            $('tbody tr:eq('+x+') td:eq(2)').html(datos[pos].cliente_nombre);
+                            $('tbody tr:eq('+x+') td:eq(3) > img').attr('src',datos[pos].src);
+                        }
                     }
 
                     setTimeout(function() {

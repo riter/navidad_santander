@@ -1,0 +1,33 @@
+.scroll-content {
+    position:absolute;
+    top:0;
+    left:0;
+    padding-right:20px;
+
+}
+.scroll-pane{position:relative;}
+.slider-wrap{
+    position:absolute;
+    right:0;
+    top:0;
+    background-color:#616161;
+    width: 6px;
+    margin-right: 5px;
+}
+.slider-vertical{position:relative;height:100%}
+.ui-slider-handle{
+    /*background-color:#f50000;*/
+    width:11px;
+    height:11px;
+    margin:0 auto;
+    display:block;
+    position:absolute;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin-left: -3px;
+}
+.ui-slider-handle img{border:none}
+.scrollbar-top{position:absolute;top:0;}
+.scrollbar-bottom{position:absolute;bottom:0;}
+.scrollbar-grip{position:absolute;top:50%;}

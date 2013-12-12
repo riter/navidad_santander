@@ -1,5 +1,12 @@
 $(document).ready(function() {
-
+    /*$(".boxes").mCustomScrollbar({
+        verticalScroll:true,
+        theme:"light",
+        scrollButtons:{
+            enable:true
+        }
+    });*/
+    $('.boxes').sbscroller();
 
     /* Validar si cargo las 3 fotos del dia en el Boton Subiir foto*/
     $(".upload").on('click',upload);

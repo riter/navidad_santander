@@ -15,6 +15,12 @@
     <script type="text/javascript" src="/frontend_js/jquery.fancybox.js?v=2.1.5"></script>
     <script type="text/javascript" src="/frontend_js/modernizr.js"></script>
 
+    <!--Add Plugin Sbscroller-->
+    <script type="text/javascript" src="/jui/js/jquery-ui-1.8.20.min.js"></script>
+    <script type="text/javascript" src="/plugins/sbscroller/jquery.sbscroller.js"></script>
+    <script type="text/javascript" src="/plugins/sbscroller/jquery.mousewheel.min.js"></script>
+    <link rel="stylesheet" href="/plugins/sbscroller/jquery.sbscroller.css" />
+
     <script type="text/javascript" src="/js/home/home.js"></script>
 
 </head>
