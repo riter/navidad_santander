@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8" />
     <title>Yo lo quiero para Navidad | Santander Universidades</title>
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/frontend_css/styles.css" />
 
     <!-- Add jQuery library -->
-    <script type="text/javascript" src="/frontend_js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="/plugins/sbscroller/jquery-1.7.1.min.js"></script>
 
     <!-- Add fancyBox -->
     <link rel="stylesheet" href="/frontend_js/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
@@ -16,7 +16,8 @@
     <script type="text/javascript" src="/frontend_js/modernizr.js"></script>
 
     <!--Add Plugin Sbscroller-->
-    <script type="text/javascript" src="/jui/js/jquery-ui-1.8.20.min.js"></script>
+    <!--<script type="text/javascript" src="/plugins/sbscroller/jquery.ui.core.min.js"></script>-->
+    <script type="text/javascript" src="/plugins/sbscroller/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/plugins/sbscroller/jquery.sbscroller.js"></script>
     <script type="text/javascript" src="/plugins/sbscroller/jquery.mousewheel.min.js"></script>
     <link rel="stylesheet" href="/plugins/sbscroller/jquery.sbscroller.css" />
@@ -50,9 +51,11 @@
     </div>
 </header>
 <section>
+    <div id="mycontainer">
+
+    </div>
     <div class="container">
         <div class="boxes">
-
             <? $posicion=0;
                 for($f=0; $f<10; $f++){
                 echo '<ul>';
@@ -88,6 +91,7 @@
                 </li>
             </ul>
         </div>
+
     </div>
 </section>
 <footer>
