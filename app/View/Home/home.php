@@ -16,7 +16,6 @@
     <script type="text/javascript" src="/frontend_js/modernizr.js"></script>
 
     <!--Add Plugin Sbscroller-->
-    <!--<script type="text/javascript" src="/plugins/sbscroller/jquery.ui.core.min.js"></script>-->
     <script type="text/javascript" src="/plugins/sbscroller/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/plugins/sbscroller/jquery.sbscroller.js"></script>
     <script type="text/javascript" src="/plugins/sbscroller/jquery.mousewheel.min.js"></script>
