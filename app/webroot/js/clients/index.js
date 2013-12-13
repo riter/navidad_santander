@@ -6,6 +6,8 @@
                 {"bSortable": true},
                 {"bSortable": true},
                 {"bSortable": true},
+                {"bSortable": true},
+                {"bSortable": true},
                 {"bSortable": false, "bSearchable" : false}
             ],
             "aaSorting": [[0, "desc" ]],

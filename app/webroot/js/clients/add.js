@@ -9,6 +9,10 @@
                 "data[Client][email]": {
                     required: true,
                     email:true
+                },
+                "data[Client][fecha_nac]": {
+                    required: true,
+                    date:true
                 }
             },
             messages: {
@@ -18,6 +22,10 @@
                 "data[Client][email]": {
                     required: 'Email requerido',
                     email: 'Email incorrecto'
+                },
+                "data[Client][fecha_nac]": {
+                    required: 'Fecha Naciemiento requerido',
+                    date: 'Fecha incorrecto'
                 }
             }
         });

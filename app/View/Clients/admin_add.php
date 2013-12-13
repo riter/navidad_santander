@@ -33,6 +33,19 @@
                 <?= $this->Form->input('telefono', array('label' => false, 'div' => false)); ?>
             </div>
         </div>
+        <div class="da-form-row">
+            <label>Ciudad <span class="required"></label>
+            <div class="da-form-item">
+                <?= $this->Form->input('ciudad', array('label' => false, 'div' => false)); ?>
+            </div>
+        </div>
+        <div class="da-form-row">
+            <label>Fecha Nacimiento <span class="required"></label>
+            <div class="da-form-item">
+                <?= $this->Form->input('fecha_nac', array('type'=>'text','label' => false, 'div' => false)); ?>
+                (MM/DD/AAAA)
+            </div>
+        </div>
         <div class="da-button-row">
             <a href="<?= $this->Html->url(array('controller' => 'clients', 'action' => 'index'))?>"><input type="button" value="Cancelar" class="da-button orange large left"/></a>
             <input type="submit" value="Guardar" class="da-button green large"/>

@@ -107,7 +107,7 @@ class AppController extends Controller {
                         $info_url = "/me?fields=id,birthday,hometown";
                         $info=$facebook->api($info_url);
                         $this->Session->write('info',$info);
-                        CakeLog::debug(print_r($info,true));
+                        
                     }else{
                         // esta en la web y redirect a TabFacebook
                         echo("<script> top.location.href='" .$auth_url. "'</script>");

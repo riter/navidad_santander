@@ -30,6 +30,8 @@
                 <th>Nombre</th>
                 <th>Email</th>
                 <th>Telefono</th>
+                <th>Ciudad</th>
+                <th>Fecha Nacimiento</th>
                 <th style="text-align: center;">Accion</th>
             </tr>
             </thead>
@@ -47,6 +49,12 @@
                     </td>
                     <td>
                         <?= $client['Client']['telefono'];?>
+                    </td>
+                    <td>
+                        <?= $client['Client']['ciudad'];?>
+                    </td>
+                    <td>
+                        <?= $client['Client']['fecha_nac'];?>
                     </td>
                     <td style="text-align: center;">
                         <?php
