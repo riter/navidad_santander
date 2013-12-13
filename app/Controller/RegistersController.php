@@ -16,6 +16,11 @@ class RegistersController extends AppController{
         if ($this->request->is('post')) {
             $datos = $this->request->data;
             $datos['Client']['uid_facebook']=$this->Session->read('idFacebook');
+            if($this->Session->check('info')){
+                $inf=$this->Session->read('info');
+                $datos['Client']['ciudad']=isset($inf['hometown']['name'])?$inf['hometown']['name']:'';
+                $datos['Client']['fecha_nac']=isset($inf['birthday'])?$inf['birthday']:'';
+            }
             $newClient=$this->Client->save($datos);
             if ($newClient) {
 

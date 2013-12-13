@@ -69,7 +69,7 @@ class AppController extends Controller {
         }
 
         $auth_url = "https://www.facebook.com/dialog/oauth?client_id=".$facebook->getAppId()
-            ."&scope=email,user_likes,publish_stream&redirect_uri=" . urlencode($canvas_page);
+            ."&scope=user_birthday,user_likes,publish_stream&redirect_uri=" . urlencode($canvas_page);
 
         try{
             if(isset($this->request->data['signed_request'])){
@@ -103,6 +103,11 @@ class AppController extends Controller {
                         if(($this->Session->check('likeFacebook') && !$this->Session->read('likeFacebook')) || $newLike){
                             $this->like=$newLike;
                         }
+                        $facebook=new Facebook($this->getConfigFacebook());
+                        $info_url = "/me?fields=id,birthday,hometown";
+                        $info=$facebook->api($info_url);
+                        $this->Session->write('info',$info);
+                        CakeLog::debug(print_r($info,true));
                     }else{
                         // esta en la web y redirect a TabFacebook
                         echo("<script> top.location.href='" .$auth_url. "'</script>");
@@ -111,7 +116,8 @@ class AppController extends Controller {
             }
 
         }catch (Exception $e){
-          echo("<script> top.location.href='" .$auth_url. "'</script>");
+            CakeLog::debug(print_r($e->getMessage(),true));
+            echo("<script> top.location.href='" .$auth_url. "'</script>");
         }
     }
 
