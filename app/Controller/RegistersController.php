@@ -93,12 +93,12 @@ class RegistersController extends AppController{
             $jpeg_quelity=100;
             list($targ_w,$targ_h)=getimagesize($filename);
 
-            if($targ_w<=$cropW){
+            /*if($targ_w<=$cropW){
                 $cropW=$targ_w;
             }
             if($targ_h<=$cropH){
                 $cropH=$targ_h;
-            }
+            }*/
             switch($ext){
                 case 'gif':
                     $img_r=imagecreatefromgif($filename);
