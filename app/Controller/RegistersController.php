@@ -129,7 +129,7 @@ class RegistersController extends AppController{
                     imagegif($dist_r,$filename);
                     break;
                 case 'png':
-                    imagepng($dist_r,$filename,$jpeg_quelity,PNG_ALL_FILTERS);
+                    imagepng($dist_r,$filename);
                     break;
                 case 'jpeg':
                     imagejpeg($dist_r,$filename,$jpeg_quelity);
