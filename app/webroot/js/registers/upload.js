@@ -1,17 +1,6 @@
 $(document).ready(function() {
     // minimum Crop de Imagen
-    $('#preview').jWindowCrop({
-        targetWidth:205,
-        targetHeight:205,
-        smartControls: true,
-        showControlsOnStart: false,
-        onChange: function(result) {
-            $('#crop_x').val(result.cropX);
-            $('#crop_y').val(result.cropY);
-            $('#crop_w').val(result.cropW);
-            $('#crop_h').val(result.cropH);
-        }
-    });
+
 
     var opcion = '';
 
@@ -39,6 +28,18 @@ $(document).ready(function() {
                     $('#preview').attr('src',e.target.result);
                     $('#preview').attr('title',escape(theFile.name));
 
+                    $('#preview').jWindowCrop({
+                        targetWidth:205,
+                        targetHeight:205,
+                        smartControls: true,
+                        showControlsOnStart: false,
+                        onChange: function(result) {
+                            $('#crop_x').val(result.cropX);
+                            $('#crop_y').val(result.cropY);
+                            $('#crop_w').val(result.cropW);
+                            $('#crop_h').val(result.cropH);
+                        }
+                    });
                 };
             })(f);
             reader.readAsDataURL(f);
