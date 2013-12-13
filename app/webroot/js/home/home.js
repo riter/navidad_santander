@@ -135,9 +135,10 @@ $(document).ready(function() {
 
     /* Hilo que carga las fotos en los cuadros cada 3 segundos*/
     var interval = 5000;   //number of mili seconds between each call
+    var cantidadServer=0;
     var refresh = function() {
         $.ajax({
-            url: "/photos/ajax_reload_fotos",
+            url: "/photos/ajax_reload_fotos/"+cantidadServer,
             async:false,
             dataType: "json",
             data: '',
@@ -145,14 +146,18 @@ $(document).ready(function() {
             success: function(msg) {
                 var datos=eval(msg);
                 var posicion=crearFila(datos.length);
-                //console.log(datos.length);
-                for(var i=0; i< posicion; i++){
-                    if(i < datos.length){
-                        $('#'+i+' img').attr('src',datos[i].src);
-                    }else{
-                        $('#'+i+' img').attr('src','');
-                    }
 
+                //console.log(datos.length);
+                if(cantidadServer < datos.length){
+                    for(var i=0; i< posicion; i++){
+                        if(i < datos.length){
+                            $('#'+i+' img').attr('src',datos[i].src);
+                        }else{
+                            $('#'+i+' img').attr('src','');
+                        }
+
+                    }
+                    cantidadServer=datos.length;
                 }
                 //console.log(datos);
 
