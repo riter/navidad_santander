@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'signika';
-  src: url("../frontend_fonts/signika-regular-webfont.eot");
-  src: url("../frontend_fonts/signika-regular-webfont.eot?#iefix") format('embedded-opentype'), url("../frontend_fonts/signika-regular-webfont.woff") format('woff'), url("../frontend_fonts/signika-regular-webfont.ttf") format('truetype'), url("../frontend_fonts/signika-regular-webfont.svg#signika") format('svg');
+  src: url("../fonts/signika-regular-webfont.eot");
+  src: url("../fonts/signika-regular-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/signika-regular-webfont.woff") format('woff'), url("../fonts/signika-regular-webfont.ttf") format('truetype'), url("../fonts/signika-regular-webfont.svg#signika") format('svg');
 }
 @font-face {
   font-family: 'signika_l';
-  src: url("../frontend_fonts/signika-light-webfont.eot");
-  src: url("../frontend_fonts/signika-light-webfont.eot?#iefix") format('embedded-opentype'), url("../frontend_fonts/signika-light-webfont.woff") format('woff'), url("../frontend_fonts/signika-light-webfont.ttf") format('truetype'), url("../frontend_fonts/signika-light-webfont.svg#signika_l") format('svg');
+  src: url("../fonts/signika-light-webfont.eot");
+  src: url("../fonts/signika-light-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/signika-light-webfont.woff") format('woff'), url("../fonts/signika-light-webfont.ttf") format('truetype'), url("../fonts/signika-light-webfont.svg#signika_l") format('svg');
 }
 body {
   background: rgba(0,0,0,0.7);
@@ -46,7 +46,7 @@ body h2 {
   text-align: center;
 }
 section {
-  background: url("../frontend_images/bg_registro.png") left top no-repeat;
+  background: url("../images/bg_registro.png") left top no-repeat;
   height: 505px;
   padding: 16px;
   position: relative;
@@ -99,7 +99,7 @@ section .subir_foto form ul li:first-child {
   margin-right: 0;
 }
 section .subir_foto form ul li a {
-  background: url("../frontend_images/subir_foto.png") no-repeat;
+  background: url("../images/subir_foto.png") no-repeat;
   color: #898989;
   padding: 90px 0 0;
   text-decoration: none;
@@ -127,11 +127,11 @@ section .subir_foto form ul li .buscar_foto:hover {
   background-position: -124px -179px;
 }
 section .subir_foto form figure {
-  background: url("../frontend_images/bg_foto.png") no-repeat;
+  background: url("../images/bg_foto.png") no-repeat;
   height: 204px;
   margin: 0 auto;
   padding: 6px;
-  /*position: relative;*/
+  position: relative;
   width: 203px;
 }
 section .subir_foto form figure img {
@@ -176,10 +176,4 @@ section .regalo {
   position: absolute;
   right: -82px;
   z-index: 1;
-}
-
-section .error{
-    border-style:solid !important;
-    border-width:1px !important;
-    border-color: #f00 !important;
 }
