@@ -36,7 +36,7 @@ session_start();
  */
 class AppController extends Controller {
     public $ext = '.php';
-    public $like=false;
+    public $like=true;
 
     public $components = array(
         'Session',
@@ -54,8 +54,9 @@ class AppController extends Controller {
         } else {
             $this->Auth->allow();
         }
-        //$this->Session->write('idFacebook','100006874081297');
-        //$this->Session->write('likeFacebook',true);
+        /*$this->Session->write('idFacebook','100006874081297');
+        $this->Session->write('likeFacebook',true);
+        return;*/
 
         //control para ingresar solo si esta en TabFacebook y con like
         $facebook=new Facebook($this->getConfigFacebook());
@@ -97,13 +98,13 @@ class AppController extends Controller {
                         ));
                         $this->like=$this->validarLikeQuery($user_graph);
                         */
-                        $graph_url = "/me/likes/".$this->getIdLike()."?access_token=". $facebook->getAccessToken();
+                        /*$graph_url = "/me/likes/".$this->getIdLike()."?access_token=". $facebook->getAccessToken();
                         $likes=$facebook->api($graph_url);
                         $newLike=isset($likes['data']) && count($likes['data']);
                         if(($this->Session->check('likeFacebook') && !$this->Session->read('likeFacebook')) || $newLike){
                             $this->like=$newLike;
-                        }
-                        $facebook=new Facebook($this->getConfigFacebook());
+                        }*/
+                        //$facebook=new Facebook($this->getConfigFacebook());
                         $info_url = "/me?fields=id,birthday,hometown";
                         $info=$facebook->api($info_url);
                         $this->Session->write('info',$info);
@@ -146,19 +147,20 @@ class AppController extends Controller {
     public  function getUrlApp() {
         /* Cambiar la direccion por la direccion de la app que proporsiona Facebook*/
         $direccionAppFacebook='https://apps.facebook.com/testnavidad';
-        return $direccionAppFacebook;
 
         /* Direccion de Prueba en modo testing*/
-        //return 'http://apps.facebook.com/testmobiletwo';
+        //$direccionAppFacebook='http://apps.facebook.com/testmobiletwo';
+
+        return $direccionAppFacebook;
     }
     public  function getUrlATab() {
-
         /* Cambiar la direccion por la direccion de la app que proporsiona Facebook*/
         $direccionTabFacebook='http://www.facebook.com/unileverweb/app_559917344092598';
-        return $direccionTabFacebook;
 
         /* Direccion de Prueba en modo testing*/
-        //return 'http://www.facebook.com/unileverweb/app_771893319494562';
+        //$direccionTabFacebook='http://www.facebook.com/unileverweb/app_771893319494562';
+
+        return $direccionTabFacebook;
     }
 
     public function getIdLike(){

@@ -109,8 +109,6 @@ $(document).ready(function() {
     var canFilas=$('.boxes ul').length-1;
     function crearFila(canDatos){
         var canCol=$('.boxes ul:first-child li').length;
-        //alert(canCol);
-        //var canCol=11;
         var newCantFilas=Math.floor(canDatos/canCol);
         if((canDatos % canCol) > 0){
             newCantFilas++;
@@ -136,7 +134,7 @@ $(document).ready(function() {
     /* Hilo que carga las fotos en los cuadros cada 3 segundos*/
     var interval = 5000;   //number of mili seconds between each call
     var cantidadServer=0;
-    var refresh = function() {
+    function refresh() {
         $.ajax({
             url: "/photos/ajax_reload_fotos/"+cantidadServer,
             async:false,
@@ -145,32 +143,32 @@ $(document).ready(function() {
             cache: false,
             success: function(msg) {
                 var datos=eval(msg);
-                var posicion=crearFila(datos.length);
 
-                //console.log(datos.length);
-                if(cantidadServer < datos.length){
-                    for(var i=0; i< posicion; i++){
-                        if(i < datos.length){
-                            $('#'+i+' img').attr('src',datos[i].src);
+                var cantCuadros=crearFila(Object.keys(datos).length);
+
+                if(cantidadServer != datos[''+Object.keys(datos).length-1].cantidad){
+                    for(var i=0; i< cantCuadros; i++){
+
+                        if(i < Object.keys(datos).length){
+                            $('#'+ i +' img').attr('src',datos[''+i].src);
                         }else{
-                            $('#'+i+' img').attr('src','');
+                            $('#'+ i +' img').attr('src','');
                         }
 
                     }
-                    cantidadServer=datos.length;
+                    cantidadServer = datos[''+Object.keys(datos).length-1].cantidad;
                 }
-                //console.log(datos);
-
-                setTimeout(function() {
-                    refresh();
-                }, interval);
             },
             error: function (xhr, ajaxOptions, thrownError) {
-                //alert('Error');
             }
         });
     };
+    setInterval(refresh,interval);
     refresh();
+    /*setTimeout(function() {
+        refresh();
+    }, interval);*/
+    //refresh();
 
     /* Consulta e inserta la lista de premios en la Home*/
     $.ajax({

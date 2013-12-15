@@ -20,17 +20,20 @@
 
         /* Hilo que carga las fotos en los cuadros cada 3 segundos y agregar posiciones*/
         var interval = 5000;   //number of mili seconds between each call
-        var refresh = function() {
+        var cantidadServer=0;
+        function refresh() {
             $.ajax({
-                url: "/photos/ajax_reload_fotos",
+                url: "/photos/ajax_reload_fotos_admin/"+cantidadServer,
                 async:false,
                 dataType: "json",
                 data: '',
                 cache: false,
                 success: function(msg) {
+                    console.log(msg);
                     var datos=eval(msg);
 
                     var lspos=$('.posicion');
+
 
                     for(var x=0; x<lspos.length; x++){
                         //var pos=$(".posicion:eq("+x+")").html();
@@ -38,23 +41,21 @@
                         var pos=$(lspos[x]).html();
                         pos=parseInt(pos)-1;
 
-                        if(pos < datos.length){
-                            $('tbody tr:eq('+x+') td:eq(0) > input').attr('value',datos[pos].id);
-                            $('tbody tr:eq('+x+') td:eq(1)').html(datos[pos].cliente_id);
-                            $('tbody tr:eq('+x+') td:eq(2)').html(datos[pos].cliente_nombre);
-                            $('tbody tr:eq('+x+') td:eq(3) > img').attr('src',datos[pos].src);
+                        if(pos < Object.keys(datos).length){
+                            $('tbody tr:eq('+x+') td:eq(0) > input').attr('value',datos[''+pos].id);
+                            $('tbody tr:eq('+x+') td:eq(1)').html(datos[''+pos].cliente_id);
+                            $('tbody tr:eq('+x+') td:eq(2)').html(datos[''+pos].cliente_nombre);
+                            $('tbody tr:eq('+x+') td:eq(3) > img').attr('src',datos[''+pos].src);
                         }
                     }
-
-                    setTimeout(function() {
-                        refresh();
-                    }, interval);
+                    cantidadServer = datos[''+Object.keys(datos).length-1].cantidad;
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     //alert('Error');
                 }
             });
         };
+        setInterval(refresh,interval);
         refresh();
     });
 }) (jQuery);
