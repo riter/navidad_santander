@@ -89,7 +89,7 @@ $(document).ready(function() {
     $('#subir').click(function(){
 
 
-        if(opcion=='webcam'){
+        if(opcion=='webcam' && $('#preview_cam').html() != ''){
             /* se captura la foto y se guarda por ajax, se envia la img(src) por  POST*/
             sayCheese.takeSnapshot(sayCheese.options.width,sayCheese.options.height);
             var src=$('#preview').attr('src');
@@ -111,15 +111,17 @@ $(document).ready(function() {
                     //alert('Error');
                 }
             });
+
         }else{
             //se guarda por file y los datos van por POST
-            if(opcion=='file'){
+            if(opcion=='file' && $('#file').val()){
                 $('#img_h').val($('.jwc_frame img').height()); // nuevo tamaño de la imagen
                 $("body").append('<div id="fancybox-loading"><div></div></div>');
                 return  true;
+            }else{
+                alert('No existe foto para subir');
             }
         }
-        alert('Debe seleccionar una de las dos opciones');
         return false;
 
     });
