@@ -35,7 +35,7 @@
       <file leaf-file-name="PhotosController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Controller/PhotosController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="0" selection-start="4331" selection-end="4331" vertical-scroll-proportion="-0.65384614" vertical-offset="1870" max-vertical-offset="3927">
+            <state line="153" column="17" selection-start="6062" selection-end="6062" vertical-scroll-proportion="-18.961538" vertical-offset="2023" max-vertical-offset="3927">
               <folding>
                 <marker date="1387040341719" expanded="true" signature="6280:6343" placeholder="/* Frontend:..." />
                 <marker date="1387040341719" expanded="true" signature="6888:6962" placeholder="/*foreach($g..." />
@@ -44,19 +44,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/webroot/js/photos/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="21" selection-start="1664" selection-end="1664" vertical-scroll-proportion="0.0" vertical-offset="681" max-vertical-offset="1309">
+            <state line="63" column="22" selection-start="2146" selection-end="2146" vertical-scroll-proportion="0.7875" vertical-offset="630" max-vertical-offset="1343">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="admin_index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/View/Photos/admin_index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="18" selection-start="1033" selection-end="1033" vertical-scroll-proportion="-3.2692308" vertical-offset="408" max-vertical-offset="1496">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/webroot/js/ganadores/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="22" selection-start="2347" selection-end="2347" vertical-scroll-proportion="0.7875" vertical-offset="460" max-vertical-offset="1122">
+            <state line="43" column="28" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1122">
               <folding />
             </state>
           </provider>
@@ -74,7 +83,7 @@
       <file leaf-file-name="home.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/webroot/js/home/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="4" selection-start="4823" selection-end="4844" vertical-scroll-proportion="0.0" vertical-offset="2040" max-vertical-offset="3366">
+            <state line="135" column="4" selection-start="4823" selection-end="4844" vertical-scroll-proportion="0.0" vertical-offset="2193" max-vertical-offset="3366">
               <folding />
             </state>
           </provider>
@@ -90,7 +99,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/webroot/plugins/sbscroller/jquery.sbscroller.css" />
         <option value="$PROJECT_DIR$/app/webroot/plugins/sbscroller/jquery.sbscroller.js" />
         <option value="$PROJECT_DIR$/app/webroot/plugins/sbscroller/jquery.mousewheel.min.js" />
         <option value="$PROJECT_DIR$/app/View/Home/home.php" />
@@ -103,9 +111,10 @@
         <option value="$PROJECT_DIR$/app/tmp/logs/debug.log" />
         <option value="$PROJECT_DIR$/app/Controller/PhotosController.php" />
         <option value="$PROJECT_DIR$/app/webroot/js/home/home.js" />
-        <option value="$PROJECT_DIR$/app/webroot/js/photos/index.js" />
         <option value="$PROJECT_DIR$/app/Controller/AppController.php" />
         <option value="$PROJECT_DIR$/app/webroot/js/ganadores/index.js" />
+        <option value="$PROJECT_DIR$/app/View/Photos/admin_index.php" />
+        <option value="$PROJECT_DIR$/app/webroot/js/photos/index.js" />
       </list>
     </option>
   </component>
@@ -914,11 +923,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Controller/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="16" selection-start="830" selection-end="830" vertical-scroll-proportion="0.27" vertical-offset="341" max-vertical-offset="867" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/RegistersController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="101" selection-start="639" selection-end="639" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="3876" />
@@ -972,23 +976,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/PhotosController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="0" selection-start="4331" selection-end="4331" vertical-scroll-proportion="-0.65384614" vertical-offset="1870" max-vertical-offset="3927">
-          <folding>
-            <marker date="1387040341719" expanded="true" signature="6280:6343" placeholder="/* Frontend:..." />
-            <marker date="1387040341719" expanded="true" signature="6888:6962" placeholder="/*foreach($g..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/js/home/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="4" selection-start="4823" selection-end="4844" vertical-scroll-proportion="0.0" vertical-offset="2040" max-vertical-offset="3366">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/webroot/frontend_css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.8647166" vertical-offset="1020" max-vertical-offset="4760">
@@ -1003,16 +990,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/js/photos/index.js">
+    <entry file="file://$PROJECT_DIR$/app/Controller/PhotosController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="21" selection-start="1664" selection-end="1664" vertical-scroll-proportion="0.0" vertical-offset="681" max-vertical-offset="1309">
-          <folding />
+        <state line="153" column="17" selection-start="6062" selection-end="6062" vertical-scroll-proportion="-18.961538" vertical-offset="2023" max-vertical-offset="3927">
+          <folding>
+            <marker date="1387040341719" expanded="true" signature="6280:6343" placeholder="/* Frontend:..." />
+            <marker date="1387040341719" expanded="true" signature="6888:6962" placeholder="/*foreach($g..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/webroot/js/ganadores/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="22" selection-start="2347" selection-end="2347" vertical-scroll-proportion="0.7875" vertical-offset="460" max-vertical-offset="1122">
+        <state line="43" column="28" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/js/home/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="135" column="4" selection-start="4823" selection-end="4844" vertical-scroll-proportion="0.0" vertical-offset="2040" max-vertical-offset="3366">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Photos/admin_index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="18" selection-start="1033" selection-end="1033" vertical-scroll-proportion="-3.2692308" vertical-offset="408" max-vertical-offset="1496">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/js/photos/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="22" selection-start="2146" selection-end="2146" vertical-scroll-proportion="0.7875" vertical-offset="630" max-vertical-offset="1343">
           <folding />
         </state>
       </provider>

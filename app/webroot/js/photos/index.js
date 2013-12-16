@@ -51,15 +51,17 @@
                 cache: false,
                 success: function(msg) {
                     var datos=eval(msg);
-
+                    //console.log(datos);
                     for(var i=0; i< Object.keys(datos).length; i++){
                         //console.log($('#'+datos[i].id));
-                        if($('#'+datos[''+i].id).length > 0){
+                        if($('#'+datos[''+i].id) != 'undefined'){
+                            //console.log($('#'+datos[''+i]));
                             $('#'+datos[''+i].id).html(i+1);
                         }else{
 
                         }
                     }
+                    //console.log('termino');
                     cantidadServer = datos[''+Object.keys(datos).length-1].cantidad;
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
