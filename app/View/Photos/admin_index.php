@@ -28,6 +28,7 @@
             <tbody>
             <?php
                 //$posicion=1;
+                /*
                 foreach ($photos as $photo):
                 ?>
                 <tr>
@@ -76,7 +77,7 @@
                         <?= $this->Form->postLink($eliminar, array('controller' => 'photos', 'action' => 'delete', $photo['Photo']['id']),array('confirm' => "Estas seguro de eliminar la foto con id = {$photo['Photo']['id']}?", 'escape' => false))?>
                     </td>
                 </tr>
-            <?php endforeach; ?>
+            <?php endforeach; */?>
             </tbody>
         </table>
     </div>

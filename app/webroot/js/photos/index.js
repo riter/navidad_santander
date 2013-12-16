@@ -1,6 +1,6 @@
 (function($) {
     $(document).ready(function(e) {
-        $("#table_photos").dataTable({
+        /*$("#table_photos").dataTable({
             "aoColumns":[
                 {"bSortable": false, "bSearchable" : false},
                 {"bSortable": true},
@@ -14,7 +14,7 @@
             },
             "sPaginationType": "full_numbers",
             "bFilter": true
-        });
+        });*/
 
         $('.moderar').on('click',function(){
 
@@ -39,36 +39,62 @@
            return false;
         });
 
+        /* Index tabla carga por ajax*/
+         $("#table_photos").dataTable({
+
+            "aoColumns":[
+                {"bSortable": false,"bSearchable" : false},
+                {"bSortable": true},
+                {"bSortable": true},
+                {"bSortable": true,"bSearchable" : false},
+                {"bSortable": true}
+            ],
+            "aaSorting": [[0, "desc" ]],
+            "bProcessing": true,
+            "bServerSide": true,
+            "sAjaxSource": "/admin/photos/lista_fotos",
+            "oLanguage": {
+                "sUrl": "/js/es_BO.txt"
+            },
+            //"sScrollX": "900px",
+            "sPaginationType": "full_numbers",
+            "bFilter": true,
+            "fnDrawCallback": function(oSettings){
+                refresh();
+
+            }
+        });
+
+
         /* Hilo que carga las fotos en los cuadros cada 3 segundos y agregar posiciones*/
         var interval = 5000;   //number of mili seconds between each call
         var cantidadServer=0;
         var refresh = function() {
             $.ajax({
-                url: "/photos/ajax_reload_fotos_admin/",
-                async:false,
+                url: "/photos/ajax_reload_fotos_admin/"+cantidadServer,
+                async:true,
                 dataType: "json",
                 data: '',
                 cache: false,
                 success: function(msg) {
                     var datos=eval(msg);
-                    //console.log(datos);
-                    for(var i=0; i< Object.keys(datos).length; i++){
-                        //console.log($('#'+datos[i].id));
-                        if($('#'+datos[''+i].id) != 'undefined'){
-                            //console.log($('#'+datos[''+i]));
-                            $('#'+datos[''+i].id).html(i+1);
-                        }else{
 
+                    if(cantidadServer != datos[''+Object.keys(datos).length-1].cantidad){
+                        cantidadServer = datos[''+Object.keys(datos).length-1].cantidad;
+                       // $("#table_photos").dataTable.fnReloadAjax();
+                        for(var i=0; i< Object.keys(datos).length-1; i++){
+                            var id=(datos[''+i].id);
+                            if($('.'+id) != 'undefined'){
+                                $('.'+id).html(i+1);
+                            }
                         }
                     }
-                    //console.log('termino');
-                    cantidadServer = datos[''+Object.keys(datos).length-1].cantidad;
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                 }
             });
         };
         setInterval(refresh,interval);
-        refresh();
+
     });
 }) (jQuery);
