@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-    $('.boxes').sbscroller();
-
     /* Validar si cargo las 3 fotos del dia en el Boton Subiir foto*/
     $(".upload").on('click',upload);
     function upload(){
@@ -105,6 +103,10 @@ $(document).ready(function() {
             //alert('Error');
         }
     });
+
+    /* Inicializacion sbscroller*/
+    $('.boxes').sbscroller();
+
     /* Se creara mas fila si hay mas de 55 fotos*/
     var canFilas=$('.boxes ul').length-1;
     function crearFila(canDatos){
@@ -113,6 +115,7 @@ $(document).ready(function() {
         if((canDatos % canCol) > 0){
             newCantFilas++;
         }
+
         var posicion= canFilas * canCol;
         if(canFilas<newCantFilas){
             for(var i=canFilas; i<newCantFilas; i++){
@@ -123,30 +126,32 @@ $(document).ready(function() {
                     posicion++;
                 }
                 htmlFila+="</ul>";
-                $('.boxes').append(htmlFila);
+
+                $('.boxes > .scroll-content').append(htmlFila);
             }
             canFilas=newCantFilas;
-            //console.log('entro');
+            //refreshSbroller();
+            $('.boxes').sbscroller('refresh');
         }
         return posicion;
     }
 
-    /* Hilo que carga las fotos en los cuadros cada 3 segundos*/
-    var interval = 5000;   //number of mili seconds between each call
+    /* Hilo que carga las fotos en los cuadros cada 5 segundos*/
+    var interval = 10000;   //number of mili seconds between each call
     var cantidadServer=0;
     function refresh() {
         $.ajax({
             url: "/photos/ajax_reload_fotos/"+cantidadServer,
-            async:false,
+            async:true,
             dataType: "json",
             data: '',
             cache: false,
             success: function(msg) {
                 var datos=eval(msg);
 
-                var cantCuadros=crearFila(Object.keys(datos).length);
-
                 if(cantidadServer != datos[''+Object.keys(datos).length-1].cantidad){
+                    var cantCuadros=crearFila(Object.keys(datos).length);
+                    cantidadServer = datos[''+Object.keys(datos).length-1].cantidad;
                     for(var i=0; i< cantCuadros; i++){
 
                         if(i < Object.keys(datos).length){
@@ -156,7 +161,7 @@ $(document).ready(function() {
                         }
 
                     }
-                    cantidadServer = datos[''+Object.keys(datos).length-1].cantidad;
+
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) {
