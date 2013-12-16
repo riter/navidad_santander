@@ -12,7 +12,6 @@ body {
   background: url("../frontend_images/bg2.jpg") center top no-repeat;
   font-family: 'signika';
   font-size: 12px;
-  overflow: hidden;
 }
 header {
   background: transparent url("../frontend_images/header.png") center top no-repeat;
@@ -35,7 +34,6 @@ header .header .generador a {
   margin: 0 auto;
   padding: 2px 0 0;
   width: 104px;
-  cursor: pointer;
 }
 header .header .logo {
   height: 174px;
@@ -106,12 +104,14 @@ section {
 }
 .boxes {
   height: 490px;
-    overflow-y: scroll;
+  overflow-y: scroll;
+  position: relative;
+  z-index: 700;
 }
 .boxes ul {
-  background: url("../frontend_images/boxes.png") left center repeat-x;
-  margin: 0 8px 20px 53px;
-  padding: 0;
+  background: url("../frontend_images/Rodillos.gif") no-repeat 111px 8px;
+  padding: 0 8px 20px 53px;
+  margin: 0;
 }
 .boxes ul li {
   display: inline-block;
@@ -163,7 +163,7 @@ section {
   border-radius: 10px;
   bottom: -16px;
   height: 11px;
-  font-size: 10px;
+  font-size: 12px;
   left: 50%;
   margin: 0 0 0 -34px;
   padding: 6px 0;
