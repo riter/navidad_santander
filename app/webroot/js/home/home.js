@@ -79,8 +79,8 @@ $(document).ready(function() {
                 case 'like':
                     $.fancybox.open({
                         href:'/Home/like',
-                        maxWidth	: 537,
-                        maxHeight	: 537,
+                        maxWidth	: 810,
+                        maxHeight	: 527,
                         fitToView	: true,
                         // width		: '100%',
                         // height		: '100%',
@@ -110,7 +110,7 @@ $(document).ready(function() {
     /* Se creara mas fila si hay mas de 55 fotos*/
     var canFilas=$('.boxes ul').length-1;
     function crearFila(canDatos){
-        var canCol=$('.boxes ul:first-child li').length;
+        var canCol=$('.boxes ul:eq(2) > li').length;
         var newCantFilas=Math.floor(canDatos/canCol);
         if((canDatos % canCol) > 0){
             newCantFilas++;
@@ -130,7 +130,6 @@ $(document).ready(function() {
                 $('.boxes > .scroll-content').append(htmlFila);
             }
             canFilas=newCantFilas;
-            //refreshSbroller();
             $('.boxes').sbscroller('refresh');
         }
         return posicion;
@@ -151,6 +150,8 @@ $(document).ready(function() {
 
                 if(cantidadServer != datos[''+Object.keys(datos).length-1].cantidad){
                     var cantCuadros=crearFila(Object.keys(datos).length);
+                    $('.boxes > .scroll-content ul').removeClass('par');
+                    $('.boxes > .scroll-content ul:even').addClass('par');
                     cantidadServer = datos[''+Object.keys(datos).length-1].cantidad;
                     for(var i=0; i< cantCuadros; i++){
 
@@ -170,10 +171,6 @@ $(document).ready(function() {
     };
     setInterval(refresh,interval);
     refresh();
-    /*setTimeout(function() {
-        refresh();
-    }, interval);*/
-    //refresh();
 
     /* Consulta e inserta la lista de premios en la Home*/
     $.ajax({
@@ -192,7 +189,6 @@ $(document).ready(function() {
              }
          },
          error: function (xhr, ajaxOptions, thrownError) {
-            //alert('Error');
          }
      });
 });

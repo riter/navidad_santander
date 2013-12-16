@@ -185,7 +185,8 @@ class RegistersController extends AppController{
             $facebook=new Facebook($this->getConfigFacebook());
 
             $ret_obj = $facebook->api('/me/feed', 'POST',array(
-                'link' => Router::url('/',true),
+                //'link' => Router::url('/',true),
+                'link' => $this->getUrlATab(),
                 'message' => 'Yo lo quiero para Navidad','description' => 'Participa ahora!. Sube tus fotos y desplaza a los demas para colocar tu foto en el cuadro con premio.',
                 'picture'=>Router::url('/',true).'/frontend_images/logo.png',
                 'privacy' => array('value' => 'EVERYONE')));
@@ -197,10 +198,11 @@ class RegistersController extends AppController{
 
     public function sended(){
         $this->layout='';
+        $config=$this->getConfigFacebook();
         if($this->request->is('post')){
-            $this->redirect('https://www.facebook.com/dialog/apprequests?app_id=559917344092598&message=Participa%20ahora!.%20En%20el%20concurso%20Yo%20lo%20quiero%20para%20Navidad&display=popup&redirect_uri=http://test.navidad.com/home/home');
+            $this->redirect('https://www.facebook.com/dialog/apprequests?app_id='.$config['appId'].'&message=Participa%20ahora!.%20En%20el%20concurso%20Yo%20lo%20quiero%20para%20Navidad&display=popup&redirect_uri='.Router::url('/home/home',true));
         }else{
-            $config=$this->getConfigFacebook();
+
             $this->set('appId',$config['appId']);
         }
     }

@@ -60,16 +60,18 @@
             "sPaginationType": "full_numbers",
             "bFilter": true,
             "fnDrawCallback": function(oSettings){
+                $('.dataTables_paginate a').on('click',function(){
+                    cantidadServer=0;
+                    console.log(cantidadServer);
+                });
                 refresh();
-
             }
         });
-
 
         /* Hilo que carga las fotos en los cuadros cada 3 segundos y agregar posiciones*/
         var interval = 5000;   //number of mili seconds between each call
         var cantidadServer=0;
-        var refresh = function() {
+        function refresh() {
             $.ajax({
                 url: "/photos/ajax_reload_fotos_admin/"+cantidadServer,
                 async:true,
@@ -81,7 +83,7 @@
 
                     if(cantidadServer != datos[''+Object.keys(datos).length-1].cantidad){
                         cantidadServer = datos[''+Object.keys(datos).length-1].cantidad;
-                       // $("#table_photos").dataTable.fnReloadAjax();
+
                         for(var i=0; i< Object.keys(datos).length-1; i++){
                             var id=(datos[''+i].id);
                             if($('.'+id) != 'undefined'){

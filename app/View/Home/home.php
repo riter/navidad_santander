@@ -55,8 +55,20 @@
     </div>
     <div class="container">
         <div class="boxes">
+            <ul style="display: none" class="ejemplo">
+                <li>
+                    <div class="box" id='idEjm'>
+                        <div class="img"></div>
+                        <div class="box_color ">
+                            <img src="" alt="">
+                        </div>
+                        <span class="fecha">
+                        </span>
+                    </div>
+                </li>
+            </ul>
             <? $posicion=0;
-                for($f=0; $f<10; $f++){
+                for($f=0; $f<5; $f++){
                 echo '<ul>';
                     for($c=0; $c<11; $c++){
                         ?>
@@ -77,20 +89,7 @@
                 echo '</ul>';
                  }
             ?>
-            <ul style="display: none" class="ejemplo">
-                <li>
-                    <div class="box" id='idEjm'>
-                        <div class="img"></div>
-                        <div class="box_color ">
-                            <img src="" alt="">
-                        </div>
-                        <span class="fecha">
-                        </span>
-                    </div>
-                </li>
-            </ul>
         </div>
-
     </div>
 </section>
 <footer>
