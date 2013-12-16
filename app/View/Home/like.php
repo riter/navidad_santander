@@ -14,12 +14,13 @@
 <body>
 <section>
     <div class="megusta">
-        <h2>Mira todos los regalos que tenemos para nuestros fans</h2>
-        <figure>
+        <img src="/frontend_images/like.png" alt="like">
+            <div class="descripcion">
+                <p>Haz click en <span>Me Gusta</span> y dí <span>¡Yo lo quiero!</span></p>
+                <p>y participa por uno de los regalos que tenemos para ti.</p>
+            </div>
             <img src="/frontend_images/premios.png" alt="premios">
-        </figure>
-        <p>Haz click en Me Gusta y di ¡Yo lo quiero!</p>
-        <a class="btn-megusta" href="#">Me gusta</a>
+        </div>
     </div>
 </section>
 </body>

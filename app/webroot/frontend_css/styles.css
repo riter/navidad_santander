@@ -109,9 +109,13 @@ section {
   z-index: 700;
 }
 .boxes ul {
-  background: url("../frontend_images/Rodillos.gif") no-repeat 111px 8px;
+  background: url("../frontend_images/Rodillos.gif") no-repeat;
+  background-position: 55px -66px;
   padding: 0 8px 20px 53px;
   margin: 0;
+}
+.boxes ul.par {
+  background-position: 66px -160px;
 }
 .boxes ul li {
   display: inline-block;
