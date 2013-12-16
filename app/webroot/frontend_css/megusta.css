@@ -22,30 +22,27 @@ body h2 {
   text-align: center;
 }
 section {
-  background: #fff url("../frontend_images/bg_megusta.png") no-repeat center bottom;
-  height: 280px;
-  padding: 15px;
+  background: #fff url("../frontend_images/bg_megusta.jpg") no-repeat center bottom;
+  height: 457px;
+  padding: 35px;
   position: relative;
-  width: 518px;
+  width: 740px;
 }
 section .megusta {
   text-align: center;
 }
-section .megusta p {
+section .megusta img {
+  margin: 0 0 12px;
+}
+section .megusta .descripcion {
+  margin: 0 0 20px;
+}
+section .megusta .descripcion p {
   color: #343434;
   display: block;
   font-size: 20px;
-  margin: 0.5em 0;
+  margin: 0;
 }
-section .megusta a {
-  background: #f00;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  color: #fff;
-  display: inline-block;
-  font-family: Helvetica;
-  font-size: 30px;
-  padding: 0.3em 0.8em;
-  text-decoration: none;
+section .megusta .descripcion p span {
+  color: #f00;
 }
