@@ -12,12 +12,13 @@
                 Moderar Fotografia
             </span>
         </div>
-        <div class="da-panel-content with-padding">
-            <div>
-                <img src="<?= $img;?>" alt="" style="max-height: 600px; max-width: 800px; "/>
+        <div class="da-panel-content with-padding" style="text-align: center">
+            <div >
+                <img src="<?= $img;?>" alt="" style="min-width: 205px; min-height: 205px"/>
             </div>
-            <p>
-                <a href="photos/moderar/<?=$id?>/2" class="da-button red" >
+            <br/>
+            <div>
+                <a href="photos/moderar/<?=$id?>/2" class="da-button red">
                     <img src="/images/icons/color/cancel.png" alt="">
                     Rechazar
                 </a>
@@ -25,7 +26,7 @@
                     <img src="/images/icons/color/accept.png" alt="">
                     Aceptar
                 </a>
-            </p>
+            </div>
         </div>
     </div>
 </body>

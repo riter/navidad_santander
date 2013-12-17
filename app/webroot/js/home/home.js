@@ -41,7 +41,6 @@ $(document).ready(function() {
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) {
-                //alert('Error');
             }
         });
     }
@@ -100,7 +99,6 @@ $(document).ready(function() {
             }
         },
         error: function (xhr, ajaxOptions, thrownError) {
-            //alert('Error');
         }
     });
 

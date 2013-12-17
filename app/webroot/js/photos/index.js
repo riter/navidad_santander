@@ -15,29 +15,32 @@
             "sPaginationType": "full_numbers",
             "bFilter": true
         });*/
+        function addEvent(){
+            $('.moderar').on('click',function(){
 
-        $('.moderar').on('click',function(){
+                $.fancybox.open({
+                    href : $(this).attr('href'),
+                    maxWidth	: 300,
+                    maxHeight	: 400,
+                    //width	: 300,
+                    //height	: 400,
+                    fitToView	: true,
+                    autoSize	: false,
+                    closeClick	: false,
+                    openEffect	: 'none',
+                    closeEffect	: 'none',
+                    padding: 0,
+                    type : 'ajax'
+                });
 
-            $.fancybox.open({
-                href : $(this).attr('href'),
-                width	: 300,
-                height	: 400,
-                fitToView	: false,
-                autoSize	: true,
-                closeClick	: false,
-                openEffect	: 'none',
-                closeEffect	: 'none',
-                padding: 0,
-                type : 'ajax'
+                $.fancybox.close = function() {
+                    parent.location.reload();
+                    return true;
+                };
+
+                return false;
             });
-
-            $.fancybox.close = function() {
-                parent.location.reload();
-                return true;
-            };
-
-           return false;
-        });
+        }
 
         /* Index tabla carga por ajax*/
          $("#table_photos").dataTable({
@@ -46,8 +49,9 @@
                 {"bSortable": false,"bSearchable" : false},
                 {"bSortable": true},
                 {"bSortable": true},
-                {"bSortable": true,"bSearchable" : false},
-                {"bSortable": true}
+                {"bSortable": false,"bSearchable" : false},
+                {"bSortable": true},
+                {"bSortable": false,"bSearchable" : false}
             ],
             "aaSorting": [[0, "desc" ]],
             "bProcessing": true,
@@ -62,9 +66,9 @@
             "fnDrawCallback": function(oSettings){
                 $('.dataTables_paginate a').on('click',function(){
                     cantidadServer=0;
-                    console.log(cantidadServer);
                 });
-                refresh();
+                //refresh();
+                addEvent();
             }
         });
 
@@ -90,6 +94,7 @@
                                 $('.'+id).html(i+1);
                             }
                         }
+                        addEvent();
                     }
                 },
                 error: function (xhr, ajaxOptions, thrownError) {

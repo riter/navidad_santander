@@ -7,7 +7,6 @@ $(document).ready(function() {
     /* Proceso para subir Imagenes*/
     $('.buscar_foto').click(function(){
        $('#file').click();
-       opcion='file';
     });
 
     function archivo(evt) {
@@ -55,6 +54,7 @@ $(document).ready(function() {
         switch(val.substring(val.lastIndexOf('.') + 1).toLowerCase()){
             case 'gif': case 'jpg': case 'png': case 'jpeg':
              archivo(evt);
+             opcion='file';
             break;
             default:
                 alert('Tipo de Archivo Incorrecto');
@@ -70,6 +70,7 @@ $(document).ready(function() {
     $('.webcam').click(function(){
         $('.jwc_frame').css('display','none');
         $('#preview_cam').css('display','block');
+        $('#preview').attr('src','');
         /*ver si el contendor de la webcam tiene un tag video entonces dar start*/
         if($('#preview_cam').html() == ''){
             sayCheese.start();
@@ -108,7 +109,6 @@ $(document).ready(function() {
                     window.location.href = msg;
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
-                    //alert('Error');
                 }
             });
 

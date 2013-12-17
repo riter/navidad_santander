@@ -29,15 +29,13 @@
                 data: '',
                 cache: false,
                 success: function(msg) {
-                    console.log(msg);
+
                     var datos=eval(msg);
 
                     var lspos=$('.posicion');
 
 
                     for(var x=0; x<lspos.length; x++){
-                        //var pos=$(".posicion:eq("+x+")").html();
-                        //var pos=$($('.posicion')[x]).html();
                         var pos=$(lspos[x]).html();
                         pos=parseInt(pos)-1;
 
@@ -51,7 +49,6 @@
                     cantidadServer = datos[''+Object.keys(datos).length-1].cantidad;
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
-                    //alert('Error');
                 }
             });
         };

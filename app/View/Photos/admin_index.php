@@ -21,8 +21,9 @@
                 <th>Posicion</th>
                 <th>Usuario</th>
                 <th>Fecha</th>
+                <th>Moderar</th>
                 <th>Estado</th>
-                <th style="text-align: center;">Accion</th>
+                <th style="text-align: center; width: 50px">Accion</th>
             </tr>
             </thead>
             <tbody>
