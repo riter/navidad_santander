@@ -83,7 +83,8 @@ class AppController extends Controller {
                         echo("<script> top.location.href='" .$canvas_page. "'</script>");
                     }
 
-                }elseif( $user){
+                }else{
+                    if( $user){
                         $this->Session->write('idFacebook',$user);
 
                         /*Validar like por Grapho*/
@@ -108,11 +109,13 @@ class AppController extends Controller {
                         $info_url = "/me?fields=id,birthday,hometown";
                         $info=$facebook->api($info_url);
                         $this->Session->write('info',$info);
-                        
+
                     }else{
                         // esta en la web y redirect a TabFacebook
                         echo("<script> top.location.href='" .$auth_url. "'</script>");
                     }
+
+                }
                 $this->Session->write('likeFacebook',$this->like);
             }
 

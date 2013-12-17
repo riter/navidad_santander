@@ -68,7 +68,7 @@
                 </li>
             </ul>
             <? $posicion=0;
-                for($f=0; $f<5; $f++){
+                for($f=0; $f<10; $f++){
                 echo '<ul>';
                     for($c=0; $c<11; $c++){
                         ?>
