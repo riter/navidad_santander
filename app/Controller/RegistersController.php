@@ -181,19 +181,23 @@ class RegistersController extends AppController{
     }
 
     public function publicarFacebook(){
-        try{
-            $facebook=new Facebook($this->getConfigFacebook());
+        $this->loadModel('Photo');
+        $this->loadModel('Client');
+        $cliente=$this->Client->find('first',array('conditions'=>array('uid_facebook'=>$this->Session->read('idFacebook'))));
 
-            $ret_obj = $facebook->api('/me/feed', 'POST',array(
-                //'link' => Router::url('/',true),
-                'link' => $this->getUrlATab(),
-                'message' => 'Yo ya estoy participando para ganar iPads mini, iPods, Psp, Playstation y más.Tú también, entra en la aplicación Yo Lo Quiero y participa',
-                'description' => 'Participa ahora!. Sube tus fotos y desplaza a los demas para colocar tu foto en el cuadro con premio.',
-                'picture'=>Router::url('/',true).'/frontend_images/logo.png',
-                'privacy' => array('value' => 'EVERYONE')));
+        if(!empty($cliente) && count($cliente['Photo'])==1){
+            try{
+                $facebook=new Facebook($this->getConfigFacebook());
 
-        }catch (Exception $e){
-            CakeLog::debug(print_r($e->getMessage(),true));
+                $ret_obj = $facebook->api('/me/feed', 'POST',array(
+                    'link' => $this->getUrlATab(),
+                    'message' => 'Yo ya estoy participando para ganar iPads mini, iPods, Psp, Playstation y más.Tú también, entra en la aplicación Yo Lo Quiero y participa',
+                    'description' => 'Participa ahora!. Sube tus fotos y desplaza a los demas para colocar tu foto en el cuadro con premio.',
+                    'picture'=>Router::url('/',true).'/frontend_images/logo.png',
+                    'privacy' => array('value' => 'EVERYONE')));
+            }catch (Exception $e){
+                CakeLog::debug(print_r($e->getMessage(),true));
+            }
         }
     }
 

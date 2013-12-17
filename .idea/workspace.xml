@@ -23,84 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RegistersController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Controller/RegistersController.php">
+      <file leaf-file-name="AppController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="0" selection-start="2271" selection-end="2271" vertical-scroll-proportion="0.2053942" vertical-offset="853" max-vertical-offset="3927">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientsController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Controller/ClientsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="47" selection-start="327" selection-end="327" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="1088">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/webroot/js/home/home.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="29" selection-start="1608" selection-end="1608" vertical-scroll-proportion="-6.2" vertical-offset="559" max-vertical-offset="3349">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Photo.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Model/Photo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="6" selection-start="416" selection-end="416" vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="459">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Client.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Model/Client.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="39" selection-start="399" selection-end="399" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="357">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin_lista_fotos.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/View/Photos/admin_lista_fotos.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="28" selection-start="1096" selection-end="1096" vertical-scroll-proportion="-5.230769" vertical-offset="459" max-vertical-offset="969">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/webroot/js/photos/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="40" selection-start="645" selection-end="645" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1921">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin_index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/View/Photos/admin_index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="27" selection-start="873" selection-end="873" vertical-scroll-proportion="-7.1923075" vertical-offset="204" max-vertical-offset="1530">
-              <folding>
-                <element signature="n#style#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="upload.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/webroot/js/registers/upload.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="65" selection-start="3865" selection-end="3865" vertical-scroll-proportion="0.0" vertical-offset="1690" max-vertical-offset="2295">
+            <state line="148" column="65" selection-start="5901" selection-end="5901" vertical-scroll-proportion="2.143411" vertical-offset="1410" max-vertical-offset="3315">
               <folding />
             </state>
           </provider>
@@ -119,7 +45,6 @@
         <option value="$PROJECT_DIR$/app/Controller/PhotosController.php" />
         <option value="$PROJECT_DIR$/app/View/Home/home.php" />
         <option value="$PROJECT_DIR$/app/webroot/frontend_css/styles.css" />
-        <option value="$PROJECT_DIR$/app/Controller/AppController.php" />
         <option value="$PROJECT_DIR$/app/View/Photos/admin_ver.php" />
         <option value="$PROJECT_DIR$/app/webroot/js/ganadores/index.js" />
         <option value="$PROJECT_DIR$/app/View/Photos/admin_lista_fotos.php" />
@@ -128,10 +53,11 @@
         <option value="$PROJECT_DIR$/app/webroot/js/registers/upload.js" />
         <option value="$PROJECT_DIR$/app/Model/Photo.php" />
         <option value="$PROJECT_DIR$/app/Model/Client.php" />
-        <option value="$PROJECT_DIR$/app/tmp/logs/debug.log" />
         <option value="$PROJECT_DIR$/app/Controller/ClientsController.php" />
         <option value="$PROJECT_DIR$/app/webroot/js/photos/index.js" />
+        <option value="$PROJECT_DIR$/app/tmp/logs/debug.log" />
         <option value="$PROJECT_DIR$/app/Controller/RegistersController.php" />
+        <option value="$PROJECT_DIR$/app/Controller/AppController.php" />
       </list>
     </option>
   </component>
@@ -944,13 +870,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="86" selection-start="6229" selection-end="6284" vertical-scroll-proportion="-5.269231" vertical-offset="2532" max-vertical-offset="3315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/webroot/js/ganadores/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="76" selection-start="1627" selection-end="1627" vertical-scroll-proportion="0.36346865" vertical-offset="517" max-vertical-offset="1071">
@@ -968,13 +887,6 @@
     <entry file="file://$PROJECT_DIR$/app/webroot/js/registers/upload.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="110" column="65" selection-start="3865" selection-end="3865" vertical-scroll-proportion="0.0" vertical-offset="1690" max-vertical-offset="2295">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/PhotosController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="27" selection-start="1941" selection-end="1941" vertical-scroll-proportion="-7.9615383" vertical-offset="677" max-vertical-offset="3672">
           <folding />
         </state>
       </provider>
@@ -1002,23 +914,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/tmp/logs/debug.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="27" selection-start="490" selection-end="490" vertical-scroll-proportion="0.4568138" vertical-offset="0" max-vertical-offset="23528">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/webroot/js/home/home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="29" selection-start="1608" selection-end="1608" vertical-scroll-proportion="-6.2" vertical-offset="559" max-vertical-offset="3349">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/ClientsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="47" selection-start="327" selection-end="327" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="1088">
           <folding />
         </state>
       </provider>
@@ -1044,9 +942,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/ClientsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="47" selection-start="327" selection-end="327" vertical-scroll-proportion="0.3174274" vertical-offset="0" max-vertical-offset="1088">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/PhotosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="178" column="8" selection-start="6690" selection-end="6728" vertical-scroll-proportion="0.14660831" vertical-offset="2874" max-vertical-offset="3672">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tmp/logs/debug.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="0" selection-start="1802" selection-end="1803" vertical-scroll-proportion="0.0" vertical-offset="801" max-vertical-offset="1343">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/RegistersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="0" selection-start="2271" selection-end="2271" vertical-scroll-proportion="0.2053942" vertical-offset="853" max-vertical-offset="3927">
+        <state line="190" column="0" selection-start="6522" selection-end="6522" vertical-scroll-proportion="-0.29411766" vertical-offset="3130" max-vertical-offset="3995">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="65" selection-start="5901" selection-end="5901" vertical-scroll-proportion="2.143411" vertical-offset="1410" max-vertical-offset="3315">
           <folding />
         </state>
       </provider>
