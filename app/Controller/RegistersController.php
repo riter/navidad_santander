@@ -187,7 +187,8 @@ class RegistersController extends AppController{
             $ret_obj = $facebook->api('/me/feed', 'POST',array(
                 //'link' => Router::url('/',true),
                 'link' => $this->getUrlATab(),
-                'message' => 'Yo lo quiero para Navidad','description' => 'Participa ahora!. Sube tus fotos y desplaza a los demas para colocar tu foto en el cuadro con premio.',
+                'message' => 'Yo ya estoy participando para ganar iPads mini, iPods, Psp, Playstation y más.Tú también, entra en la aplicación Yo Lo Quiero y participa',
+                'description' => 'Participa ahora!. Sube tus fotos y desplaza a los demas para colocar tu foto en el cuadro con premio.',
                 'picture'=>Router::url('/',true).'/frontend_images/logo.png',
                 'privacy' => array('value' => 'EVERYONE')));
 

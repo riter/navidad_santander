@@ -16,6 +16,7 @@
             "bFilter": true
         });*/
         function addEvent(){
+            $('.moderar').unbind('click');
             $('.moderar').on('click',function(){
 
                 $.fancybox.open({

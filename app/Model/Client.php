@@ -11,4 +11,11 @@ class Client extends AppModel {
     var $useTable = 'cliente';
     //var $displayField = 'descripcion';
     public $primaryKey = 'id';
+
+    public $hasMany = array(
+        'Photo' => array(
+            'className' => 'Photo',
+            'foreignKey' => 'cliente_id'
+        )
+    );
 } 
