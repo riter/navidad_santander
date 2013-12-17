@@ -94,7 +94,7 @@
 </section>
 <footer>
     <div class="container">
-        <h3>Todos los derechos reservados Santander Universidades 2013.</h3>
+        <h3>Todos los derechos reservados Santander Universidades 2013. <a class="terminos" href="/files/TERMINOS_Y_CONDICIONES.doc" target="_blank" style=" color: #fff; font-family: signika; font-size: 13px; text-align: center; padding-left: 10px">Términos y Condiciones</a></h3>
     </div>
 </footer>
 </body>

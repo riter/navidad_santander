@@ -26,7 +26,7 @@
       <file leaf-file-name="AppController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="150" column="31" selection-start="5798" selection-end="5798" vertical-scroll-proportion="0.40697673" vertical-offset="2340" max-vertical-offset="3366">
+            <state line="58" column="17" selection-start="1898" selection-end="1898" vertical-scroll-proportion="0.24224806" vertical-offset="861" max-vertical-offset="3366">
               <folding />
             </state>
           </provider>
@@ -35,7 +35,18 @@
       <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/View/Home/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="53" selection-start="3088" selection-end="3088" vertical-scroll-proportion="-9.807693" vertical-offset="1020" max-vertical-offset="1802">
+            <state line="96" column="131" selection-start="3784" selection-end="3817" vertical-scroll-proportion="-13.730769" vertical-offset="1275" max-vertical-offset="1802">
+              <folding>
+                <element signature="n#style#0;n#a#0;n#h3#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/View/Registers/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="0" selection-start="1333" selection-end="1333" vertical-scroll-proportion="-13.076923" vertical-offset="153" max-vertical-offset="799">
               <folding />
             </state>
           </provider>
@@ -60,13 +71,11 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/Controller/PhotosController.php" />
         <option value="$PROJECT_DIR$/app/webroot/frontend_css/styles.css" />
         <option value="$PROJECT_DIR$/app/View/Photos/admin_ver.php" />
         <option value="$PROJECT_DIR$/app/webroot/js/ganadores/index.js" />
         <option value="$PROJECT_DIR$/app/View/Photos/admin_lista_fotos.php" />
         <option value="$PROJECT_DIR$/app/View/Photos/admin_index.php" />
-        <option value="$PROJECT_DIR$/app/webroot/js/home/home.js" />
         <option value="$PROJECT_DIR$/app/webroot/js/registers/upload.js" />
         <option value="$PROJECT_DIR$/app/Model/Photo.php" />
         <option value="$PROJECT_DIR$/app/Model/Client.php" />
@@ -74,8 +83,10 @@
         <option value="$PROJECT_DIR$/app/webroot/js/photos/index.js" />
         <option value="$PROJECT_DIR$/app/tmp/logs/debug.log" />
         <option value="$PROJECT_DIR$/app/Controller/RegistersController.php" />
-        <option value="$PROJECT_DIR$/app/Controller/AppController.php" />
+        <option value="$PROJECT_DIR$/app/View/Registers/index.php" />
+        <option value="$PROJECT_DIR$/app/webroot/js/home/home.js" />
         <option value="$PROJECT_DIR$/app/View/Home/home.php" />
+        <option value="$PROJECT_DIR$/app/Controller/AppController.php" />
       </list>
     </option>
   </component>
@@ -806,16 +817,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../aclprueba" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\test.santander\app\webroot\files" />
       <recent name="C:\xampp\htdocs\test.santander\app\webroot\plugins\sbscroller" />
       <recent name="C:\xampp\htdocs\test.santander\app\webroot\frontend_images" />
       <recent name="C:\xampp\htdocs\test.santander\app\webroot\plugins" />
       <recent name="C:\xampp\htdocs\test.santander\Doc" />
-      <recent name="C:\xampp\htdocs\test.santander\app\webroot\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\test.santander\app\webroot\plugins\sbscroller" />
@@ -883,11 +894,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/webroot/js/ganadores/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="76" selection-start="1627" selection-end="1627" vertical-scroll-proportion="0.36346865" vertical-offset="517" max-vertical-offset="1071" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/webroot/js/registers/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561" />
@@ -906,11 +912,6 @@
     <entry file="file://$PROJECT_DIR$/app/View/Photos/admin_index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="27" selection-start="873" selection-end="873" vertical-scroll-proportion="-7.1923075" vertical-offset="204" max-vertical-offset="1530" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/webroot/js/home/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="29" selection-start="1608" selection-end="1608" vertical-scroll-proportion="-6.2" vertical-offset="559" max-vertical-offset="3349" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/Photo.php">
@@ -955,16 +956,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Registers/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="1333" selection-end="1333" vertical-scroll-proportion="-13.076923" vertical-offset="153" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/js/home/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="31" selection-end="31" vertical-scroll-proportion="0.031365313" vertical-offset="0" max-vertical-offset="3349">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Home/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="53" selection-start="3088" selection-end="3088" vertical-scroll-proportion="-9.807693" vertical-offset="1020" max-vertical-offset="1802">
-          <folding />
+        <state line="96" column="131" selection-start="3784" selection-end="3817" vertical-scroll-proportion="-13.730769" vertical-offset="1275" max-vertical-offset="1802">
+          <folding>
+            <element signature="n#style#0;n#a#0;n#h3#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/AppController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="31" selection-start="5798" selection-end="5798" vertical-scroll-proportion="0.40697673" vertical-offset="2340" max-vertical-offset="3366">
+        <state line="58" column="17" selection-start="1898" selection-end="1898" vertical-scroll-proportion="0.24224806" vertical-offset="861" max-vertical-offset="3366">
           <folding />
         </state>
       </provider>
