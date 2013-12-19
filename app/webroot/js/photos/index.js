@@ -85,13 +85,18 @@
                 cache: false,
                 success: function(msg) {
                     var datos=eval(msg);
+                    //console.log(datos[Object.keys(datos).length-1]);
 
-                    if(cantidadServer != datos[''+Object.keys(datos).length-1].cantidad){
-                        cantidadServer = datos[''+Object.keys(datos).length-1].cantidad;
+                    var cant=Object.keys(datos).length-1;
+                    var cantLoad=Object.keys(datos)[cant];
+                    cantLoad=datos[cantLoad].cantidad;
 
-                        for(var i=0; i< Object.keys(datos).length-1; i++){
+                    if(cantidadServer != cantLoad){
+                        cantidadServer = cantLoad;
+
+                        for(var i=0; i< cant-1; i++){
                             var id=(datos[''+i].id);
-                            if($('.'+id) != 'undefined'){
+                            if($('.'+id) != undefined){
                                 $('.'+id).html(i+1);
                             }
                         }

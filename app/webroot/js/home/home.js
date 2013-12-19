@@ -146,14 +146,19 @@ $(document).ready(function() {
             success: function(msg) {
                 var datos=eval(msg);
 
-                if(cantidadServer != datos[''+Object.keys(datos).length-1].cantidad){
-                    var cantCuadros=crearFila(Object.keys(datos).length);
+                var cant=Object.keys(datos).length-1;
+                var cantLoad=Object.keys(datos)[cant];
+                cantLoad=datos[cantLoad].cantidad;
+
+                if(cantidadServer != cantLoad){
+                    var cantCuadros=crearFila(cant-1);
                     $('.boxes > .scroll-content ul').removeClass('par');
                     $('.boxes > .scroll-content ul:even').addClass('par');
-                    cantidadServer = datos[''+Object.keys(datos).length-1].cantidad;
+                    cantidadServer = cantLoad;
+
                     for(var i=0; i< cantCuadros; i++){
 
-                        if(i < Object.keys(datos).length){
+                        if(i < cant-1){
                             $('#'+ i +' img').attr('src',datos[''+i].src);
                         }else{
                             $('#'+ i +' img').attr('src','');
